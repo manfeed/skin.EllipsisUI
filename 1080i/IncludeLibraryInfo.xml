@@ -64,7 +64,7 @@
 							<height>52</height>
 							<font>Library_Light_20</font>
 							<textcolor>Text</textcolor>
-							<label>$INFO[ListItem.Date,$LOCALIZE[20416]: ,  -  ]$VAR[ItemDuration]</label>
+							<label>$LOCALIZE[20373] $INFO[ListItem.Season]$INFO[ListItem.Year, (,)  -  ]$VAR[ItemDuration]</label>
 							<align>center</align>
 							<scroll>true</scroll>
 						</control>
@@ -75,7 +75,7 @@
 							<height>112</height>
 							<font>Library_Normal_20</font>
 							<textcolor>Text</textcolor>
-							<label>$INFO[ListItem.Plot]</label>
+							<label>$INFO[ListItem.Date,$LOCALIZE[20416]: ,  -  ]$INFO[ListItem.Plot]</label>
 							<align>center</align>
 							<autoscroll delay="6500" time="2500" repeat="2500">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 						</control>
@@ -177,12 +177,12 @@
 						<control type="label">
 							<description>Season</description>
 							<left>28</left>
-							<top>75</top>
+							<top>82</top>
 							<width>669</width>
 							<height>52</height>
 							<font>Library_Normal_43</font>
 							<textcolor>Text</textcolor>
-							<label>[B]$INFO[ListItem.Label][/B]</label>
+							<label>[B]$INFO[ListItem.Label][/B]$INFO[ListItem.Year, (,)]</label>
 							<align>center</align>
 							<scroll>true</scroll>
 						</control>
@@ -280,7 +280,7 @@
 							<height>112</height>
 							<font>Library_Light_28</font>
 							<textcolor>Text</textcolor>
-							<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
+							<label>[B]$INFO[ListItem.TVShowTitle][/B]$INFO[ListItem.Year, (,)]</label>
 							<align>center</align>
 							<aligny>center</aligny>
 							<scrolltime>200</scrolltime>
@@ -292,7 +292,7 @@
 							<top>164</top>
 							<width>669</width>
 							<height>52</height>
-							<font>Library_Normal_22</font>
+							<font>Library_Normal_20</font>
 							<textcolor>Text</textcolor>
 							<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), $LOCALIZE[1443] , $LOCALIZE[50161]]</label>
 							<align>center</align>
@@ -502,6 +502,7 @@
 					<control type="group">
 						<visible>String.IsEmpty(ListItem.Title)</visible>
 						<control type="label">
+							<visible>!Container.Content(artists)</visible>
 							<left>28</left>
 							<top>0</top>
 							<width>772</width>
@@ -513,11 +514,33 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 						</control>
+						<control type="textbox">
+							<visible>Container.Content(artists) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+							<left>28</left>
+							<top>0</top>
+							<width>772</width>
+							<height>291</height>
+							<font>Library_Normal_43</font>
+							<textcolor>Text</textcolor>
+							<label>[B]$INFO[ListItem.Label][/B]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<scroll>true</scroll>
+						</control>
+						<control type="image">
+							<visible>Container.Content(artists)</visible>
+							<left>210</left>
+							<top>72</top>
+							<width>400</width>
+							<height>240</height>
+							<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+							<aspectratio align="center" aligny="top">keep</aspectratio>
+						</control>
 					</control>
 					<control type="group">
 						<visible>!String.IsEmpty(ListItem.Title)</visible>
 						<control type="label">
-							<visible>!Container.Content(albums)</visible>
+							<visible>!Container.Content(albums) + !Container.Content(songs)</visible>
 							<left>28</left>
 							<top>22</top>
 							<width>772</width>
@@ -531,6 +554,18 @@
 						<control type="label">
 							<visible>Container.Content(songs)</visible>
 							<left>28</left>
+							<top>22</top>
+							<width>772</width>
+							<height>52</height>
+							<font>Library_Light_25</font>
+							<textcolor>Text</textcolor>
+							<label>$INFO[ListItem.TrackNumber,,.- ][B]$INFO[ListItem.Title][/B]$INFO[ListItem.Label2, - (,)]</label>
+							<align>center</align>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<visible>Container.Content(songs) + String.IsEmpty(ListItem.Art(artist.clearlogo))</visible>
+							<left>28</left>
 							<top>94</top>
 							<width>772</width>
 							<height>52</height>
@@ -540,8 +575,17 @@
 							<align>center</align>
 							<scroll>true</scroll>
 						</control>
+						<control type="image">
+							<visible>Container.Content(songs)</visible>
+							<left>322</left>
+							<top>88</top>
+							<width>175</width>
+							<height>105</height>
+							<texture background="true">$INFO[ListItem.Art(artist.clearlogo)]</texture>
+							<aspectratio align="center" aligny="top">keep</aspectratio>
+						</control>
 						<control type="label">
-							<visible>Container.Content(albums)</visible>
+							<visible>Container.Content(albums) + String.IsEmpty(ListItem.Art(artist.clearlogo))</visible>
 							<left>28</left>
 							<top>120</top>
 							<width>772</width>
@@ -551,6 +595,15 @@
 							<label>[B]$INFO[ListItem.Artist][/B]</label>
 							<align>center</align>
 							<scroll>true</scroll>
+						</control>
+						<control type="image">
+							<visible>Container.Content(albums)</visible>
+							<left>285</left>
+							<top>105</top>
+							<width>250</width>
+							<height>150</height>
+							<texture background="true">$INFO[ListItem.Art(artist.clearlogo)]</texture>
+							<aspectratio align="center" aligny="top">keep</aspectratio>
 						</control>
 						<control type="label">
 							<visible>Container.Content(albums)</visible>
@@ -804,6 +857,7 @@
 						</control>
 						<control type="textbox">
 							<description>Title And Year</description>
+							<visible>!Container.Content(Episodes)</visible>
 							<animation effect="slide" end="0,25" condition="ListItem.IsCollection">Conditional</animation>
 							<left>28</left>
 							<top>50</top>
@@ -812,6 +866,21 @@
 							<font>Library_Light_25</font>
 							<textcolor>Text</textcolor>
 							<label>[B]$INFO[ListItem.Title][/B]$INFO[ListItem.Year, (,)]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<scrolltime>200</scrolltime>
+							<autoscroll delay="1500" time="1000" repeat="1500">true</autoscroll>
+						</control>
+						<control type="textbox">
+							<description>Title And Year</description>
+							<visible>Container.Content(Episodes)</visible>
+							<left>28</left>
+							<top>50</top>
+							<width>669</width>
+							<height>92</height>
+							<font>Library_Light_25</font>
+							<textcolor>Text</textcolor>
+							<label>[B]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title][/B]</label>
 							<align>center</align>
 							<aligny>center</aligny>
 							<scrolltime>200</scrolltime>
@@ -830,6 +899,7 @@
 							<scroll>true</scroll>
 						</control>
 						<control type="textbox">
+							<visible>!Container.Content(Episodes)</visible>
 							<left>28</left>
 							<top>200</top>
 							<width>669</width>
@@ -837,6 +907,18 @@
 							<font>Library_Normal_20</font>
 							<textcolor>Text</textcolor>
 							<label>$INFO[ListItem.Plot]</label>
+							<align>center</align>
+							<autoscroll delay="6500" time="2500" repeat="2500">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+						</control>
+						<control type="textbox">
+							<visible>Container.Content(Episodes)</visible>
+							<left>28</left>
+							<top>200</top>
+							<width>669</width>
+							<height>185</height>
+							<font>Library_Normal_20</font>
+							<textcolor>Text</textcolor>
+							<label>$INFO[ListItem.Date,$LOCALIZE[20416]: ,  -  ]$INFO[ListItem.Plot]</label>
 							<align>center</align>
 							<autoscroll delay="6500" time="2500" repeat="2500">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 						</control>
@@ -914,16 +996,17 @@
 					</control>
 					<control type="group">
 						<visible>!String.IsEmpty(ListItem.Title)</visible>
-						<control type="label">
+						<control type="textbox">
 							<description>TV Show</description>
 							<left>28</left>
-							<top>98</top>
+							<top>68</top>
 							<width>669</width>
-							<height>52</height>
+							<height>110</height>
 							<font>Library_Light_28</font>
 							<textcolor>Text</textcolor>
 							<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
 							<align>center</align>
+							<aligny>center</aligny>
 							<scroll>true</scroll>
 						</control>
 						<control type="label">

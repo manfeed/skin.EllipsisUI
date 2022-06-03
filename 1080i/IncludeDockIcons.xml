@@ -11,6 +11,7 @@
 			<icon>dock\icons\play.png</icon>
 			<label>$LOCALIZE[208]</label>
 			<onclick>PlayerControl(Play)</onclick>
+			<onclick>Dialog.Close(all,true)</onclick>
 			<visible>Player.Paused</visible>
 		</item>
 	</include>

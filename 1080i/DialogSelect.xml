@@ -145,6 +145,16 @@
 							<texture border="8">controls\button_nf.png</texture>
 						</control>
 						<control type="image">
+							<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+							<left>15</left>
+							<top>10</top>
+							<width>90</width>
+							<height>90</height>
+							<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+							<texture>$INFO[ListItem.Art(poster)]</texture>
+						</control>
+						<control type="image">
+							<visible>!String.IsEqual(ListItem.DBType,movie)</visible>
 							<left>15</left>
 							<top>10</top>
 							<width>90</width>
@@ -195,6 +205,16 @@
 							<texture border="8">controls\button_f.png</texture>
 						</control>
 						<control type="image">
+							<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+							<left>15</left>
+							<top>10</top>
+							<width>90</width>
+							<height>90</height>
+							<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+							<texture>$INFO[ListItem.Art(poster)]</texture>
+						</control>
+						<control type="image">
+							<visible>!String.IsEqual(ListItem.DBType,movie)</visible>
 							<left>15</left>
 							<top>10</top>
 							<width>90</width>

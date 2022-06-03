@@ -13,17 +13,20 @@
 	<include file="IncludeShowCaseVinylView.xml"/>
 	<include file="IncludeProfilesView.xml"/>
 	<include file="IncludeLoginView.xml"/>
+	<include file="IncludeWallView.xml"/>
 	<include name="Video_Library_Views">
 		<include>Show_Case_View</include>
 		<include>Show_Case_Hybrid_View</include>
 		<include>List_View_Media</include>
 		<include>DVD_Hybrid_View</include>
 		<include>Tile_Hybrid_View</include>
+		<include>Wall_View</include>
 	</include>
 	<include name="Music_Library_Views">
 		<include>Show_Case_Vinyl_View</include>
 		<include>List_View_Media</include>
 		<include>Tile_Hybrid_View</include>
+		<include>Wall_View</include>
 	</include>
 	<include name="Picture_Views">
 		<include>List_View</include>

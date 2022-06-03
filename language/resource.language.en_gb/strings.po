@@ -53,7 +53,7 @@ msgid "Hide Current Folder / Section Widget"
 msgstr ""
 
 msgctxt "#50009"
-msgid "Hide New (Unwatched) Video Overlay"
+msgid "Hide Watched Video Overlay"
 msgstr ""
 
 msgctxt "#50010"
@@ -702,4 +702,12 @@ msgstr ""
 
 msgctxt "#50171"
 msgid "Game settings"
+msgstr ""
+
+msgctxt "#50172"
+msgid "Same Director"
+msgstr ""
+
+msgctxt "#50173"
+msgid "Wall"
 msgstr ""

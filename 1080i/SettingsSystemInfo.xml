@@ -443,13 +443,6 @@
 			<font>Default</font>
 			<align>center</align>
 		</control>
-		<control type="image">
-			<left>506</left>
-			<top>909</top>
-			<width>908</width>
-			<height>72</height>
-			<texture>filter_iconlabel.png</texture>
-		</control>
 		<control type="label">
 			<description>Current Selection</description>
 			<left>0</left>

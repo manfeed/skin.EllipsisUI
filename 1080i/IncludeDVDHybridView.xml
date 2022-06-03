@@ -41,12 +41,13 @@
 						<visible>!String.IsEmpty(Container(55).ListItem(3).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>0</top>
+						<left>0</left>
 						<width>290</width>
 						<height>424</height>
-						<texture>overlays\dvd\$INFO[Container(55).ListItem(3).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+						<visible>String.IsEqual(Container(55).ListItem(3).Overlay,OverlayWatched.png)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -112,12 +113,13 @@
 						<visible>!String.IsEmpty(Container(55).ListItem(2).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>0</top>
+						<left>0</left>
 						<width>330</width>
 						<height>484</height>
-						<texture>overlays\dvd\$INFO[Container(55).ListItem(2).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+						<visible>String.IsEqual(Container(55).ListItem(2).Overlay,OverlayWatched.png)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -183,12 +185,13 @@
 						<visible>!String.IsEmpty(Container(55).ListItem(1).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>0</top>
+						<left>0</left>
 						<width>376</width>
 						<height>552</height>
-						<texture>overlays\dvd\$INFO[Container(55).ListItem(1).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+						<visible>String.IsEqual(Container(55).ListItem(1).Overlay,OverlayWatched.png)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -257,12 +260,13 @@
 						<visible>!String.IsEmpty(Container(55).ListItem(0).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>0</top>
+						<left>0</left>
 						<width>376</width>
 						<height>552</height>
-						<texture>overlays\dvd\$INFO[Container(55).ListItem(0).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+						<visible>String.IsEqual(Container(55).ListItem(0).Overlay,OverlayWatched.png)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -337,12 +341,13 @@
 						<visible>!String.IsEmpty(Container(55).ListItem(2).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>0</top>
+						<left>0</left>
 						<width>290</width>
 						<height>424</height>
-						<texture>overlays\dvd\$INFO[Container(55).ListItem(2).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+						<visible>String.IsEqual(Container(55).ListItem(2).Overlay,OverlayWatched.png)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -408,12 +413,13 @@
 						<visible>!String.IsEmpty(Container(55).ListItem(1).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>0</top>
+						<left>0</left>
 						<width>290</width>
 						<height>424</height>
-						<texture>overlays\dvd\$INFO[Container(55).ListItem(1).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+						<visible>String.IsEqual(Container(55).ListItem(1).Overlay,OverlayWatched.png)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -479,12 +485,13 @@
 						<visible>!String.IsEmpty(Container(55).ListItem(0).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>0</top>
+						<left>0</left>
 						<width>330</width>
 						<height>484</height>
-						<texture>overlays\dvd\$INFO[Container(55).ListItem(0).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+						<visible>String.IsEqual(Container(55).ListItem(0).Overlay,OverlayWatched.png)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -552,12 +559,13 @@
 						<visible>!String.IsEmpty(Container(55).ListItem(-1).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>0</top>
+						<left>0</left>
 						<width>376</width>
 						<height>552</height>
-						<texture>overlays\dvd\$INFO[Container(55).ListItem(-1).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+						<visible>String.IsEqual(Container(55).ListItem(-1).Overlay,OverlayWatched.png)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -633,12 +641,13 @@
 						<visible>!String.IsEmpty(Container(55).ListItem(2).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>0</top>
+						<left>0</left>
 						<width>290</width>
 						<height>424</height>
-						<texture>overlays\dvd\$INFO[Container(55).ListItem(2).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+						<visible>String.IsEqual(Container(55).ListItem(2).Overlay,OverlayWatched.png)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -710,12 +719,13 @@
 						<visible>!String.IsEmpty(Container(55).ListItem(1).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>0</top>
+						<left>0</left>
 						<width>330</width>
 						<height>484</height>
-						<texture>overlays\dvd\$INFO[Container(55).ListItem(1).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+						<visible>String.IsEqual(Container(55).ListItem(1).Overlay,OverlayWatched.png)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -787,12 +797,13 @@
 						<visible>!String.IsEmpty(Container(55).ListItem(0).Art(poster))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>0</top>
+						<left>0</left>
 						<width>376</width>
 						<height>552</height>
-						<texture>overlays\dvd\$INFO[Container(55).ListItem(0).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+						<visible>String.IsEqual(Container(55).ListItem(0).Overlay,OverlayWatched.png)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -838,9 +849,9 @@
 			<width>798</width>
 			<height>690</height>
 			<onleft>ActivateWindow(1201)</onleft>
-			<onright>60</onright>
+			<onright>67</onright>
 			<viewtype label="50132">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>67</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<itemlayout height="69" width="798">
 				<control type="image">
@@ -868,6 +879,20 @@
 					<texture>$INFO[ListItem.Art(poster)]</texture>
 				</control>
 				<control type="label">
+					<visible>String.IsEqual(Container.SortMethod,$LOCALIZE[369]) + [Container.Content(TvShows) | Container.Content(Seasons)]</visible>
+					<left>82</left>
+					<top>6</top>
+					<width>700</width>
+					<height>52</height>
+					<font>Medium_Large</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label] [COLOR=TextMedium]- $INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), $LOCALIZE[1443] , $LOCALIZE[50161]][/COLOR]</label>
+				</control>
+				<control type="label">
+					<visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[369]) | [!Container.Content(TvShows) + !Container.Content(Seasons)]</visible>
 					<left>82</left>
 					<top>6</top>
 					<width>700</width>
@@ -915,6 +940,20 @@
 					<texture>$INFO[ListItem.Art(poster)]</texture>
 				</control>
 				<control type="label">
+					<visible>String.IsEqual(Container.SortMethod,$LOCALIZE[369]) + [Container.Content(TvShows) | Container.Content(Seasons)]</visible>
+					<left>82</left>
+					<top>6</top>
+					<width>700</width>
+					<height>52</height>
+					<font>Medium_Large</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label] [COLOR=TextMedium]- $INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), $LOCALIZE[1443] , $LOCALIZE[50161]][/COLOR]</label>
+				</control>
+				<control type="label">
+					<visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[369]) | [!Container.Content(TvShows) + !Container.Content(Seasons)]</visible>
 					<left>82</left>
 					<top>6</top>
 					<width>700</width>
@@ -953,7 +992,7 @@
 				</animation>
 				<visible>Container(55).OnPrevious</visible>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="67">
 				<left>1824</left>
 				<height>690</height>
 				<top>175</top>
@@ -983,13 +1022,24 @@
 				<visible>Container(55).OnNext</visible>
 			</control>
 			<control type="label">
-				<left>560</left>
-				<top>865</top>
+				<visible>!ListItem.IsParentFolder</visible>
+				<left>600</left>
+				<top>972</top>
 				<width>1200</width>
 				<align>right</align>
 				<font>Medium_Large</font>
 				<scroll>true</scroll>
-				<label>$INFO[Container(55).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(55).CurrentPage] $LOCALIZE[20163] $INFO[Container(55).NumPages]</label>
+				<label>$INFO[Container(55).CurrentItem] $LOCALIZE[20163] $INFO[Container(55).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(55).CurrentPage] $LOCALIZE[20163] $INFO[Container(55).NumPages]</label>
+			</control>
+			<control type="grouplist">
+				<left>-25</left>
+				<top>972</top>
+				<width>800</width>
+				<height>45</height>
+				<itemgap>10</itemgap>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<include>MediaFlags</include>
 			</control>
 		</control>
 		<control type="group">
@@ -1006,22 +1056,47 @@
 			<animation effect="fade" time="300">WindowOpen</animation>
 			<animation effect="fade" time="300">WindowClose</animation>
 			<control type="image">
-				<left>506</left>
-				<top>909</top>
-				<width>908</width>
-				<height>72</height>
-				<texture>filter_iconlabel.png</texture>
+				<left>835</left>
+				<top>880</top>
+				<width>250</width>
+				<height>150</height>
+				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+			</control>
+			<control type="image">
+				<visible>Container.Content(Seasons)</visible>
+				<left>835</left>
+				<top>880</top>
+				<width>250</width>
+				<height>150</height>
+				<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
 			</control>
 			<control type="label">
-				<description>Current Selection</description>
+				<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
+				<visible>!Container.Content(Seasons)</visible>
 				<left>0</left>
-				<top>906</top>
+				<top>865</top>
 				<width>1920</width>
 				<height>72</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[Container(55).ListItem.Label] $INFO[Container(55).ListItem.Year,(,)]</label>
-				<font>Selected_Item</font>
+				<font>Library_Normal_28</font>
+				<textcolor>TextSelectedItem</textcolor>
+				<shadowcolor>TextShadow</shadowcolor>
+			</control>
+			<control type="label">
+				<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+				<visible>Container.Content(Seasons)</visible>
+				<left>0</left>
+				<top>865</top>
+				<width>1920</width>
+				<height>72</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container(55).ListItem.Label] $INFO[Container(55).ListItem.Year,(,)]$INFO[Container(55).ListItem.TVShowTitle,  -  ,]</label>
+				<font>Library_Normal_28</font>
 				<textcolor>TextSelectedItem</textcolor>
 				<shadowcolor>TextShadow</shadowcolor>
 			</control>

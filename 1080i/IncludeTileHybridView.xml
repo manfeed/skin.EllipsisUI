@@ -3,7 +3,7 @@
 	<include name="Tile_Hybrid_View">
 		<control type="group">
 			<left>998</left>
-			<top>351</top>
+			<top>310</top>
 			<visible>Control.IsVisible(58)</visible>
 			<!-- DVD Hybrid View Icons - Counter Clockwise Mothion -->
 			<control type="group" id="5801">
@@ -46,8 +46,9 @@
 						<top>0</top>
 						<width>290</width>
 						<height>290</height>
-						<texture>overlays\icon\$INFO[Container(58).ListItem(3).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+						<visible>String.IsEqual(Container(58).ListItem(3).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -118,8 +119,9 @@
 						<top>0</top>
 						<width>330</width>
 						<height>330</height>
-						<texture>overlays\icon\$INFO[Container(58).ListItem(2).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+						<visible>String.IsEqual(Container(58).ListItem(2).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -190,8 +192,9 @@
 						<top>0</top>
 						<width>376</width>
 						<height>376</height>
-						<texture>overlays\icon\$INFO[Container(58).ListItem(1).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+						<visible>String.IsEqual(Container(58).ListItem(1).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -265,8 +268,9 @@
 						<top>0</top>
 						<width>376</width>
 						<height>376</height>
-						<texture>overlays\icon\$INFO[Container(58).ListItem(0).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+						<visible>String.IsEqual(Container(58).ListItem(0).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -346,8 +350,9 @@
 						<top>0</top>
 						<width>290</width>
 						<height>290</height>
-						<texture>overlays\icon\$INFO[Container(58).ListItem(2).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+						<visible>String.IsEqual(Container(58).ListItem(2).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -418,8 +423,9 @@
 						<top>0</top>
 						<width>290</width>
 						<height>290</height>
-						<texture>overlays\icon\$INFO[Container(58).ListItem(1).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+						<visible>String.IsEqual(Container(58).ListItem(1).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -490,8 +496,9 @@
 						<top>0</top>
 						<width>330</width>
 						<height>330</height>
-						<texture>overlays\icon\$INFO[Container(58).ListItem(0).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+						<visible>String.IsEqual(Container(58).ListItem(0).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -564,8 +571,9 @@
 						<top>0</top>
 						<width>376</width>
 						<height>376</height>
-						<texture>overlays\icon\$INFO[Container(58).ListItem(-1).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+						<visible>String.IsEqual(Container(58).ListItem(-1).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -646,8 +654,9 @@
 						<top>0</top>
 						<width>290</width>
 						<height>290</height>
-						<texture>overlays\icon\$INFO[Container(58).ListItem(2).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+						<visible>String.IsEqual(Container(58).ListItem(2).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -724,8 +733,9 @@
 						<top>0</top>
 						<width>330</width>
 						<height>330</height>
-						<texture>overlays\icon\$INFO[Container(58).ListItem(1).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+						<visible>String.IsEqual(Container(58).ListItem(1).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -802,8 +812,9 @@
 						<top>0</top>
 						<width>376</width>
 						<height>376</height>
-						<texture>overlays\icon\$INFO[Container(58).ListItem(0).Overlay]</texture>
-						<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+						<visible>String.IsEqual(Container(58).ListItem(0).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -845,7 +856,7 @@
 		<control type="list" id="58">
 			<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(MusicVideos)  | Container.Content(Images)</visible>
 			<left>162</left>
-			<top>178</top>
+			<top>148</top>
 			<width>798</width>
 			<height>690</height>
 			<onleft>ActivateWindow(1201)</onleft>
@@ -869,6 +880,7 @@
 					<texture>$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
+					<visible>!Container.Content(Albums) + !Container.Content(Songs)</visible>
 					<left>82</left>
 					<top>6</top>
 					<width>700</width>
@@ -879,6 +891,32 @@
 					<textcolor>Text</textcolor>
 					<align>left</align>
 					<label>$INFO[ListItem.Label] [COLOR=TextMedium]$INFO[ListItem.Label2, - ,][/COLOR]</label>
+				</control>
+				<control type="label">
+					<visible>Container.Content(Albums)</visible>
+					<left>82</left>
+					<top>6</top>
+					<width>700</width>
+					<height>52</height>
+					<font>Medium_Large</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)] [COLOR=TextMedium]$INFO[ListItem.Label2, - ,][/COLOR]</label>
+				</control>
+				<control type="label">
+					<visible>Container.Content(Songs)</visible>
+					<left>82</left>
+					<top>6</top>
+					<width>700</width>
+					<height>52</height>
+					<font>Medium_Large</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.TrackNumber,,.- ]$INFO[ListItem.Title][COLOR=TextMedium]$INFO[ListItem.Label2, - ,][/COLOR]</label>
 				</control>
 			</itemlayout>
 			<focusedlayout height="69" width="798">
@@ -906,6 +944,7 @@
 					<texture>$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
+					<visible>!Container.Content(Albums) + !Container.Content(Songs)</visible>
 					<left>82</left>
 					<top>6</top>
 					<width>700</width>
@@ -916,6 +955,32 @@
 					<textcolor>Text</textcolor>
 					<align>left</align>
 					<label>$INFO[ListItem.Label] [COLOR=TextMedium]$INFO[ListItem.Label2, - ,][/COLOR]</label>
+				</control>
+				<control type="label">
+					<visible>Container.Content(Songs)</visible>
+					<left>82</left>
+					<top>6</top>
+					<width>700</width>
+					<height>52</height>
+					<font>Medium_Large</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.TrackNumber,,.- ]$INFO[ListItem.Title][COLOR=TextMedium]$INFO[ListItem.Label2, - ,][/COLOR]</label>
+				</control>
+				<control type="label">
+					<visible>Container.Content(Albums)</visible>
+					<left>82</left>
+					<top>6</top>
+					<width>700</width>
+					<height>52</height>
+					<font>Medium_Large</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)] [COLOR=TextMedium]$INFO[ListItem.Label2, - ,][/COLOR]</label>
 				</control>
 			</focusedlayout>
 		</control>
@@ -972,13 +1037,14 @@
 				<visible>Container(58).OnNext</visible>
 			</control>
 			<control type="label">
-				<left>545</left>
-				<top>825</top>
+				<visible>!ListItem.IsParentFolder</visible>
+				<left>575</left>
+				<top>950</top>
 				<width>1200</width>
 				<align>right</align>
 				<font>Medium_Large</font>
 				<scroll>true</scroll>
-				<label>$INFO[Container(58).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(58).CurrentPage] $LOCALIZE[20163] $INFO[Container(58).NumPages]</label>
+				<label>$INFO[Container(58).CurrentItem] $LOCALIZE[20163] $INFO[Container(58).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(58).CurrentPage] $LOCALIZE[20163] $INFO[Container(58).NumPages]</label>
 			</control>
 		</control>
 		<control type="group">
@@ -994,17 +1060,11 @@
 			<animation effect="fade" time="300">Hidden</animation>
 			<animation effect="fade" time="300">WindowOpen</animation>
 			<animation effect="fade" time="300">WindowClose</animation>
-			<control type="image">
-				<left>506</left>
-				<top>909</top>
-				<width>908</width>
-				<height>72</height>
-				<texture>filter_iconlabel.png</texture>
-			</control>
 			<control type="label">
-				<description>Current Selection</description>
+				<visible>String.IsEmpty(ListItem.Art(Clearlogo))</visible>
+				<visible>Container.Content(Artists)</visible>
 				<left>0</left>
-				<top>906</top>
+				<top>890</top>
 				<width>1920</width>
 				<height>72</height>
 				<align>center</align>
@@ -1013,6 +1073,76 @@
 				<font>Selected_Item</font>
 				<textcolor>TextSelectedItem</textcolor>
 				<shadowcolor>TextShadow</shadowcolor>
+			</control>
+			<control type="image">
+				<visible>Container.Content(Artists)</visible>
+				<left>835</left>
+				<top>880</top>
+				<width>250</width>
+				<height>150</height>
+				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+			</control>
+			<control type="label">
+				<visible>String.IsEmpty(ListItem.Art(artist.Clearlogo))</visible>
+				<visible>Container.Content(Albums)</visible>
+				<left>0</left>
+				<top>890</top>
+				<width>1920</width>
+				<height>72</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container(58).ListItem.Artist]</label>
+				<font>Selected_Item</font>
+				<textcolor>TextSelectedItem</textcolor>
+				<shadowcolor>TextShadow</shadowcolor>
+			</control>
+			<control type="image">
+				<visible>Container.Content(Albums)</visible>
+				<left>835</left>
+				<top>880</top>
+				<width>250</width>
+				<height>150</height>
+				<texture background="true">$INFO[ListItem.Art(artist.clearlogo)]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+			</control>
+			<control type="grouplist">
+				<visible>Container.Content(Songs)</visible>
+				<left>100</left>
+				<top>850</top>
+				<height>105</height>
+				<width>1690</width>
+				<align>center</align>
+				<itemgap>40</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="label">
+					<width>auto</width>
+					<height>90</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Album]$INFO[ListItem.Year, (,)]</label>
+					<font>Library_Normal_25</font>
+					<textcolor>TextSelectedItem</textcolor>
+					<shadowcolor>TextShadow</shadowcolor>
+				</control>
+				<control type="image">
+					<visible>!String.IsEmpty(ListItem.Art(artist.clearlogo))</visible>
+					<width>175</width>
+					<height>105</height>
+					<texture background="true">$INFO[ListItem.Art(artist.clearlogo)]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+				</control>
+				<control type="label">
+					<visible>String.IsEmpty(ListItem.Art(artist.clearlogo))</visible>
+					<width>auto</width>
+					<height>90</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Artist,-   ,]</label>
+					<font>Library_Normal_25</font>
+					<textcolor>TextSelectedItem</textcolor>
+					<shadowcolor>TextShadow</shadowcolor>
+				</control>
 			</control>
 		</control>
 	</include>

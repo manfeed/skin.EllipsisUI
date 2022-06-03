@@ -376,8 +376,8 @@
 				<texturenofocus/>
 				<textureradioonfocus>controls\radiobutton_f.png</textureradioonfocus>
 				<textureradioonnofocus>controls\radiobutton_nf.png</textureradioonnofocus>
-				<onclick>Skin.ToggleSetting(Disable_Unwatched_Overlay)</onclick>
-				<selected>Skin.HasSetting(Disable_Unwatched_Overlay)</selected>
+				<onclick>Skin.ToggleSetting(Disable_Watched_Overlay)</onclick>
+				<selected>Skin.HasSetting(Disable_Watched_Overlay)</selected>
 				<pulseonselect>false</pulseonselect>
 			</control>
 			<control type="radiobutton" id="200">
@@ -716,13 +716,6 @@
 			<animation effect="fade" time="300">Hidden</animation>
 			<animation effect="fade" time="300">WindowOpen</animation>
 			<animation effect="fade" time="300">WindowClose</animation>
-			<control type="image">
-				<left>506</left>
-				<top>909</top>
-				<width>908</width>
-				<height>72</height>
-				<texture>filter_iconlabel.png</texture>
-			</control>
 			<control type="label">
 				<description>Current Selection</description>
 				<left>0</left>

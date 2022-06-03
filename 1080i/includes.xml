@@ -69,6 +69,10 @@
 		<value condition="Integer.IsLess(ListItem.Duration,3600)">$INFO[ListItem.Duration(m),,[LOWERCASE] $LOCALIZE[12391][/LOWERCASE]]</value>
 		<value>$VAR[Durat_hh] $VAR[Durat_mm]</value>
 	</variable>
+	<variable name="watched_style">
+		<value condition="!Skin.HasSetting(Disable_Watched_Overlay) + [Container.Content(Episodes) | Container.Content(MusicVideos)]">overlays/icon/OverlayWatched2.png</value>
+		<value condition="!Skin.HasSetting(Disable_Watched_Overlay)">overlays/icon/OverlayWatched.png</value>
+	</variable>
 	<include name="FolderName">
 		<control type="group">
 			<visible>!Skin.HasSetting(Disable_Current_Folder_Section_Widget)</visible>
@@ -736,7 +740,7 @@
 			<visible>![!Skin.HasSetting(Disable_Visualisation) + Player.HasAudio]</visible>
 			<visible>![!Skin.HasSetting(Disable_Background_Video) + Player.HasVideo]</visible>
 			<visible>![!String.IsEmpty(Fanart.Image) + String.IsEmpty(ListItem.Art(fanart))]</visible>
-			<visible>![!Skin.HasSetting(Disable_Fanart) + String.IsEmpty(Fanart.Image) + !String.IsEmpty(ListItem.Art(fanart))]</visible>
+			<visible>![!Skin.HasSetting(Disable_Fanart) + !String.IsEmpty(ListItem.Art(fanart))]</visible>
 			<visible>![Skin.HasSetting(Enable_Custom_Background) + !String.IsEmpty(Skin.String(Custom_Background))]</visible>
 			<visible>![Skin.HasSetting(Enable_Custom_Background_Folder) + !String.IsEmpty(Skin.String(Custom_Background_Folder))]</visible>
 			<visible>Skin.HasSetting(Enable_Time_Of_Day_Background) + String.IsEmpty(ListItem.Art(artist.fanart))</visible>
@@ -1004,6 +1008,19 @@
 				<animation effect="fade" time="60000">Hidden</animation>
 				<visible>System.Time(23:00,23:59)</visible>
 			</control>
+		</control>
+		<control type="image">
+			<left>-960</left>
+			<top>-540</top>
+			<width>3840</width>
+			<height>2160</height>
+			<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+			<texture diffuse="background-diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+			<visible>Container.Content(MusicVideos) + !String.IsEmpty(ListItem.Art(thumb))</visible>
+			<visible>![!Skin.HasSetting(Disable_Visualisation) + Player.HasAudio]</visible>
+			<visible>![!Skin.HasSetting(Disable_Background_Video) + Player.HasVideo]</visible>
+			<visible>![!String.IsEmpty(Fanart.Image) + String.IsEmpty(ListItem.Art(fanart))]</visible>
+			<visible>![!Skin.HasSetting(Disable_Fanart) + String.IsEmpty(Fanart.Image) + !String.IsEmpty(ListItem.Art(fanart))]</visible>
 		</control>
 		<control type="multiimage">
 			<animation effect="fade" time="600">Visible</animation>

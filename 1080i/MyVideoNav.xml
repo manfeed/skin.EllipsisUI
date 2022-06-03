@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,51,55,58,59,62</views>
+	<views>50,51,53,55,58,59,62</views>
 	<controls>
 		<include>Background</include>
 		<!-- Elipsis Visor -->

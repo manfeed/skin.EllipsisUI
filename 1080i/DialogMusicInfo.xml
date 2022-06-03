@@ -795,7 +795,7 @@
 					<font>Medium</font>
 					<scroll>true</scroll>
 					<align>right</align>
-					<label>$INFO[Container(50).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(50).CurrentPage] $LOCALIZE[20163] $INFO[Container(50).NumPages]</label>
+					<label>$INFO[Container(50).CurrentItem] $LOCALIZE[20163] $INFO[Container(50).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(50).CurrentPage] $LOCALIZE[20163] $INFO[Container(50).NumPages]</label>
 				</control>
 			</control>
 			<control type="grouplist" id="200">
