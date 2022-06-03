@@ -65,12 +65,13 @@
 							<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 						</control>
 						<control type="image">
-							<left>0</left>
 							<top>0</top>
+							<left>0</left>
 							<width>450</width>
 							<height>662</height>
-							<texture>overlays\dvd\$INFO[ListItem.Overlay]</texture>
-							<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+							<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+							<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 						</control>
 						<control type="image">
 							<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
@@ -170,16 +171,17 @@
 							<height>662</height>
 							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 							<texture diffuse="dvdbox-diffuse.png"/>
-							<info>ListItem.Thumb</info>
-							<visible>!String.IsEmpty(ListItem.Thumb)</visible>
+							<info>ListItem.Art(poster)</info>
+							<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
 						</control>
 						<control type="image">
-							<left>0</left>
 							<top>0</top>
+							<left>0</left>
 							<width>450</width>
 							<height>662</height>
-							<texture>overlays\dvd\$INFO[ListItem.Overlay]</texture>
-							<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+							<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+							<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -283,12 +285,13 @@
 							<visible>!String.IsEmpty(ListItem.Thumb)</visible>
 						</control>
 						<control type="image">
-							<left>0</left>
 							<top>0</top>
+							<left>0</left>
 							<width>447</width>
 							<height>252</height>
-							<texture>overlays\wide\$INFO[ListItem.Overlay]</texture>
-							<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+							<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+							<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -412,12 +415,13 @@
 							<visible>!String.IsEmpty(ListItem.Thumb)</visible>
 						</control>
 						<control type="image">
-							<left>0</left>
 							<top>0</top>
+							<left>0</left>
 							<width>447</width>
 							<height>252</height>
-							<texture>overlays\wide\$INFO[ListItem.Overlay]</texture>
-							<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+							<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+							<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -641,7 +645,7 @@
 					<control type="togglebutton" id="8">
 						<description>Play/Browse</description>
 						<height>69</height>
-						<width>250</width>
+						<width>215</width>
 						<label>208</label>
 						<altlabel>1024</altlabel>
 						<align>center</align>
@@ -649,7 +653,7 @@
 					<control type="button" id="11">
 						<description>Trailer</description>
 						<height>69</height>
-						<width>250</width>
+						<width>215</width>
 						<label>20410</label>
 						<align>center</align>
 						<enable>!String.IsEmpty(ListItem.Trailer)</enable>
@@ -657,28 +661,36 @@
 					<control type="button" id="5">
 						<description>Cast</description>
 						<height>69</height>
-						<width>250</width>
+						<width>215</width>
 						<label>206</label>
+						<align>center</align>
+					</control>
+					<control type="button" id="13">
+						<description>Same director</description>
+						<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+						<height>69</height>
+						<width>215</width>
+						<label>50172</label>
 						<align>center</align>
 					</control>
 					<control type="button" id="10">
 						<description>Choose Art</description>
 						<height>69</height>
-						<width>250</width>
+						<width>215</width>
 						<label>13511</label>
 						<align>center</align>
 					</control>
 					<control type="button" id="6">
 						<description>Refresh</description>
 						<height>69</height>
-						<width>250</width>
+						<width>215</width>
 						<label>184</label>
 						<align>center</align>
 					</control>
 					<control type="button" id="7">
 						<description>User Rating</description>
 						<height>69</height>
-						<width>250</width>
+						<width>215</width>
 						<label>38023</label>
 						<align>center</align>
 					</control>

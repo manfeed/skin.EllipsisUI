@@ -6,12 +6,13 @@
 			<top>156</top>
 			<width>1596</width>
 			<height>759</height>
+			<animation effect="slide" start="0,0" end="0,-30" time="0" condition="Container.Content(Movies) | Container.Content(TvShows) | Container.Content(MusicVideos) | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)">Conditional</animation>
 			<onleft>ActivateWindow(1201)</onleft>
-			<onright>60</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
+			<onright>65</onright>
+			<onup>59</onup>
+			<ondown>59</ondown>
 			<viewtype label="535">list</viewtype>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>65</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<itemlayout height="69">
 				<control type="image">
@@ -39,29 +40,103 @@
 					<texture>$INFO[ListItem.Art(poster)]</texture>
 				</control>
 				<control type="image">
-					<left>82</left>
+					<left>72</left>
 					<top>0</top>
 					<width>69</width>
 					<height>69</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>overlays\list_nf\$INFO[ListItem.Overlay]</texture>
-					<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+					<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched3.png</texture>
+					<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="group">
+					<visible>Container.Content(Movies)</visible>
+					<control type="label">
+						<left>152</left>
+						<top>6</top>
+						<width>1264</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label] $INFO[ListItem.Year, (,)]  [COLOR TextMedium]$VAR[ItemDuration][/COLOR]</label>
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
+					<control type="label">
+						<left>82</left>
+						<top>6</top>
+						<width>1334</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label] $INFO[ListItem.Year, (,)]  [COLOR TextMedium]$VAR[ItemDuration][/COLOR]</label>
+						<visible>!String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Container.Content(Episodes)</visible>
+					<control type="label">
+						<left>152</left>
+						<top>6</top>
+						<width>1264</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]  [COLOR TextMedium]$VAR[ItemDuration][/COLOR]</label>
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
+					<control type="label">
+						<left>82</left>
+						<top>6</top>
+						<width>1334</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]  [COLOR TextMedium]$VAR[ItemDuration][/COLOR]</label>
+						<visible>!String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(Albums) + !Container.Content(Songs)</visible>
+					<control type="label">
+						<left>152</left>
+						<top>6</top>
+						<width>1264</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
+					<control type="label">
+						<left>82</left>
+						<top>6</top>
+						<width>1334</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
 				</control>
 				<control type="label">
-					<left>152</left>
-					<top>6</top>
-					<width>1264</width>
-					<height>52</height>
-					<font>Default</font>
-					<aligny>center</aligny>
-					<selectedcolor>Highlight</selectedcolor>
-					<textcolor>Text</textcolor>
-					<align>left</align>
-					<info>ListItem.Label</info>
-					<visible>String.Contains(ListItem.Overlay,OverlayUnwatched.png)</visible>
-					<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
-				</control>
-				<control type="label">
+					<visible>Container.Content(Albums)</visible>
 					<left>82</left>
 					<top>6</top>
 					<width>1334</width>
@@ -71,11 +146,37 @@
 					<selectedcolor>Highlight</selectedcolor>
 					<textcolor>Text</textcolor>
 					<align>left</align>
-					<info>ListItem.Label</info>
-					<visible>!String.Contains(ListItem.Overlay,OverlayUnwatched.png) | Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
+				</control>
+				<control type="label">
+					<visible>Container.Content(Songs)</visible>
+					<left>82</left>
+					<top>6</top>
+					<width>1334</width>
+					<height>52</height>
+					<font>Default</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.TrackNumber,,.- ]$INFO[ListItem.Title][COLOR=TextMedium]$INFO[ListItem.Album, - ,]$INFO[ListItem.Year, (,)][/COLOR]</label>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(Container.SortMethod,$LOCALIZE[369]) + [Container.Content(TvShows) | Container.Content(Seasons)]</visible>
+					<left>1120</left>
+					<top>6</top>
+					<width>450</width>
+					<height>52</height>
+					<font>Default</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>right</align>
+					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), $LOCALIZE[1443] , $LOCALIZE[50161]]</label>
 				</control>
 				<control type="label">
 					<visible>!Container.Content(addons)</visible>
+					<visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[369]) | [!Container.Content(TvShows) + !Container.Content(Seasons)]</visible>
 					<left>1190</left>
 					<top>6</top>
 					<width>380</width>
@@ -138,38 +239,103 @@
 					<texture>$INFO[ListItem.Art(poster)]</texture>
 				</control>
 				<control type="image">
-					<left>82</left>
+					<left>72</left>
 					<top>0</top>
 					<width>69</width>
 					<height>69</height>
-					<texture>overlays\list_fo\$INFO[ListItem.Overlay]</texture>
-					<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
-					<visible>Control.HasFocus(59)</visible>
+					<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched3.png</texture>
+					<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 				</control>
-				<control type="image">
-					<left>82</left>
-					<top>0</top>
-					<width>69</width>
-					<height>69</height>
-					<texture>overlays\list_nf\$INFO[ListItem.Overlay]</texture>
-					<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
-					<visible>!Control.HasFocus(59)</visible>
+				<control type="group">
+					<visible>Container.Content(Movies)</visible>
+					<control type="label">
+						<left>152</left>
+						<top>6</top>
+						<width>1264</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label] $INFO[ListItem.Year, (,)]  [COLOR TextMedium]$VAR[ItemDuration][/COLOR]</label>
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
+					<control type="label">
+						<left>82</left>
+						<top>6</top>
+						<width>1334</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label] $INFO[ListItem.Year, (,)]  [COLOR TextMedium]$VAR[ItemDuration][/COLOR]</label>
+						<visible>!String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Container.Content(Episodes)</visible>
+					<control type="label">
+						<left>152</left>
+						<top>6</top>
+						<width>1264</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]  [COLOR TextMedium]$VAR[ItemDuration][/COLOR]</label>
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
+					<control type="label">
+						<left>82</left>
+						<top>6</top>
+						<width>1334</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]  [COLOR TextMedium]$VAR[ItemDuration][/COLOR]</label>
+						<visible>!String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(Albums) + !Container.Content(Songs)</visible>
+					<control type="label">
+						<left>152</left>
+						<top>6</top>
+						<width>1264</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
+					<control type="label">
+						<left>82</left>
+						<top>6</top>
+						<width>1334</width>
+						<height>52</height>
+						<font>Default</font>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					</control>
 				</control>
 				<control type="label">
-					<left>152</left>
-					<top>6</top>
-					<width>1264</width>
-					<height>52</height>
-					<font>Default</font>
-					<aligny>center</aligny>
-					<selectedcolor>Highlight</selectedcolor>
-					<textcolor>Text</textcolor>
-					<align>left</align>
-					<info>ListItem.Label</info>
-					<visible>String.Contains(ListItem.Overlay,OverlayUnwatched.png)</visible>
-					<visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
-				</control>
-				<control type="label">
+					<visible>Container.Content(Songs)</visible>
 					<left>82</left>
 					<top>6</top>
 					<width>1334</width>
@@ -179,11 +345,37 @@
 					<selectedcolor>Highlight</selectedcolor>
 					<textcolor>Text</textcolor>
 					<align>left</align>
-					<info>ListItem.Label</info>
-					<visible>!String.Contains(ListItem.Overlay,OverlayUnwatched.png) | Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
+					<label>$INFO[ListItem.TrackNumber,,.- ]$INFO[ListItem.Title][COLOR=TextMedium]$INFO[ListItem.Album, - ,]$INFO[ListItem.Year, (,)][/COLOR]</label>
+				</control>
+				<control type="label">
+					<visible>Container.Content(Albums)</visible>
+					<left>82</left>
+					<top>6</top>
+					<width>1334</width>
+					<height>52</height>
+					<font>Default</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Label]$INFO[ListItem.Year, (,)]</label>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(Container.SortMethod,$LOCALIZE[369]) + [Container.Content(TvShows) | Container.Content(Seasons)]</visible>
+					<left>1120</left>
+					<top>6</top>
+					<width>450</width>
+					<height>52</height>
+					<font>Default</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>right</align>
+					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), $LOCALIZE[1443] , $LOCALIZE[50161]]</label>
 				</control>
 				<control type="label">
 					<visible>!Container.Content(addons)</visible>
+					<visible>!String.IsEqual(Container.SortMethod,$LOCALIZE[369]) | [!Container.Content(TvShows) + !Container.Content(Seasons)]</visible>
 					<left>1190</left>
 					<top>6</top>
 					<width>380</width>
@@ -216,7 +408,7 @@
 			<top>50</top>
 			<control type="image">
 				<left>1804</left>
-				<top>65</top>
+				<top>20</top>
 				<width>60</width>
 				<height>60</height>
 				<texture>menu\nav\nav_arrow_up_NF.png</texture>
@@ -225,7 +417,7 @@
 			</control>
 			<control type="image">
 				<left>1804</left>
-				<top>65</top>
+				<top>20</top>
 				<width>60</width>
 				<height>60</height>
 				<texture>menu\nav\nav_arrow_up_FO.png</texture>
@@ -235,17 +427,17 @@
 				</animation>
 				<visible>Container(59).OnPrevious</visible>
 			</control>
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="65">
 				<left>1824</left>
 				<height>759</height>
-				<top>126</top>
+				<top>80</top>
 				<width>18</width>
 				<onleft>59</onleft>
 				<onright>ActivateWindow(1201)</onright>
 			</control>
 			<control type="image">
 				<left>1804</left>
-				<top>888</top>
+				<top>842</top>
 				<width>60</width>
 				<height>60</height>
 				<texture>menu\nav\nav_arrow_down_NF.png</texture>
@@ -254,7 +446,7 @@
 			</control>
 			<control type="image">
 				<left>1804</left>
-				<top>888</top>
+				<top>842</top>
 				<width>60</width>
 				<height>60</height>
 				<texture>menu\nav\nav_arrow_down_FO.png</texture>
@@ -265,13 +457,115 @@
 				<visible>Container(59).OnNext</visible>
 			</control>
 			<control type="label">
-				<left>545</left>
-				<top>895</top>
+				<visible>!ListItem.IsParentFolder</visible>
+				<left>585</left>
+				<top>903</top>
 				<width>1200</width>
 				<align>right</align>
-				<font>Default</font>
+				<font>Medium</font>
 				<scroll>true</scroll>
-				<label>$INFO[Container(59).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(59).CurrentPage] $LOCALIZE[20163] $INFO[Container(59).NumPages]</label>
+				<label>$INFO[Container(59).CurrentItem] $LOCALIZE[20163] $INFO[Container(59).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(59).CurrentPage] $LOCALIZE[20163] $INFO[Container(59).NumPages]</label>
+			</control>
+			<control type="image">
+				<left>835</left>
+				<top>847</top>
+				<width>250</width>
+				<height>150</height>
+				<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+			</control>
+			<control type="image">
+				<visible>Container.Content(Seasons)</visible>
+				<left>835</left>
+				<top>847</top>
+				<width>250</width>
+				<height>150</height>
+				<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+			</control>
+			<control type="image">
+				<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+				<left>835</left>
+				<top>845</top>
+				<width>250</width>
+				<height>150</height>
+				<texture background="true">$INFO[ListItem.Art(artist.clearlogo)]</texture>
+				<aspectratio align="center" aligny="top">keep</aspectratio>
+			</control>
+			<control type="label">
+				<visible>[Container.Content(Albums) | Container.Content(Songs)] + String.IsEmpty(ListItem.Art(artist.clearlogo))</visible>
+				<left>1</left>
+				<top>843</top>
+				<width>1920</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Artist]</label>
+				<font>Library_Normal_28</font>
+				<textcolor>TextSelectedItem</textcolor>
+				<shadowcolor>TextShadow</shadowcolor>
+			</control>
+			<control type="grouplist">
+				<visible>Container.Content(Episodes)</visible>
+				<left>100</left>
+				<top>12</top>
+				<height>105</height>
+				<width>1690</width>
+				<align>center</align>
+				<itemgap>40</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="label">
+					<width>auto</width>
+					<height>90</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Year, (,)]</label>
+					<font>Library_Normal_28</font>
+					<textcolor>TextSelectedItem</textcolor>
+					<shadowcolor>TextShadow</shadowcolor>
+				</control>
+				<control type="image">
+					<visible>!String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+					<width>175</width>
+					<height>105</height>
+					<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+				</control>
+				<control type="label">
+					<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+					<width>auto</width>
+					<height>90</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.TVShowTitle,-   ,]</label>
+					<font>Library_Normal_28</font>
+					<textcolor>TextSelectedItem</textcolor>
+					<shadowcolor>TextShadow</shadowcolor>
+				</control>
+			</control>
+			<control type="label">
+				<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+				<visible>Container.Content(Seasons)</visible>
+				<left>0</left>
+				<top>24</top>
+				<width>1920</width>
+				<height>72</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Year, (,)]$INFO[ListItem.TVShowTitle,  -  ,]</label>
+				<font>Library_Normal_28</font>
+				<textcolor>TextSelectedItem</textcolor>
+				<shadowcolor>TextShadow</shadowcolor>
+			</control>
+			<control type="grouplist">
+				<left>-25</left>
+				<top>895</top>
+				<width>800</width>
+				<height>45</height>
+				<itemgap>10</itemgap>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<include>MediaFlags</include>
 			</control>
 		</control>
 		<control type="group">

@@ -59,13 +59,6 @@
 		</control>
 	</include>
 	<include name="Dock_LabelOSD">
-		<control type="image">
-			<left>-453</left>
-			<top>-93</top>
-			<width>908</width>
-			<height>72</height>
-			<texture>filter_iconlabel.png</texture>
-		</control>
 		<control type="label">
 			<description>Current Selection</description>
 			<left>-960</left>

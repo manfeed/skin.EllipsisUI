@@ -337,7 +337,7 @@
 			<visible>!Skin.HasSetting(Disable_Music_Home_Icon)</visible>
 			<icon>icon_home_music.png</icon>
 			<label>1211</label>
-			<onclick>ActivateWindow(Music,Artists)</onclick>
+			<onclick>ActivateWindow(Music)</onclick>
 		</item>
 	</include>
 	<include name="Menu_Videos">
@@ -345,7 +345,7 @@
 			<visible>!Skin.HasSetting(Disable_Videos_Home_Icon)</visible>
 			<icon>icon_home_videos.png</icon>
 			<label>1212</label>
-			<onclick>ActivateWindow(Videos,Files)</onclick>
+			<onclick>ActivateWindow(Videos,root)</onclick>
 		</item>
 	</include>
 	<include name="Menu_Play_DVD">
@@ -363,7 +363,7 @@
 			<visible>Library.HasContent(TVShows)</visible>
 			<icon>icon_home_tv_library.png</icon>
 			<label>[CAPITALIZE]$LOCALIZE[50067][/CAPITALIZE]</label>
-			<onclick>ActivateWindow(Videos,TvShowTitles)</onclick>
+			<onclick>ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
 		</item>
 	</include>
 	<include name="Menu_Movie_Library">
@@ -372,7 +372,7 @@
 			<visible>Library.HasContent(Movies)</visible>
 			<icon>icon_home_movie_library.png</icon>
 			<label>[CAPITALIZE]$LOCALIZE[20342][/CAPITALIZE]</label>
-			<onclick>ActivateWindow(Videos,MovieTitles)</onclick>
+			<onclick>ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
 		</item>
 	</include>
 	<include name="Menu_Music_Video_Library">

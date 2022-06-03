@@ -23,7 +23,6 @@
 			<left>180</left>
 			<width>1520</width>
 			<visible>!Window.IsVisible(sliderdialog)</visible>
-			<visible>!Window.Is(osdaudiosettings)</visible>
 			<control type="group">
 				<width>1520</width>
 				<height>870</height>

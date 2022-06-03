@@ -1716,13 +1716,6 @@
                 <animation effect="fade" time="300">Hidden</animation>
                 <animation effect="fade" time="300">WindowOpen</animation>
                 <animation effect="fade" time="300">WindowClose</animation>
-                <control type="image">
-                    <left>-454</left>
-                    <top>549</top>
-                    <width>908</width>
-                    <height>72</height>
-                    <texture>filter_iconlabel.png</texture>
-                </control>
                 <control type="label">
                     <description>Current Selection</description>
                     <left>-960</left>

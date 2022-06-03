@@ -1,170 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-    <include name="List_View">
-        <control type="list" id="50">
-            <left>162</left>
-            <top>264</top>
-            <width>1596</width>
-            <height>552</height>
-            <onleft>ActivateWindow(1201)</onleft>
-            <onright>ActivateWindow(1201)</onright>
-            <onup>50</onup>
-            <ondown>50</ondown>
-            <viewtype label="535">list</viewtype>
-            <pagecontrol></pagecontrol>
-            <scrolltime>200</scrolltime>
-            <itemlayout height="69">
-                <control type="image">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>1596</width>
-                    <height>69</height>
-                    <texture border="4,5,6,8">controls\button_nf.png</texture>
-                </control>
-                <control type="image">
-                    <left>15</left>
-                    <top>6</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texture fallback="DefaultHardDisk.png">$INFO[Listitem.Icon]</texture>
-                </control>
-                <control type="image">
-                    <left>82</left>
-                    <top>0</top>
-                    <width>69</width>
-                    <height>69</height>
-                    <aspectratio>stretch</aspectratio>
-                    <texture>overlays\list_nf\$INFO[ListItem.Overlay]</texture>
-                    <visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
-                </control>
-                <control type="label">
-                    <left>152</left>
-                    <top>6</top>
-                    <width>1264</width>
-                    <height>52</height>
-                    <font>Default</font>
-                    <aligny>center</aligny>
-                    <selectedcolor>Highlight</selectedcolor>
-                    <textcolor>Text</textcolor>
-                    <align>left</align>
-                    <info>ListItem.Label</info>
-                    <visible>String.Contains(ListItem.Overlay,OverlayUnwatched.png)</visible>
-                    <visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
-                </control>
-                <control type="label">
-                    <left>82</left>
-                    <top>6</top>
-                    <width>1334</width>
-                    <height>52</height>
-                    <font>Default</font>
-                    <aligny>center</aligny>
-                    <selectedcolor>Highlight</selectedcolor>
-                    <textcolor>Text</textcolor>
-                    <align>left</align>
-                    <info>ListItem.Label</info>
-                    <visible>!String.Contains(ListItem.Overlay,OverlayUnwatched.png) | Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
-                </control>
-                <control type="label">
-                    <left>1190</left>
-                    <top>6</top>
-                    <width>380</width>
-                    <height>52</height>
-                    <font>Default</font>
-                    <aligny>center</aligny>
-                    <selectedcolor>Highlight</selectedcolor>
-                    <textcolor>Text</textcolor>
-                    <align>right</align>
-                    <info>ListItem.Label2</info>
-                </control>
-            </itemlayout>
-            <focusedlayout height="69">
-                <control type="image">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>1596</width>
-                    <height>69</height>
-                    <texture border="4,5,6,8">controls\button_nf.png</texture>
-                    <visible>!Control.HasFocus(50)</visible>
-                </control>
-                <control type="image">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>1596</width>
-                    <height>69</height>
-                    <texture border="4,5,6,8">controls\button_f.png</texture>
-                    <visible>Control.HasFocus(50)</visible>
-                </control>
-                <control type="image">
-                    <left>15</left>
-                    <top>6</top>
-                    <width>52</width>
-                    <height>52</height>
-                    <texture fallback="DefaultHardDisk.png">$INFO[Listitem.Icon]</texture>
-                </control>
-                <control type="image">
-                    <left>82</left>
-                    <top>0</top>
-                    <width>69</width>
-                    <height>69</height>
-                    <texture>overlays\list_fo\$INFO[ListItem.Overlay]</texture>
-                    <visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
-                    <visible>Control.HasFocus(50)</visible>
-                </control>
-                <control type="image">
-                    <left>82</left>
-                    <top>0</top>
-                    <width>69</width>
-                    <height>69</height>
-                    <texture>overlays\list_nf\$INFO[ListItem.Overlay]</texture>
-                    <visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
-                    <visible>!Control.HasFocus(50)</visible>
-                </control>
-                <control type="label">
-                    <left>152</left>
-                    <top>6</top>
-                    <width>1264</width>
-                    <height>52</height>
-                    <font>Default</font>
-                    <aligny>center</aligny>
-                    <selectedcolor>Highlight</selectedcolor>
-                    <textcolor>Text</textcolor>
-                    <align>left</align>
-                    <info>ListItem.Label</info>
-                    <visible>String.Contains(ListItem.Overlay,OverlayUnwatched.png)</visible>
-                    <visible>!Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
-                </control>
-                <control type="label">
-                    <left>82</left>
-                    <top>6</top>
-                    <width>1334</width>
-                    <height>52</height>
-                    <font>Default</font>
-                    <aligny>center</aligny>
-                    <selectedcolor>Highlight</selectedcolor>
-                    <textcolor>Text</textcolor>
-                    <align>left</align>
-                    <info>ListItem.Label</info>
-                    <visible>!String.Contains(ListItem.Overlay,OverlayUnwatched.png) | Skin.HasSetting(Disable_Unwatched_Overlay)</visible>
-                </control>
-                <control type="label">
-                    <left>1190</left>
-                    <top>6</top>
-                    <width>380</width>
-                    <height>52</height>
-                    <font>Default</font>
-                    <aligny>center</aligny>
-                    <selectedcolor>Highlight</selectedcolor>
-                    <textcolor>Text</textcolor>
-                    <align>right</align>
-                    <info>ListItem.Label2</info>
-                </control>
-            </focusedlayout>
-        </control>
-        <control type="group">
-            <left>854</left>
-            <top>434</top>
-            <visible>Control.IsVisible(50)</visible>
-            <include>Sort_Letter</include>
-        </control>
-    </include>
+	<include name="List_View">
+		<control type="list" id="50">
+			<left>162</left>
+			<top>264</top>
+			<width>1596</width>
+			<height>552</height>
+			<onleft>ActivateWindow(1201)</onleft>
+			<onright>ActivateWindow(1201)</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<viewtype label="535">list</viewtype>
+			<pagecontrol/>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="69">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1596</width>
+					<height>69</height>
+					<texture border="4,5,6,8">controls\button_nf.png</texture>
+				</control>
+				<control type="image">
+					<left>15</left>
+					<top>6</top>
+					<width>52</width>
+					<height>52</height>
+					<texture fallback="DefaultHardDisk.png">$INFO[Listitem.Icon]</texture>
+				</control>
+				<control type="image">
+					<left>72</left>
+					<top>0</top>
+					<width>69</width>
+					<height>69</height>
+					<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched3.png</texture>
+					<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="label">
+					<left>152</left>
+					<top>6</top>
+					<width>1264</width>
+					<height>52</height>
+					<font>Default</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+				</control>
+				<control type="label">
+					<left>82</left>
+					<top>6</top>
+					<width>1334</width>
+					<height>52</height>
+					<font>Default</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>!String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Skin.HasSetting(Disable_Watched_Overlay)</visible>
+				</control>
+				<control type="label">
+					<left>1190</left>
+					<top>6</top>
+					<width>380</width>
+					<height>52</height>
+					<font>Default</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</itemlayout>
+			<focusedlayout height="69">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1596</width>
+					<height>69</height>
+					<texture border="4,5,6,8">controls\button_nf.png</texture>
+					<visible>!Control.HasFocus(50)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1596</width>
+					<height>69</height>
+					<texture border="4,5,6,8">controls\button_f.png</texture>
+					<visible>Control.HasFocus(50)</visible>
+				</control>
+				<control type="image">
+					<left>15</left>
+					<top>6</top>
+					<width>52</width>
+					<height>52</height>
+					<texture fallback="DefaultHardDisk.png">$INFO[Listitem.Icon]</texture>
+				</control>
+				<control type="image">
+					<left>72</left>
+					<top>0</top>
+					<width>69</width>
+					<height>69</height>
+					<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched3.png</texture>
+					<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="label">
+					<left>152</left>
+					<top>6</top>
+					<width>1264</width>
+					<height>52</height>
+					<font>Default</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+				</control>
+				<control type="label">
+					<left>82</left>
+					<top>6</top>
+					<width>1334</width>
+					<height>52</height>
+					<font>Default</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>left</align>
+					<info>ListItem.Label</info>
+					<visible>!String.IsEqual(ListItem.Overlay,OverlayWatched.png) | Skin.HasSetting(Disable_Watched_Overlay)</visible>
+				</control>
+				<control type="label">
+					<left>1190</left>
+					<top>6</top>
+					<width>380</width>
+					<height>52</height>
+					<font>Default</font>
+					<aligny>center</aligny>
+					<selectedcolor>Highlight</selectedcolor>
+					<textcolor>Text</textcolor>
+					<align>right</align>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group">
+			<left>854</left>
+			<top>434</top>
+			<visible>Control.IsVisible(50)</visible>
+			<include>Sort_Letter</include>
+		</control>
+	</include>
 </includes>

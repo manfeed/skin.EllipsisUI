@@ -53,8 +53,8 @@ msgid "Hide Current Folder / Section Widget"
 msgstr "Ocultar carpeta / ventana actual"
 
 msgctxt "#50009"
-msgid "Hide New (Unwatched) Video Overlay"
-msgstr "Ocultar marca nuevos vídeos (no visualizados)"
+msgid "Hide Watched Video Overlay"
+msgstr "Ocultar marca vídeos ya vistos"
 
 msgctxt "#50010"
 msgid "- File:"
@@ -562,11 +562,11 @@ msgstr "Vista Autentificación"
 
 msgctxt "#50136"
 msgid "Show Case Hybrid"
-msgstr "Mostrar Carátula Híbrido"
+msgstr "Carátula Híbrido"
 
 msgctxt "#50137"
 msgid "Show Case"
-msgstr "Mostrar Carátula"
+msgstr "Carátula"
 
 msgctxt "#50138"
 msgid "Vinyl"
@@ -703,3 +703,11 @@ msgstr "Memoria Usada:"
 msgctxt "#50171"
 msgid "Game settings"
 msgstr "Configuración juegos"
+
+msgctxt "#50172"
+msgid "Same Director"
+msgstr "Mismo director"
+
+msgctxt "#50173"
+msgid "Wall"
+msgstr "Muro"
