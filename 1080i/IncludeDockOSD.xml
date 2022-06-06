@@ -155,14 +155,14 @@
 			<width>15</width>
 			<height>15</height>
 			<label/>
-			<font></font>
-			<textcolor></textcolor>
-			<texturefocus></texturefocus>
-			<texturenofocus></texturenofocus>
-			<textureup></textureup>
-			<texturedown></texturedown>
-			<textureupfocus></textureupfocus>
-			<texturedownfocus></texturedownfocus>
+			<font/>
+			<textcolor/>
+			<texturefocus/>
+			<texturenofocus/>
+			<textureup/>
+			<texturedown/>
+			<textureupfocus/>
+			<texturedownfocus/>
 			<visible>false</visible>
 		</control>
 		<!-- Dock Scroller Icons - Counter Clockwise Mothion -->
@@ -476,6 +476,7 @@
 				<include>Dock_LayoutOSD</include>
 				<content>
 					<include>Dock_Play</include>
+					<include>Dock_Stop</include>
 					<include>Dock_FastForward</include>
 					<include>Dock_SkipForward</include>
 					<include>Dock_Random</include>
@@ -487,7 +488,6 @@
 					<include>Dock_Subtitle</include>
 					<include>Dock_SkipBack</include>
 					<include>Dock_Rewind</include>
-					<include>Dock_Stop</include>
 				</content>
 			</control>
 			<include>Dock_TabOSD</include>

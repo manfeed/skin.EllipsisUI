@@ -84,7 +84,7 @@
 				<height>237</height>
 				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
 				<texture diffuse="dvdbox-diffuse.png"/>
-				<info>VideoPlayer.Cover</info>
+				<info>Player.Art(poster)</info>
 			</control>
 			<control type="image">
 				<left>27</left>
