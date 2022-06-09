@@ -102,6 +102,8 @@
 		<item>
 			<icon>dock\icons\stop.png</icon>
 			<label>$LOCALIZE[50049]</label>
+			<onclick>Control.SetFocus(9500,0,absolute)</onclick>
+			<onclick>Dialog.Close(all,true)</onclick>
 			<onclick>PlayerControl(Stop)</onclick>
 			<visible>Player.Playing | Player.Paused | Player.Forwarding | Player.Rewinding</visible>
 		</item>

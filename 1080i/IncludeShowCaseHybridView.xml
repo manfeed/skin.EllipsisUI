@@ -1863,5 +1863,11 @@
 			</control>
 		</control>
 		<include>Library_Info</include>
+		<control type="group">
+			<left>970</left>
+			<top>395</top>
+			<visible>Control.IsVisible(51)</visible>
+			<include>Sort_Letter</include>
+		</control>
 	</include>
 </includes>

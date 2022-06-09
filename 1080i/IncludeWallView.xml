@@ -332,5 +332,11 @@
 				<label>$INFO[Container(53).CurrentItem] $LOCALIZE[20163] $INFO[Container(53).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(53).CurrentPage] $LOCALIZE[20163] $INFO[Container(53).NumPages]</label>
 			</control>
 		</control>
+		<control type="group">
+			<left>854</left>
+			<top>500</top>
+			<visible>Control.IsVisible(53)</visible>
+			<include>Sort_Letter</include>
+		</control>
 	</include>
 </includes>
