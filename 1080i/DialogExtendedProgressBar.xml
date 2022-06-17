@@ -41,8 +41,8 @@
 				<description>Progressbar</description>
 				<left>210</left>
 				<top>322</top>
-				<width>704</width>469
-				<height>46</height>31
+				<width>704</width>
+				<height>46</height>
 				<texturebg>controls\progressbar_back.png</texturebg>
 				<lefttexture></lefttexture>
 				<midtexture>controls\progressbar_full.png</midtexture>

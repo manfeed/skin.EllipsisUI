@@ -1,1172 +1,356 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-    <include name="Tile_View">
-        <control type="list" id="57">
-            <left>0</left>
-            <top>0</top>
-            <width>1920</width>
-            <height>1080</height>
-            <onup>9000</onup>
-            <ondown>ActivateWindow(1201)</ondown>
-            <viewtype label="50140">list</viewtype>
-            <focusposition>2</focusposition>
-            <orientation>horizontal</orientation>
-            <scrolltime>250</scrolltime>
-            <itemlayout height="768" width="384">
-                <control type="label">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>384</width>
-                    <height>768</height>
-                    <font>Default</font>
-                    <align>center</align>
-                    <info>ListItem.label</info>
-                    <visible>false</visible>
-                </control>
-            </itemlayout>
-            <focusedlayout height="768" width="384">
-                <control type="label">
-                    <left>0</left>
-                    <top>0</top>
-                    <width>384</width>
-                    <height>768</height>
-                    <font>Default</font>
-                    <align>center</align>
-                    <info>ListItem.label</info>
-                    <visible>false</visible>
-                </control>
-            </focusedlayout>
-        </control>
-        <control type="group">
-            <left>960</left>
-            <top>348</top>
-            <visible>Control.IsVisible(57)</visible>
-            <!-- Tile View Icons - Counter Clockwise Mothion -->
-            <control type="group" id="5701">
-                <visible>Container(57).OnPrevious</visible>
-                <animation effect="slide" end="0,0" time="250" reversible="false">Hidden</animation>
-                <!-- Show Far Left Icon On Move Previous -->
-                <control type="group">
-                    <visible>Container(57).OnPrevious</visible>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(-2).Label)</visible>
-                    <animation type="Hidden" reversible="false">
-                        <effect type="fade" start="0" end="100" time="250" />
-                        <effect type="slide" start="0,0" end="248,0" time="250" />
-                    </animation>
-                    <animation effect="fade" start="0" end="0" time="0" reversible="false">Visible</animation>
-                    <left>-1142</left>
-                    <top>82</top>
-                    <width>192</width>
-                    <height>384</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png">DefaultVideo.png</texture>
-                        <info>Container(57).ListItem(-2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png">DefaultVideo.png</texture>
-                        <info>Container(57).ListItem(-2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Move Icon 1 To Icon 2 Position On Move Previous -->
-                <control type="group">
-                    <visible>Container(57).OnPrevious</visible>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(-1).Label)</visible>
-                    <animation effect="zoom" start="-894,82,192,384" end="-543,75,240,480" time="250" reversible="false">Hidden</animation>
-                    <left>-894</left>
-                    <top>82</top>
-                    <width>192</width>
-                    <height>384</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Move Icon 2 To Icon 3 Position On Move Next -->
-                <control type="group">
-                    <visible>Container(57).OnPrevious</visible>
-                    <animation effect="zoom" start="-543,75,240,480" end="-192,0,384,768" time="250" reversible="false">Hidden</animation>
-                    <left>-543</left>
-                    <top>75</top>
-                    <width>240</width>
-                    <height>480</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(0).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(0).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(0).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(0).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Move Icon 3 To Icon 4 Position On Move Previous -->
-                <control type="group">
-                    <visible>Container(57).OnPrevious</visible>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(1).Label)</visible>
-                    <animation effect="zoom" start="-192,0,384,768" end="318,75,240,480" time="250" reversible="false">Hidden</animation>
-                    <left>-192</left>
-                    <top>0</top>
-                    <width>384</width>
-                    <height>768</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>384</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>384</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>384</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Move Icon 4 To Icon 5 Position On Move Previous -->
-                <control type="group">
-                    <visible>Container(57).OnPrevious</visible>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(2).Label)</visible>
-                    <animation effect="zoom" start="318,75,240,480" end="702,82,192,384" time="250" reversible="false">Hidden</animation>
-                    <left>318</left>
-                    <top>75</top>
-                    <width>240</width>
-                    <height>480</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Hide Far Right Icon On Move Previous -->
-                <control type="group">
-                    <visible>Container(57).OnPrevious</visible>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(3).Label)</visible>
-                    <animation type="Hidden" reversible="false">
-                        <effect type="fade" start="100" end="0" time="250" />
-                        <effect type="slide" start="0,0" end="248,0" time="250" />
-                    </animation>
-                    <left>702</left>
-                    <top>82</top>
-                    <width>192</width>
-                    <height>384</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(3).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(3).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(3).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(3).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(3).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(3).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(3).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(3).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-            </control>
-            <!-- Tile View Icons - Clockwise Mothion -->
-            <control type="group" id="5702">
-                <visible>Container(57).OnNext</visible>
-                <animation effect="slide" end="0,0" time="250" reversible="false">Hidden</animation>
-                <!-- Hide Far Left Icon On Move Next -->
-                <control type="group">
-                    <visible>Container(57).OnNext</visible>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(-3).Label)</visible>
-                    <animation type="Hidden" reversible="false">
-                        <effect type="fade" start="100" end="0" time="250" />
-                        <effect type="slide" start="0,0" end="-248,0" time="250" />
-                    </animation>
-                    <left>-894</left>
-                    <top>82</top>
-                    <width>192</width>
-                    <height>384</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-3).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-3).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-3).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-3).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-3).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-3).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-3).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-3).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Move Icon 2 To Icon 1 Position On Move Next -->
-                <control type="group">
-                    <visible>Container(57).OnNext</visible>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(-2).Label)</visible>
-                    <animation effect="zoom" start="-543,75,240,480" end="-894,82,192,384" time="250" reversible="false">Hidden</animation>
-                    <left>-543</left>
-                    <top>75</top>
-                    <width>240</width>
-                    <height>480</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Move Icon 3 To Icon 2 Position On Move Next -->
-                <control type="group">
-                    <visible>Container(57).OnNext</visible>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(-1).Label)</visible>
-                    <animation effect="zoom" start="-192,0,384,768" end="-543,75,240,480" time="250" reversible="false">Hidden</animation>
-                    <left>-192</left>
-                    <top>0</top>
-                    <width>384</width>
-                    <height>768</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>384</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>384</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>384</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Move Icon 4 To Icon 3 Position On Move Next -->
-                <control type="group">
-                    <visible>Container(57).OnNext</visible>
-                    <animation effect="zoom" start="318,75,240,480" end="-192,0,384,768" time="250" reversible="false">Hidden</animation>
-                    <left>318</left>
-                    <top>75</top>
-                    <width>240</width>
-                    <height>480</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(0).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(0).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(0).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(0).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Move Icon 5 To Icon 4 Position On Move Next -->
-                <control type="group">
-                    <visible>Container(57).OnNext</visible>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(1).Label)</visible>
-                    <animation effect="zoom" start="702,82,192,384" end="318,75,240,480" time="250" reversible="false">Hidden</animation>
-                    <left>702</left>
-                    <top>82</top>
-                    <width>192</width>
-                    <height>384</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Show Far Right Icon On Move Next -->
-                <control type="group">
-                    <visible>Container(57).OnNext</visible>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(2).Label)</visible>
-                    <animation type="Hidden" reversible="false">
-                        <effect type="fade" start="0" end="100" time="250" />
-                        <effect type="slide" start="248,0" end="0,0" time="250" />
-                    </animation>
-                    <animation effect="fade" start="0" end="0" time="0" reversible="false">Visible</animation>
-                    <left>702</left>
-                    <top>82</top>
-                    <width>192</width>
-                    <height>384</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-            </control>
-            <!-- Tile View Static Icons -->
-            <control type="group" id="5700">
-                <visible>!Control.IsVisible(5701)  + !Control.IsVisible(5702)</visible>
-                <animation effect="fade" time="600">WindowOpen</animation>
-                <animation effect="fade" time="600">WindowClose</animation>
-                <!-- Icon 1 -->
-                <control type="group">
-                    <left>-894</left>
-                    <top>82</top>
-                    <width>192</width>
-                    <height>384</height>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(-2).Label)</visible>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Icon 2 -->
-                <control type="group">
-                    <left>-543</left>
-                    <top>75</top>
-                    <width>240</width>
-                    <height>480</height>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(-1).Label)</visible>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(-1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(-1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(-1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Icon 3 -->
-                <control type="group">
-                    <left>-192</left>
-                    <top>0</top>
-                    <width>384</width>
-                    <height>768</height>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(0).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(0).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>384</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(0).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>384</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(0).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(0).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>384</top>
-                        <width>384</width>
-                        <height>384</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Icon 4 -->
-                <control type="group">
-                    <left>318</left>
-                    <top>75</top>
-                    <width>240</width>
-                    <height>480</height>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(1).Label)</visible>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(1).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(1).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(1).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>240</top>
-                        <width>240</width>
-                        <height>240</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-                <!-- Icon 5 -->
-                <control type="group">
-                    <left>702</left>
-                    <top>82</top>
-                    <width>192</width>
-                    <height>384</height>
-                    <visible>!String.IsEmpty(Container(57).ListItemNoWrap(2).Label)</visible>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="iconview-diffuse.png" />
-                        <info>Container(57).ListItem(2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>0</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture>iconview-overlay.png</texture>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">keep</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(2).ActualIcon</info>
-                        <visible>String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <aspectratio align="center" scalediffuse="false">scale</aspectratio>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png" />
-                        <info>Container(57).ListItem(2).Thumb</info>
-                        <visible>!String.IsEmpty(Container(57).ListItem(2).Thumb)</visible>
-                    </control>
-                    <control type="image">
-                        <left>0</left>
-                        <top>192</top>
-                        <width>192</width>
-                        <height>192</height>
-                        <texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-                    </control>
-                </control>
-            </control>
-        </control>
-        <control type="group">
-            <visible>Control.IsVisible(57) + !Window.IsActive(1201)</visible>
-            <visible>!Skin.HasSetting(Disable_Icon_Labels)</visible>
-            <animation effect="fade" time="300">Visible</animation>
-            <animation effect="fade" time="300">Hidden</animation>
-            <animation effect="fade" time="300">WindowOpen</animation>
-            <animation effect="fade" time="300">WindowClose</animation>
-            <control type="label">
-                <description>Current Selection</description>
-                <left>0</left>
-                <top>906</top>
-                <width>1920</width>
-                <height>72</height>
-                <align>center</align>
-                <aligny>center</aligny>
-                <label>$INFO[Container(57).ListItem.Label]</label>
-                <font>Selected_Item</font>
-                <textcolor>TextSelectedItem</textcolor>
-                <shadowcolor>TextShadow</shadowcolor>
-            </control>
-        </control>
-    </include>
+	<include name="Tile_View">
+		<control type="list" id="57">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<onup>9000</onup>
+			<ondown>ActivateWindow(1201)</ondown>
+			<viewtype label="50140">list</viewtype>
+			<focusposition>2</focusposition>
+			<orientation>horizontal</orientation>
+			<scrolltime>250</scrolltime>
+			<itemlayout height="768" width="384">
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>384</width>
+					<height>768</height>
+					<font>Default</font>
+					<align>center</align>
+					<info>ListItem.label</info>
+					<visible>false</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="768" width="384">
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>384</width>
+					<height>768</height>
+					<font>Default</font>
+					<align>center</align>
+					<info>ListItem.label</info>
+					<visible>false</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="group">
+			<left>960</left>
+			<top>348</top>
+			<visible>Control.IsVisible(57)</visible>
+			<!-- Tile View Icons - Counter Clockwise Mothion -->
+			<control type="group" id="5701">
+				<visible>Container(57).OnPrevious</visible>
+				<animation effect="slide" end="0,0" time="250" reversible="false">Hidden</animation>
+				<!-- Show Far Left Icon On Move Previous -->
+				<control type="group">
+					<visible>Container(57).OnPrevious</visible>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(-2).Label)</visible>
+					<animation type="Hidden" reversible="false">
+						<effect type="fade" start="0" end="100" time="250"/>
+						<effect type="slide" start="0,0" end="248,0" time="250"/>
+					</animation>
+					<animation effect="fade" start="0" end="0" time="0" reversible="false">Visible</animation>
+					<left>-1142</left>
+					<top>82</top>
+					<width>192</width>
+					<height>384</height>
+					<include content="TileImage">
+						<param name="width" value="192"/>
+						<param name="height" value="192"/>
+						<param name="order" value="-2"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Move Icon 1 To Icon 2 Position On Move Previous -->
+				<control type="group">
+					<visible>Container(57).OnPrevious</visible>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(-1).Label)</visible>
+					<animation effect="zoom" start="-894,82,192,384" end="-543,75,240,480" time="250" reversible="false">Hidden</animation>
+					<left>-894</left>
+					<top>82</top>
+					<width>192</width>
+					<height>384</height>
+					<include content="TileImage">
+						<param name="width" value="192"/>
+						<param name="height" value="192"/>
+						<param name="order" value="-1"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Move Icon 2 To Icon 3 Position On Move Next -->
+				<control type="group">
+					<visible>Container(57).OnPrevious</visible>
+					<animation effect="zoom" start="-543,75,240,480" end="-192,0,384,768" time="250" reversible="false">Hidden</animation>
+					<left>-543</left>
+					<top>75</top>
+					<width>240</width>
+					<height>480</height>
+					<include content="TileImage">
+						<param name="width" value="240"/>
+						<param name="height" value="240"/>
+						<param name="order" value="0"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Move Icon 3 To Icon 4 Position On Move Previous -->
+				<control type="group">
+					<visible>Container(57).OnPrevious</visible>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(1).Label)</visible>
+					<animation effect="zoom" start="-192,0,384,768" end="318,75,240,480" time="250" reversible="false">Hidden</animation>
+					<left>-192</left>
+					<top>0</top>
+					<width>384</width>
+					<height>768</height>
+					<include content="TileImage">
+						<param name="width" value="384"/>
+						<param name="height" value="384"/>
+						<param name="order" value="1"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Move Icon 4 To Icon 5 Position On Move Previous -->
+				<control type="group">
+					<visible>Container(57).OnPrevious</visible>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(2).Label)</visible>
+					<animation effect="zoom" start="318,75,240,480" end="702,82,192,384" time="250" reversible="false">Hidden</animation>
+					<left>318</left>
+					<top>75</top>
+					<width>240</width>
+					<height>480</height>
+					<include content="TileImage">
+						<param name="width" value="240"/>
+						<param name="height" value="240"/>
+						<param name="order" value="2"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Hide Far Right Icon On Move Previous -->
+				<control type="group">
+					<visible>Container(57).OnPrevious</visible>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(3).Label)</visible>
+					<animation type="Hidden" reversible="false">
+						<effect type="fade" start="100" end="0" time="250"/>
+						<effect type="slide" start="0,0" end="248,0" time="250"/>
+					</animation>
+					<left>702</left>
+					<top>82</top>
+					<width>192</width>
+					<height>384</height>
+					<include content="TileImage">
+						<param name="width" value="192"/>
+						<param name="height" value="192"/>
+						<param name="order" value="3"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+			</control>
+			<!-- Tile View Icons - Clockwise Mothion -->
+			<control type="group" id="5702">
+				<visible>Container(57).OnNext</visible>
+				<animation effect="slide" end="0,0" time="250" reversible="false">Hidden</animation>
+				<!-- Hide Far Left Icon On Move Next -->
+				<control type="group">
+					<visible>Container(57).OnNext</visible>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(-3).Label)</visible>
+					<animation type="Hidden" reversible="false">
+						<effect type="fade" start="100" end="0" time="250"/>
+						<effect type="slide" start="0,0" end="-248,0" time="250"/>
+					</animation>
+					<left>-894</left>
+					<top>82</top>
+					<width>192</width>
+					<height>384</height>
+					<include content="TileImage">
+						<param name="width" value="192"/>
+						<param name="height" value="192"/>
+						<param name="order" value="-3"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Move Icon 2 To Icon 1 Position On Move Next -->
+				<control type="group">
+					<visible>Container(57).OnNext</visible>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(-2).Label)</visible>
+					<animation effect="zoom" start="-543,75,240,480" end="-894,82,192,384" time="250" reversible="false">Hidden</animation>
+					<left>-543</left>
+					<top>75</top>
+					<width>240</width>
+					<height>480</height>
+					<include content="TileImage">
+						<param name="width" value="240"/>
+						<param name="height" value="240"/>
+						<param name="order" value="-2"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Move Icon 3 To Icon 2 Position On Move Next -->
+				<control type="group">
+					<visible>Container(57).OnNext</visible>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(-1).Label)</visible>
+					<animation effect="zoom" start="-192,0,384,768" end="-543,75,240,480" time="250" reversible="false">Hidden</animation>
+					<left>-192</left>
+					<top>0</top>
+					<width>384</width>
+					<height>768</height>
+					<include content="TileImage">
+						<param name="width" value="384"/>
+						<param name="height" value="384"/>
+						<param name="order" value="-1"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Move Icon 4 To Icon 3 Position On Move Next -->
+				<control type="group">
+					<visible>Container(57).OnNext</visible>
+					<animation effect="zoom" start="318,75,240,480" end="-192,0,384,768" time="250" reversible="false">Hidden</animation>
+					<left>318</left>
+					<top>75</top>
+					<width>240</width>
+					<height>480</height>
+					<include content="TileImage">
+						<param name="width" value="240"/>
+						<param name="height" value="240"/>
+						<param name="order" value="0"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Move Icon 5 To Icon 4 Position On Move Next -->
+				<control type="group">
+					<visible>Container(57).OnNext</visible>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(1).Label)</visible>
+					<animation effect="zoom" start="702,82,192,384" end="318,75,240,480" time="250" reversible="false">Hidden</animation>
+					<left>702</left>
+					<top>82</top>
+					<width>192</width>
+					<height>384</height>
+					<include content="TileImage">
+						<param name="width" value="192"/>
+						<param name="height" value="192"/>
+						<param name="order" value="1"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Show Far Right Icon On Move Next -->
+				<control type="group">
+					<visible>Container(57).OnNext</visible>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(2).Label)</visible>
+					<animation type="Hidden" reversible="false">
+						<effect type="fade" start="0" end="100" time="250"/>
+						<effect type="slide" start="248,0" end="0,0" time="250"/>
+					</animation>
+					<animation effect="fade" start="0" end="0" time="0" reversible="false">Visible</animation>
+					<left>702</left>
+					<top>82</top>
+					<width>192</width>
+					<height>384</height>
+					<include content="TileImage">
+						<param name="width" value="192"/>
+						<param name="height" value="192"/>
+						<param name="order" value="2"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+			</control>
+			<!-- Tile View Static Icons -->
+			<control type="group" id="5700">
+				<visible>!Control.IsVisible(5701)  + !Control.IsVisible(5702)</visible>
+				<animation effect="fade" time="600">WindowOpen</animation>
+				<animation effect="fade" time="600">WindowClose</animation>
+				<!-- Icon 1 -->
+				<control type="group">
+					<left>-894</left>
+					<top>82</top>
+					<width>192</width>
+					<height>384</height>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(-2).Label)</visible>
+					<include content="TileImage">
+						<param name="width" value="192"/>
+						<param name="height" value="192"/>
+						<param name="order" value="-2"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Icon 2 -->
+				<control type="group">
+					<left>-543</left>
+					<top>75</top>
+					<width>240</width>
+					<height>480</height>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(-1).Label)</visible>
+					<include content="TileImage">
+						<param name="width" value="240"/>
+						<param name="height" value="240"/>
+						<param name="order" value="-1"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Icon 3 -->
+				<control type="group">
+					<left>-192</left>
+					<top>0</top>
+					<width>384</width>
+					<height>768</height>
+					<include content="TileImage">
+						<param name="width" value="384"/>
+						<param name="height" value="384"/>
+						<param name="order" value="0"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Icon 4 -->
+				<control type="group">
+					<left>318</left>
+					<top>75</top>
+					<width>240</width>
+					<height>480</height>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(1).Label)</visible>
+					<include content="TileImage">
+						<param name="width" value="240"/>
+						<param name="height" value="240"/>
+						<param name="order" value="1"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+				<!-- Icon 5 -->
+				<control type="group">
+					<left>702</left>
+					<top>82</top>
+					<width>192</width>
+					<height>384</height>
+					<visible>!String.IsEmpty(Container(57).ListItemNoWrap(2).Label)</visible>
+					<include content="TileImage">
+						<param name="width" value="192"/>
+						<param name="height" value="192"/>
+						<param name="order" value="2"/>
+						<param name="view" value="57"/>
+					</include>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(57) + !Window.IsActive(1201)</visible>
+			<visible>!Skin.HasSetting(Disable_Icon_Labels)</visible>
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<animation effect="fade" time="300">WindowOpen</animation>
+			<animation effect="fade" time="300">WindowClose</animation>
+			<control type="label">
+				<description>Current Selection</description>
+				<left>0</left>
+				<top>860</top>
+				<width>1920</width>
+				<height>72</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[B][LOWERCASE][CAPITALIZE]$INFO[Container(57).ListItem.Label][/CAPITALIZE][/LOWERCASE][/B]</label>
+				<font>Larger</font>
+				<textcolor>TextSelectedItem</textcolor>
+				<shadowcolor>TextShadow</shadowcolor>
+			</control>
+		</control>
+	</include>
 </includes>

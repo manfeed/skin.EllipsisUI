@@ -49,6 +49,11 @@
 		<value condition="Player.Process(videohwdecoder)">$LOCALIZE[19074]</value>
 		<value>$LOCALIZE[50168]</value>
 	</variable>
+	<variable name="Poster_list">
+		<value condition="Container.Content(Games)">$INFO[ListItem.Path]$INFO[ListItem.FileNameNoExtension].jpg</value>
+		<value condition="String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Icon]</value>
+		<value>$INFO[ListItem.Art(poster)]</value>
+	</variable>
 	<variable name="MusicInfoThumbVar">
 		<value condition="!String.IsEmpty(Listitem.Art(thumb))">$INFO[Listitem.Art(thumb)]</value>
 		<value condition="String.IsEqual(listitem.dbtype,artist)">DefaultArtist.png</value>
@@ -141,6 +146,348 @@
 				<texturefocus border="8">$PARAM[focus]</texturefocus>
 				<texturenofocus border="8">$PARAM[nofocus]</texturenofocus>
 				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="PosterGames">
+		<param name="width">344</param>
+		<param name="height">506</param>
+		<param name="order">0</param>
+		<param name="view">54</param>
+		<definition>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="dvdgamebox-diffuse.png">DefaultFolderBack.png</texture>
+				<visible>Container($PARAM[view]).ListItem($PARAM[order]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="dvdgamebox-diffuse.png" fallback="DefaultAddonGame.png">$INFO[Container($PARAM[view]).ListItem($PARAM[order]).Path]$INFO[Container($PARAM[view]).ListItem($PARAM[order]).FileNameNoExtension].jpg</texture>
+				<visible>!Container($PARAM[view]).ListItem($PARAM[order]).IsParentFolder</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture>dvdgamebox-overlay.png</texture>
+			</control>
+			<control type="image">
+				<visible>Container($PARAM[view]).ListItem($PARAM[order]).IsParentFolder</visible>
+				<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
+				<left>0</left>
+				<top>$PARAM[height]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture flipy="true" diffuse="dvdgamebox-reflect-diffuse.png">DefaultFolderBack.png</texture>
+			</control>
+			<control type="image">
+				<animation effect="fade" end="35" time="0" condition="true">Conditional</animation>
+				<left>0</left>
+				<top>$PARAM[height]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture flipy="true" diffuse="dvdgamebox-reflect-diffuse.png" fallback="DefaultAddonGame.png">$INFO[Container($PARAM[view]).ListItem($PARAM[order]).Path]$INFO[Container($PARAM[view]).ListItem($PARAM[order]).FileNameNoExtension].jpg</texture>
+				<visible>!Container($PARAM[view]).ListItem($PARAM[order]).IsParentFolder</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="PosterVideos">
+		<param name="width">344</param>
+		<param name="height">506</param>
+		<param name="order">0</param>
+		<param name="view">54</param>
+		<definition>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="dvdbox-diffuse.png">$INFO[Container($PARAM[view]).ListItem($PARAM[order]).Icon]</texture>
+				<visible>String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Art(poster))</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="dvdbox-diffuse.png">$INFO[Container($PARAM[view]).ListItem($PARAM[order]).Art(poster)]</texture>
+				<visible>!String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Art(poster))</visible>
+			</control>
+			<control type="image">
+				<top>0</top>
+				<left>0</left>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+				<visible>String.IsEqual(Container($PARAM[view]).ListItem($PARAM[order]).Overlay,OverlayWatched.png)</visible>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture>dvdbox-overlay.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>$PARAM[height]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Icon</info>
+				<visible>String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Art(poster))</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>$PARAM[height]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Art(poster)</info>
+				<visible>!String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Art(poster))</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="PosterTile">
+		<param name="width">290</param>
+		<param name="height">290</param>
+		<param name="order">0</param>
+		<param name="view">58</param>
+		<definition>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="iconview-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).ActualIcon</info>
+				<visible>String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="iconview-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Thumb</info>
+				<visible>!String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
+				<visible>String.IsEqual(Container($PARAM[view]).ListItem($PARAM[order]).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture>iconview-overlay.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>$PARAM[height]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).ActualIcon</info>
+				<visible>String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>$PARAM[height]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Thumb</info>
+				<visible>!String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="EpisodeImage">
+		<param name="width">426</param>
+		<param name="height">240</param>
+		<param name="order">-1</param>
+		<param name="view">62</param>
+		<definition>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="episode-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Icon</info>
+				<visible>String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="episode-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Thumb</info>
+				<visible>!String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<top>0</top>
+				<left>0</left>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+				<visible>String.IsEqual(Container($PARAM[view]).ListItem($PARAM[order]).Overlay,OverlayWatched.png)</visible>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture>episode-overlay.png</texture>
+			</control>
+		</definition>
+	</include>
+	<include name="EpisodeImageReflect">
+		<param name="width">600</param>
+		<param name="height">339</param>
+		<param name="order">1</param>
+		<param name="view">50</param>
+		<definition>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="episode-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Icon</info>
+				<visible>String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="episode-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Thumb</info>
+				<visible>!String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<top>0</top>
+				<left>0</left>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
+				<visible>String.IsEqual(Container($PARAM[view]).ListItem($PARAM[order]).Overlay,OverlayWatched.png)</visible>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture>episode-overlay.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>$PARAM[height]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Icon</info>
+				<visible>String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>$PARAM[height]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Thumb</info>
+				<visible>!String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>$PARAM[height]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
+			</control>
+		</definition>
+	</include>
+	<include name="TileImage">
+		<param name="width">192</param>
+		<param name="height">192</param>
+		<param name="order">-2</param>
+		<param name="view">57</param>
+		<definition>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+				<texture diffuse="iconview-diffuse.png">DefaultVideo.png</texture>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).ActualIcon</info>
+				<visible>String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture diffuse="iconview-diffuse.png">DefaultVideo.png</texture>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Thumb</info>
+				<visible>!String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>$PARAM[height]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">keep</aspectratio>
+				<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).ActualIcon</info>
+				<visible>String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>$PARAM[height]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+				<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
+				<info>Container($PARAM[view]).ListItem($PARAM[order]).Thumb</info>
+				<visible>!String.IsEmpty(Container($PARAM[view]).ListItem($PARAM[order]).Thumb)</visible>
 			</control>
 		</definition>
 	</include>

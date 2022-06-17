@@ -941,8 +941,8 @@
 			<onfocus>Dialog.Close(1204)</onfocus>
 			<onclick>PlayerControl(stop)</onclick>
 			<onclick>Dialog.Close(1204)</onclick>
-			<texturenofocus></texturenofocus>
-			<texturefocus></texturefocus>
+			<texturenofocus/>
+			<texturefocus/>
 			<animation effect="fade" start="0" end="0" time="0" delay="132000">Focus</animation>
 		</control>
 		<include>Debug</include>

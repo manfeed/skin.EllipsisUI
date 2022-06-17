@@ -384,6 +384,14 @@
 			<onclick>ActivateWindow(Videos,MusicVideoTitles)</onclick>
 		</item>
 	</include>
+	<include name="Menu_Games">
+		<item>
+			<visible>!Skin.HasSetting(Disable_Games_Home_Icon)</visible>
+			<icon>icon_home_games.png</icon>
+			<label>10821</label>
+			<onclick>ActivateWindow(games)</onclick>
+		</item>
+	</include>
 	<include name="Menu_Pictures">
 		<item>
 			<visible>!Skin.HasSetting(Disable_Pictures_Home_Icon)</visible>
@@ -873,6 +881,7 @@
 					<include>Menu_Movie_Library</include>
 					<include>Menu_Tv_Library</include>
 					<include>Menu_Play_DVD</include>
+					<include>Menu_Games</include>
 					<include>Menu_Pictures</include>
 					<include>Menu_FileManager</include>
 					<include>Menu_Weather</include>

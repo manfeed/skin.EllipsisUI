@@ -61,67 +61,12 @@
 					<top>81</top>
 					<width>164</width>
 					<height>480</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(-3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(-3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>164</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-3).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(-3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="164"/>
+						<param name="height" value="240"/>
+						<param name="order" value="-3"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 1 To Icon 2 Position On Move Previous -->
 				<control type="group">
@@ -132,67 +77,12 @@
 					<top>81</top>
 					<width>164</width>
 					<height>480</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(-2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(-2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>164</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-2).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(-2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="164"/>
+						<param name="height" value="240"/>
+						<param name="order" value="-2"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 2 To Icon 3 Position On Move Next -->
 				<control type="group">
@@ -203,67 +93,12 @@
 					<width>196</width>
 					<height>576</height>
 					<visible>!String.IsEmpty(Container(50).ListItemNoWrap(-1).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(-1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>196</width>
-						<height>288</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(-1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="196"/>
+						<param name="height" value="288"/>
+						<param name="order" value="-1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 3 To Icon 4 Position On Move Previous -->
 				<control type="group">
@@ -273,67 +108,12 @@
 					<top>33</top>
 					<width>228</width>
 					<height>672</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(0).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>228</width>
-						<height>336</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(0).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(0).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="228"/>
+						<param name="height" value="336"/>
+						<param name="order" value="0"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 4 To Icon 5 Position On Move Previous -->
 				<control type="group">
@@ -344,67 +124,12 @@
 					<top>0</top>
 					<width>274</width>
 					<height>807</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>274</width>
-						<height>404</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>274</width>
-						<height>404</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>404</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>404</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>404</top>
-						<width>274</width>
-						<height>404</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="274"/>
+						<param name="height" value="404"/>
+						<param name="order" value="1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 5 To Icon 6 Position On Move Previous -->
 				<control type="group">
@@ -415,67 +140,12 @@
 					<top>33</top>
 					<width>228</width>
 					<height>672</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>228</width>
-						<height>336</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(2).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="228"/>
+						<param name="height" value="336"/>
+						<param name="order" value="2"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 6 To Icon 7 Position On Move Previous -->
 				<control type="group">
@@ -486,67 +156,12 @@
 					<top>57</top>
 					<width>196</width>
 					<height>576</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>196</width>
-						<height>288</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(3).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="196"/>
+						<param name="height" value="288"/>
+						<param name="order" value="3"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Hide Far Right Icon On Move Previous -->
 				<control type="group">
@@ -560,67 +175,12 @@
 					<top>81</top>
 					<width>164</width>
 					<height>480</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(4).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(4).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(4).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(4).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>164</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(4).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(4).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(4).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(4).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(4).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="164"/>
+						<param name="height" value="240"/>
+						<param name="order" value="4"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 			</control>
 			<!-- Show Case View Icons - Clockwise Mothion -->
@@ -639,67 +199,12 @@
 					<top>81</top>
 					<width>164</width>
 					<height>480</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(-4).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-4).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(-4).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-4).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>164</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-4).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-4).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-4).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(-4).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-4).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="164"/>
+						<param name="height" value="240"/>
+						<param name="order" value="-4"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 2 To Icon 1 Position On Move Next -->
 				<control type="group">
@@ -710,67 +215,12 @@
 					<top>57</top>
 					<width>196</width>
 					<height>576</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(-3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(-3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>196</width>
-						<height>288</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-3).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(-3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="196"/>
+						<param name="height" value="288"/>
+						<param name="order" value="-3"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 3 To Icon 2 Position On Move Next -->
 				<control type="group">
@@ -781,67 +231,12 @@
 					<width>228</width>
 					<height>672</height>
 					<visible>!String.IsEmpty(Container(50).ListItemNoWrap(-2).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(-2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(-2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>228</width>
-						<height>336</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-2).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(-2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="228"/>
+						<param name="height" value="336"/>
+						<param name="order" value="-2"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 4 To Icon 3 Position On Move Next -->
 				<control type="group">
@@ -852,67 +247,12 @@
 					<top>0</top>
 					<width>274</width>
 					<height>807</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(-1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>274</width>
-						<height>404</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>274</width>
-						<height>404</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>404</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>404</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(-1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>404</top>
-						<width>274</width>
-						<height>404</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="274"/>
+						<param name="height" value="404"/>
+						<param name="order" value="-1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 5 To Icon 4 Position On Move Next -->
 				<control type="group">
@@ -922,67 +262,12 @@
 					<top>33</top>
 					<width>228</width>
 					<height>672</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(0).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>228</width>
-						<height>336</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(0).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(0).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="228"/>
+						<param name="height" value="336"/>
+						<param name="order" value="0"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 6 To Icon 5 Position On Move Next -->
 				<control type="group">
@@ -993,67 +278,12 @@
 					<top>57</top>
 					<width>196</width>
 					<height>576</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>196</width>
-						<height>288</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="196"/>
+						<param name="height" value="288"/>
+						<param name="order" value="1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 7 To Icon 6 Position On Move Next -->
 				<control type="group">
@@ -1064,67 +294,12 @@
 					<top>81</top>
 					<width>164</width>
 					<height>480</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>164</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(2).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="164"/>
+						<param name="height" value="240"/>
+						<param name="order" value="2"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Show Far Right Icon On Move Next -->
 				<control type="group">
@@ -1139,67 +314,12 @@
 					<top>81</top>
 					<width>164</width>
 					<height>480</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>164</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(3).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="164"/>
+						<param name="height" value="240"/>
+						<param name="order" value="3"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 			</control>
 			<!-- Show Case View Static Icons -->
@@ -1214,67 +334,12 @@
 					<width>164</width>
 					<height>480</height>
 					<visible>!String.IsEmpty(Container(50).ListItemNoWrap(-3).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(-3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(-3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>164</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-3).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(-3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="164"/>
+						<param name="height" value="240"/>
+						<param name="order" value="-3"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Icon 2 -->
 				<control type="group">
@@ -1283,67 +348,12 @@
 					<width>196</width>
 					<height>576</height>
 					<visible>!String.IsEmpty(Container(50).ListItemNoWrap(-2).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(-2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(-2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>196</width>
-						<height>288</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-2).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(-2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="196"/>
+						<param name="height" value="288"/>
+						<param name="order" value="-2"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Icon 3 -->
 				<control type="group">
@@ -1352,67 +362,12 @@
 					<width>228</width>
 					<height>672</height>
 					<visible>!String.IsEmpty(Container(50).ListItemNoWrap(-1).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(-1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>228</width>
-						<height>336</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(-1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="228"/>
+						<param name="height" value="336"/>
+						<param name="order" value="-1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Icon 4 -->
 				<control type="group">
@@ -1420,67 +375,12 @@
 					<top>0</top>
 					<width>274</width>
 					<height>807</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(0).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>274</width>
-						<height>404</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(0).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>274</width>
-						<height>404</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>404</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>404</top>
-						<width>274</width>
-						<height>404</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(0).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>404</top>
-						<width>274</width>
-						<height>404</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="274"/>
+						<param name="height" value="404"/>
+						<param name="order" value="0"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Icon 5 -->
 				<control type="group">
@@ -1489,74 +389,12 @@
 					<width>228</width>
 					<height>672</height>
 					<visible>!String.IsEmpty(Container(50).ListItemNoWrap(1).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<texture>$INFO[Container(50).ListItem(1).Overlay]</texture>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>228</width>
-						<height>336</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>228</width>
-						<height>336</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(1).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>336</top>
-						<width>228</width>
-						<height>336</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="228"/>
+						<param name="height" value="336"/>
+						<param name="order" value="1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Icon 6 -->
 				<control type="group">
@@ -1565,67 +403,12 @@
 					<width>196</width>
 					<height>576</height>
 					<visible>!String.IsEmpty(Container(50).ListItemNoWrap(2).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>196</width>
-						<height>288</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(2).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>196</width>
-						<height>288</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(2).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(2).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>288</top>
-						<width>196</width>
-						<height>288</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="196"/>
+						<param name="height" value="288"/>
+						<param name="order" value="2"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Icon 7 -->
 				<control type="group">
@@ -1634,67 +417,12 @@
 					<width>164</width>
 					<height>480</height>
 					<visible>!String.IsEmpty(Container(50).ListItemNoWrap(3).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png"/>
-						<info>Container(50).ListItem(3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="dvdbox-diffuse.png">$INFO[Container(50).ListItem(3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>164</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(3).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>164</width>
-						<height>240</height>
-						<texture>dvdbox-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(3).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">$INFO[Container(50).ListItem(3).Art(poster)]</texture>
-						<visible>!String.IsEmpty(Container(50).ListItem(3).Art(poster))</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>164</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="dvdbox-reflect-diffuse.png">dvdbox-overlay.png</texture>
-					</control>
+					<include content="PosterVideos">
+						<param name="width" value="164"/>
+						<param name="height" value="240"/>
+						<param name="order" value="3"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 			</control>
 		</control>
@@ -1721,69 +449,12 @@
 					<top>252</top>
 					<width>426</width>
 					<height>240</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>426</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<texture>episode-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
-					</control>
+					<include content="EpisodeImageReflect">
+						<param name="width" value="426"/>
+						<param name="height" value="240"/>
+						<param name="order" value="-1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 1 To Icon 2 Position On Move Previous -->
 				<control type="group">
@@ -1793,69 +464,12 @@
 					<top>252</top>
 					<width>426</width>
 					<height>240</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>426</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(0).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<texture>episode-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
-					</control>
+					<include content="EpisodeImageReflect">
+						<param name="width" value="426"/>
+						<param name="height" value="240"/>
+						<param name="order" value="0"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 2 To Icon 3 Position On Move Previous -->
 				<control type="group">
@@ -1866,69 +480,12 @@
 					<top>202</top>
 					<width>600</width>
 					<height>339</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>600</width>
-						<height>339</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>600</width>
-						<height>339</height>
-						<texture>episode-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>339</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>339</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>339</top>
-						<width>600</width>
-						<height>339</height>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
-					</control>
+					<include content="EpisodeImageReflect">
+						<param name="width" value="600"/>
+						<param name="height" value="339"/>
+						<param name="order" value="1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Hide Far Right Icon On Move Previous -->
 				<control type="group">
@@ -1942,69 +499,12 @@
 					<top>252</top>
 					<width>426</width>
 					<height>240</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(2).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>426</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(2).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<texture>episode-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(2).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
-					</control>
+					<include content="EpisodeImageReflect">
+						<param name="width" value="426"/>
+						<param name="height" value="240"/>
+						<param name="order" value="2"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 			</control>
 			<!-- Show Case View Wide Icons - Clockwise Mothion -->
@@ -2023,69 +523,12 @@
 					<top>252</top>
 					<width>426</width>
 					<height>240</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(-2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(-2).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(-2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>426</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-2).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<texture>episode-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-2).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-2).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(-2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
-					</control>
+					<include content="EpisodeImageReflect">
+						<param name="width" value="426"/>
+						<param name="height" value="240"/>
+						<param name="order" value="-2"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 2 To Icon 1 Position On Move Next -->
 				<control type="group">
@@ -2096,69 +539,12 @@
 					<top>202</top>
 					<width>600</width>
 					<height>339</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>600</width>
-						<height>339</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>600</width>
-						<height>339</height>
-						<texture>episode-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>339</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>339</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>339</top>
-						<width>600</width>
-						<height>339</height>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
-					</control>
+					<include content="EpisodeImageReflect">
+						<param name="width" value="600"/>
+						<param name="height" value="339"/>
+						<param name="order" value="-1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Move Icon 3 To Icon 2 Position On Move Next -->
 				<control type="group">
@@ -2169,69 +555,12 @@
 					<top>252</top>
 					<width>426</width>
 					<height>240</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>426</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(0).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<texture>episode-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
-					</control>
+					<include content="EpisodeImageReflect">
+						<param name="width" value="426"/>
+						<param name="height" value="240"/>
+						<param name="order" value="0"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Show Far Right Icon On Move Next -->
 				<control type="group">
@@ -2246,69 +575,12 @@
 					<top>252</top>
 					<width>426</width>
 					<height>240</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>426</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<texture>episode-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
-					</control>
+					<include content="EpisodeImageReflect">
+						<param name="width" value="426"/>
+						<param name="height" value="240"/>
+						<param name="order" value="1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 			</control>
 			<!-- Show Case View Wide Static Icons -->
@@ -2323,69 +595,12 @@
 					<width>426</width>
 					<height>240</height>
 					<visible>!String.IsEmpty(Container(50).ListItemNoWrap(-1).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>426</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(-1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<texture>episode-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(-1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
-					</control>
+					<include content="EpisodeImageReflect">
+						<param name="width" value="426"/>
+						<param name="height" value="240"/>
+						<param name="order" value="-1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Icon 2 -->
 				<control type="group">
@@ -2393,69 +608,12 @@
 					<top>202</top>
 					<width>600</width>
 					<height>339</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>600</width>
-						<height>339</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(0).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>600</width>
-						<height>339</height>
-						<texture>episode-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>339</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(0).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>339</top>
-						<width>600</width>
-						<height>339</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>339</top>
-						<width>600</width>
-						<height>339</height>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
-					</control>
+					<include content="EpisodeImageReflect">
+						<param name="width" value="600"/>
+						<param name="height" value="339"/>
+						<param name="order" value="0"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 				<!-- Icon 3 -->
 				<control type="group">
@@ -2464,69 +622,12 @@
 					<width>426</width>
 					<height>240</height>
 					<visible>!String.IsEmpty(Container(50).ListItemNoWrap(1).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="episode-diffuse.png"/>
-						<info>Container(50).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<top>0</top>
-						<left>0</left>
-						<width>426</width>
-						<height>240</height>
-						<texture colordiffuse="bbffffff">$VAR[watched_style]</texture>
-						<visible>String.IsEqual(Container(50).ListItem(1).Overlay,OverlayWatched.png)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>426</width>
-						<height>240</height>
-						<texture>episode-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(1).Icon</info>
-						<visible>String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png"/>
-						<info>Container(50).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(50).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>240</top>
-						<width>426</width>
-						<height>240</height>
-						<texture flipy="true" diffuse="episode-reflect-diffuse.png">episode-overlay.png</texture>
-					</control>
+					<include content="EpisodeImageReflect">
+						<param name="width" value="426"/>
+						<param name="height" value="240"/>
+						<param name="order" value="1"/>
+						<param name="view" value="50"/>
+					</include>
 				</control>
 			</control>
 		</control>
@@ -2599,7 +700,7 @@
 			</control>
 		</control>
 		<include>Library_Info</include>
-				<control type="group">
+		<control type="group">
 			<left>854</left>
 			<top>310</top>
 			<visible>Control.IsVisible(50)</visible>
