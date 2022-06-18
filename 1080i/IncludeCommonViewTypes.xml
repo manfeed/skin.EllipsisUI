@@ -28,18 +28,19 @@
 		<include>Tile_Hybrid_View</include>
 		<include>Wall_View</include>
 	</include>
+	<include name="Games_Views">
+		<include>List_View_Media</include>
+		<include>Game_Hybrid_View</include>
+		<include>Game_View</include>
+		<include>Wall_View</include>
+	</include>
 	<include name="Picture_Views">
 		<include>List_View</include>
 		<include>Snaps_View</include>
 		<include>Tile_View</include>
-		<include>Tile_Hybrid_View</include>
 	</include>
 	<include name="Program_Views">
 		<include>List_View</include>
-		<include>Game_View</include>
-		<include>Game_Hybrid_View</include>
-		<include>Tile_View</include>
-		<include>Tile_Hybrid_View</include>
 	</include>
 	<include name="AddOn_Views">
 		<include>List_View_Media</include>

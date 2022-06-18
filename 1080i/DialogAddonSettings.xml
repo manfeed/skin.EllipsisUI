@@ -16,7 +16,7 @@
 			<left>6</left>
 			<top>68</top>
 			<width>1906</width>
-			<height>946</height>
+			<height>996</height>
 			<texture>dialogs\dialog-background-tall.png</texture>
 		</control>
 		<control type="group">
@@ -59,7 +59,7 @@
 				<left>380</left>
 				<top>100</top>
 				<width>1060</width>
-				<height>700</height>
+				<height>675</height>
 				<onleft>3</onleft>
 				<onright>9000</onright>
 				<onup>5</onup>

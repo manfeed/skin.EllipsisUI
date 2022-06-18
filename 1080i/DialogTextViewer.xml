@@ -98,7 +98,7 @@
 			<width>380</width>
 			<height>35</height>
 			<font>Medium</font>
-			<textcolor>grey</textcolor>
+			<textcolor>TextGrey</textcolor>
 			<align>right</align>
 			<aligny>center</aligny>
 			<label>$LOCALIZE[50130] $INFO[Container(5).CurrentPage] $LOCALIZE[20163] $INFO[Container(5).NumPages]</label>

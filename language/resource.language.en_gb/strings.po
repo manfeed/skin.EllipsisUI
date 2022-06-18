@@ -711,3 +711,15 @@ msgstr ""
 msgctxt "#50173"
 msgid "Wall"
 msgstr ""
+
+msgctxt "#50174"
+msgid "Hide GAMES home icon"
+msgstr ""
+
+msgctxt "#50175"
+msgid "EllipsisUI is a passion project made by TeamUI.[CR]It's a big project and it takes a [B]lot[/B] of effort to develop and maintain.[CR]Consider scanning this QR and make a donation to help keep this project healthy.[CR]Any amount helps greatly and is much appreciated."
+msgstr ""
+
+msgctxt "#50176"
+msgid "Select + Right Stick"
+msgstr ""

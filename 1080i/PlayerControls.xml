@@ -15,8 +15,8 @@
 			<width>1</width>
 			<height>1</height>
 			<label/>
-			<texturenofocus></texturenofocus>
-			<texturefocus></texturefocus>
+			<texturenofocus/>
+			<texturefocus/>
 			<onfocus>SetFocus(100)</onfocus>
 		</control>
 		<control type="image">
@@ -55,7 +55,7 @@
 				<top>0</top>
 				<width>0</width>
 				<height>0</height>
-				<pagecontrol></pagecontrol>
+				<pagecontrol/>
 				<orientation>horizontal</orientation>
 				<scrolltime>300</scrolltime>
 				<visible>false</visible>
@@ -63,13 +63,13 @@
 				<focusedlayout/>
 				<content>
 					<item id="1">
-						<onclick></onclick>
+						<onclick/>
 					</item>
 					<item id="2">
-						<onclick></onclick>
+						<onclick/>
 					</item>
 					<item id="3">
-						<onclick></onclick>
+						<onclick/>
 					</item>
 				</content>
 			</control>
@@ -334,7 +334,8 @@
 					<left>340</left>
 					<top>70</top>
 					<width>656</width>
-					<height>195</height>
+					<height>125</height>
+					<aspectratio>keep</aspectratio>
 					<texture>menu\nav\tbb_navtitle.png</texture>
 				</control>
 				<control type="image">
@@ -345,15 +346,22 @@
 					<texture>menu\nav\tab3.png</texture>
 				</control>
 				<control type="textbox">
-					<left>250</left>
-					<top>300</top>
-					<width>835</width>
-					<height>327</height>
+					<left>150</left>
+					<top>205</top>
+					<width>750</width>
+					<height>405</height>
 					<textcolor>Text</textcolor>
 					<font>Default</font>
 					<align>center</align>
-					<label>$LOCALIZE[50103]</label>
+					<label>$LOCALIZE[50103][CR][CR]$LOCALIZE[50175]</label>
 					<autoscroll delay="8000" time="2000" repeat="10000"/>
+				</control>
+				<control type="image">
+					<left>935</left>
+					<top>310</top>
+					<width>230</width>
+					<height>230</height>
+					<texture>donate_ellipsisui.png</texture>
 				</control>
 			</control>
 			<control type="list" id="100">
@@ -504,7 +512,7 @@
 					<width>96</width>
 					<height>96</height>
 					<label/>
-					<font></font>
+					<font/>
 					<texturenofocus>menu\nav\nav_player_skipback_NF.png</texturenofocus>
 					<texturefocus>menu\nav\nav_player_skipback_FO.png</texturefocus>
 					<onleft>206</onleft>
@@ -518,7 +526,7 @@
 					<width>96</width>
 					<height>96</height>
 					<label/>
-					<font></font>
+					<font/>
 					<texturenofocus>menu\nav\nav_player_rewind_NF.png</texturenofocus>
 					<texturefocus>menu\nav\nav_player_rewind_FO.png</texturefocus>
 					<onleft>200</onleft>
@@ -532,7 +540,7 @@
 					<width>96</width>
 					<height>96</height>
 					<label/>
-					<font></font>
+					<font/>
 					<texturenofocus>menu\nav\nav_player_stop_NF.png</texturenofocus>
 					<texturefocus>menu\nav\nav_player_stop_FO.png</texturefocus>
 					<onleft>201</onleft>
@@ -546,9 +554,9 @@
 					<width>96</width>
 					<height>96</height>
 					<label/>
-					<font></font>
-					<texturenofocus></texturenofocus>
-					<texturefocus></texturefocus>
+					<font/>
+					<texturenofocus/>
+					<texturefocus/>
 					<onleft>202</onleft>
 					<onright>204</onright>
 					<onup>100</onup>
@@ -596,7 +604,7 @@
 					<width>96</width>
 					<height>96</height>
 					<label/>
-					<font></font>
+					<font/>
 					<texturenofocus>menu\nav\nav_player_fforward_NF.png</texturenofocus>
 					<texturefocus>menu\nav\nav_player_fforward_FO.png</texturefocus>
 					<onleft>203</onleft>
@@ -610,7 +618,7 @@
 					<width>96</width>
 					<height>96</height>
 					<label/>
-					<font></font>
+					<font/>
 					<texturenofocus>menu\nav\nav_player_skipforward_NF.png</texturenofocus>
 					<texturefocus>menu\nav\nav_player_skipforward_FO.png</texturefocus>
 					<onleft>204</onleft>

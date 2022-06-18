@@ -53,7 +53,19 @@
 				<texturenofocus/>
 			</control>
 			<control type="button" id="33">
-				<description>Hidden Tab 3 Control</description>
+				<description>Hidden Tab 4 Control</description>
+				<left>0</left>
+				<top>0</top>
+				<width>90</width>
+				<height>75</height>
+				<label/>
+				<align>center</align>
+				<textcolor/>
+				<texturefocus/>
+				<texturenofocus/>
+			</control>
+			<control type="button" id="34">
+				<description>Hidden Tab 5 Control</description>
 				<left>0</left>
 				<top>0</top>
 				<width>90</width>
@@ -66,7 +78,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<left>960</left>
+			<left>920</left>
 			<top>202</top>
 			<control type="group">
 				<control type="image">
@@ -100,6 +112,14 @@
 					<height>75</height>
 					<texture>settings\tabs\skinsettings_debug_nf.png</texture>
 					<visible>!ControlGroup(9000).HasFocus(33)</visible>
+				</control>
+				<control type="image">
+					<left>204</left>
+					<top>0</top>
+					<width>90</width>
+					<height>75</height>
+					<texture>settings\tabs\sysinfo_default_nf.png</texture>
+					<visible>!ControlGroup(9000).HasFocus(34)</visible>
 				</control>
 				<control type="image">
 					<left>-194</left>
@@ -143,6 +163,17 @@
 					<visible>ControlGroup(9000).HasFocus(33)</visible>
 					<animation type="Conditional" condition="!ControlGroup(9001).HasFocus">
 						<effect type="zoom" start="104,0,90,75" end="100,-3,96,81" time="200"/>
+					</animation>
+				</control>
+				<control type="image">
+					<left>204</left>
+					<top>0</top>
+					<width>90</width>
+					<height>75</height>
+					<texture>settings\tabs\sysinfo_default_fo.png</texture>
+					<visible>ControlGroup(9000).HasFocus(34)</visible>
+					<animation type="Conditional" condition="!ControlGroup(9001).HasFocus">
+						<effect type="zoom" start="204,0,90,75" end="200,-3,96,81" time="200"/>
 					</animation>
 				</control>
 			</control>
@@ -573,6 +604,23 @@
 				<selected>Skin.HasSetting(Disable_Music_Video_Library_Home_Icon)</selected>
 				<pulseonselect>false</pulseonselect>
 			</control>
+			<control type="radiobutton" id="317">
+				<visible>ControlGroup(9000).HasFocus(32)</visible>
+				<label>$LOCALIZE[50174]</label>
+				<left>0</left>
+				<top>0</top>
+				<width>1596</width>
+				<height>69</height>
+				<textoffsetx>22</textoffsetx>
+				<font>Default</font>
+				<texturefocus border="4,5,6,8">controls\button_f.png</texturefocus>
+				<texturenofocus/>
+				<textureradioonfocus>controls\radiobutton_f.png</textureradioonfocus>
+				<textureradioonnofocus>controls\radiobutton_nf.png</textureradioonnofocus>
+				<onclick>Skin.ToggleSetting(Disable_Games_Home_Icon)</onclick>
+				<selected>Skin.HasSetting(Disable_Games_Home_Icon)</selected>
+				<pulseonselect>false</pulseonselect>
+			</control>
 			<control type="radiobutton" id="306">
 				<visible>ControlGroup(9000).HasFocus(32)</visible>
 				<label>$LOCALIZE[50017]</label>
@@ -711,6 +759,44 @@
 			</control>
 		</control>
 		<control type="group">
+			<visible>ControlGroup(9000).HasFocus(34)</visible>
+			<control type="image">
+				<left>40</left>
+				<top>430</top>
+				<width>500</width>
+				<height>125</height>
+				<texture>tbb_logo_large.png</texture>
+			</control>
+			<control type="label">
+				<left>250</left>
+				<top>540</top>
+				<height>100</height>
+				<width>790</width>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>grey</textcolor>
+				<font>Default</font>
+				<label>$INFO[System.AddonVersion(skin.ellipsisui)]</label>
+			</control>
+			<control type="textbox">
+				<left>490</left>
+				<top>350</top>
+				<height>380</height>
+				<width>850</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Large</font>
+				<label>$LOCALIZE[50175]</label>
+			</control>
+			<control type="image">
+				<left>1410</left>
+				<top>390</top>
+				<width>300</width>
+				<height>300</height>
+				<texture>donate_ellipsisui.png</texture>
+			</control>
+		</control>
+		<control type="group">
 			<visible>!Skin.HasSetting(Disable_Icon_Labels)</visible>
 			<animation effect="fade" time="300">Visible</animation>
 			<animation effect="fade" time="300">Hidden</animation>
@@ -747,6 +833,9 @@
 				<effect type="rotate" start="0" end="-45" center="auto" time="200"/>
 			</animation>
 			<animation type="Conditional" reversible="false" condition="ControlGroup(9000).HasFocus(33)">
+				<effect type="rotate" start="0" end="-45" center="auto" time="200"/>
+			</animation>
+			<animation type="Conditional" reversible="false" condition="ControlGroup(9000).HasFocus(34)">
 				<effect type="rotate" start="0" end="-45" center="auto" time="200"/>
 			</animation>
 		</control>

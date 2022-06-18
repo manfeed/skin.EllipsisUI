@@ -6,7 +6,7 @@
 			<top>156</top>
 			<width>1596</width>
 			<height>759</height>
-			<animation effect="slide" start="0,0" end="0,-30" time="0" condition="Container.Content(Movies) | Container.Content(TvShows) | Container.Content(MusicVideos) | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-30" time="0" condition="Container.Content(Movies) | Container.Content(TvShows) | Container.Content(MusicVideos) | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Games)">Conditional</animation>
 			<onleft>ActivateWindow(1201)</onleft>
 			<onright>65</onright>
 			<onup>59</onup>
@@ -28,16 +28,7 @@
 					<width>52</width>
 					<height>52</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<visible>String.IsEmpty(ListItem.Art(poster))</visible>
-				</control>
-				<control type="image">
-					<left>15</left>
-					<top>6</top>
-					<width>52</width>
-					<height>52</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.Art(poster)]</texture>
+					<texture fallback="DefaultFile.png">$VAR[Poster_list]</texture>
 				</control>
 				<control type="image">
 					<left>72</left>
@@ -227,6 +218,14 @@
 					<width>52</width>
 					<height>52</height>
 					<aspectratio>keep</aspectratio>
+					<texture fallback="DefaultFile.png">$VAR[Poster_list]</texture>
+				</control>
+				<!--control type="image">
+					<left>15</left>
+					<top>6</top>
+					<width>52</width>
+					<height>52</height>
+					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Icon]</texture>
 					<visible>String.IsEmpty(ListItem.Art(poster))</visible>
 				</control>
@@ -237,7 +236,7 @@
 					<height>52</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Art(poster)]</texture>
-				</control>
+				</control-->
 				<control type="image">
 					<left>72</left>
 					<top>0</top>
@@ -465,6 +464,31 @@
 				<font>Medium</font>
 				<scroll>true</scroll>
 				<label>$INFO[Container(59).CurrentItem] $LOCALIZE[20163] $INFO[Container(59).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(59).CurrentPage] $LOCALIZE[20163] $INFO[Container(59).NumPages]</label>
+			</control>
+			<control type="group">
+				<visible>Container.Content(Games)</visible>
+				<control type="image" id="479">
+					<left>835</left>
+					<top>852</top>
+					<width>250</width>
+					<height>90</height>
+					<texture fallback="transp.png">$INFO[Container(59).ListItem.Path]$INFO[Container(59).ListItem.FileNameNoExtension].png</texture>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+				</control>
+				<control type="label">
+					<visible>String.Contains(Control.GetLabel(479),transp.png)</visible>
+					<description>Current Selection</description>
+					<left>1</left>
+					<top>847</top>
+					<width>1920</width>
+					<height>60</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>[B][LOWERCASE][CAPITALIZE]$INFO[Container(59).ListItem.FileNameNoExtension][/CAPITALIZE][/LOWERCASE][/B]</label>
+					<font>Library_Normal_43</font>
+					<textcolor>TextSelectedItem</textcolor>
+					<shadowcolor>TextShadow</shadowcolor>
+				</control>
 			</control>
 			<control type="image">
 				<left>835</left>

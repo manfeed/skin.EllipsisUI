@@ -21,69 +21,12 @@
 					<top>44</top>
 					<width>290</width>
 					<height>579</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(3).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(3).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(3).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(3).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
-						<visible>String.IsEqual(Container(58).ListItem(3).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<texture>iconview-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(3).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(3).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(3).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(3).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-					</control>
+					<include content="PosterTile">
+						<param name="width" value="290"/>
+						<param name="height" value="290"/>
+						<param name="order" value="3"/>
+						<param name="view" value="58"/>
+					</include>
 				</control>
 				<!-- Move Icon 2 To Icon 3 Position On Move Previous -->
 				<control type="group">
@@ -94,69 +37,12 @@
 					<top>22</top>
 					<width>330</width>
 					<height>660</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(2).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(2).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
-						<visible>String.IsEqual(Container(58).ListItem(2).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<texture>iconview-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>330</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(2).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>330</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(2).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>330</top>
-						<width>330</width>
-						<height>330</height>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-					</control>
+					<include content="PosterTile">
+						<param name="width" value="330"/>
+						<param name="height" value="330"/>
+						<param name="order" value="2"/>
+						<param name="view" value="58"/>
+					</include>
 				</control>
 				<!-- Move Icon 1 To Icon 2 Position On Move Previous -->
 				<control type="group">
@@ -167,69 +53,12 @@
 					<top>0</top>
 					<width>376</width>
 					<height>753</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(1).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
-						<visible>String.IsEqual(Container(58).ListItem(1).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<texture>iconview-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(1).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-					</control>
+					<include content="PosterTile">
+						<param name="width" value="376"/>
+						<param name="height" value="376"/>
+						<param name="order" value="1"/>
+						<param name="view" value="58"/>
+					</include>
 				</control>
 				<!-- Show Far Left Icon On Move Previous -->
 				<control type="group">
@@ -243,69 +72,12 @@
 					<top>0</top>
 					<width>376</width>
 					<height>753</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(0).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
-						<visible>String.IsEqual(Container(58).ListItem(0).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<texture>iconview-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(0).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-					</control>
+					<include content="PosterTile">
+						<param name="width" value="376"/>
+						<param name="height" value="376"/>
+						<param name="order" value="0"/>
+						<param name="view" value="58"/>
+					</include>
 				</control>
 			</control>
 			<!-- DVD Hybrid View Icons - Clockwise Mothion -->
@@ -325,69 +97,12 @@
 					<top>44</top>
 					<width>290</width>
 					<height>579</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(2).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(2).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
-						<visible>String.IsEqual(Container(58).ListItem(2).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<texture>iconview-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(2).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(2).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-					</control>
+					<include content="PosterTile">
+						<param name="width" value="290"/>
+						<param name="height" value="290"/>
+						<param name="order" value="2"/>
+						<param name="view" value="58"/>
+					</include>
 				</control>
 				<!-- Move Icon 3 To Icon 2 Position On Move Next -->
 				<control type="group">
@@ -398,69 +113,12 @@
 					<top>44</top>
 					<width>290</width>
 					<height>579</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(1).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
-						<visible>String.IsEqual(Container(58).ListItem(1).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<texture>iconview-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(1).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-					</control>
+					<include content="PosterTile">
+						<param name="width" value="290"/>
+						<param name="height" value="290"/>
+						<param name="order" value="1"/>
+						<param name="view" value="58"/>
+					</include>
 				</control>
 				<!-- Move Icon 2 To Icon 1 Position On Move Next -->
 				<control type="group">
@@ -471,69 +129,12 @@
 					<top>22</top>
 					<width>330</width>
 					<height>660</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(0).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
-						<visible>String.IsEqual(Container(58).ListItem(0).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<texture>iconview-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>330</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(0).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>330</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>330</top>
-						<width>330</width>
-						<height>330</height>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-					</control>
+					<include content="PosterTile">
+						<param name="width" value="330"/>
+						<param name="height" value="330"/>
+						<param name="order" value="0"/>
+						<param name="view" value="58"/>
+					</include>
 				</control>
 				<!-- Hide Far Left Icon On Move Next -->
 				<control type="group">
@@ -546,69 +147,12 @@
 					<top>0</top>
 					<width>376</width>
 					<height>753</height>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(-1).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(-1).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
-						<visible>String.IsEqual(Container(58).ListItem(-1).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<texture>iconview-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(-1).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(-1).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(-1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-					</control>
+					<include content="PosterTile">
+						<param name="width" value="376"/>
+						<param name="height" value="376"/>
+						<param name="order" value="-1"/>
+						<param name="view" value="58"/>
+					</include>
 				</control>
 			</control>
 			<!-- DVD Hybrid View Static Icons -->
@@ -629,69 +173,12 @@
 						<effect type="fade" start="100" end="0" time="150" tween="sine" easing="in"/>
 					</animation>
 					<visible>!String.IsEmpty(Container(58).ListItemNoWrap(2).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(2).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(2).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
-						<visible>String.IsEqual(Container(58).ListItem(2).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>290</width>
-						<height>290</height>
-						<texture>iconview-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(2).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(2).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(2).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>290</top>
-						<width>290</width>
-						<height>290</height>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-					</control>
+					<include content="PosterTile">
+						<param name="width" value="290"/>
+						<param name="height" value="290"/>
+						<param name="order" value="2"/>
+						<param name="view" value="58"/>
+					</include>
 				</control>
 				<!-- Icon 2 -->
 				<control type="group">
@@ -708,69 +195,12 @@
 						<effect type="fade" start="100" end="0" time="150" tween="sine" easing="in"/>
 					</animation>
 					<visible>!String.IsEmpty(Container(58).ListItemNoWrap(1).Label)</visible>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(1).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
-						<visible>String.IsEqual(Container(58).ListItem(1).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>330</width>
-						<height>330</height>
-						<texture>iconview-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>330</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(1).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>330</top>
-						<width>330</width>
-						<height>330</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(1).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(1).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>330</top>
-						<width>330</width>
-						<height>330</height>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-					</control>
+					<include content="PosterTile">
+						<param name="width" value="330"/>
+						<param name="height" value="330"/>
+						<param name="order" value="1"/>
+						<param name="view" value="58"/>
+					</include>
 				</control>
 				<!-- Icon 1 -->
 				<control type="group">
@@ -787,69 +217,12 @@
 						<effect type="fade" start="100" end="0" time="150" delay="150" tween="sine" easing="in"/>
 						<effect type="rotatey" start="0" end="-90" center="0,0" time="150" delay="150" tween="sine" easing="out"/>
 					</animation>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(0).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture diffuse="iconview-diffuse.png"/>
-						<info>Container(58).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<texture colordiffuse="bbffffff">overlays/icon/OverlayWatched4.png</texture>
-						<visible>String.IsEqual(Container(58).ListItem(0).Overlay,OverlayWatched.png) + !Skin.HasSetting(Disable_Watched_Overlay)</visible>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>376</width>
-						<height>376</height>
-						<texture>iconview-overlay.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(0).ActualIcon</info>
-						<visible>String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png"/>
-						<info>Container(58).ListItem(0).Thumb</info>
-						<visible>!String.IsEmpty(Container(58).ListItem(0).Thumb)</visible>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>376</top>
-						<width>376</width>
-						<height>376</height>
-						<texture flipy="true" diffuse="iconview-reflect-diffuse.png">iconview-overlay.png</texture>
-					</control>
+					<include content="PosterTile">
+						<param name="width" value="376"/>
+						<param name="height" value="376"/>
+						<param name="order" value="0"/>
+						<param name="view" value="58"/>
+					</include>
 				</control>
 			</control>
 		</control>
