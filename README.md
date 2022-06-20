@@ -54,7 +54,7 @@ After this, you will automatically receive the latest development versions of El
 <br>
 
 ## DEVELOPMENT:
-[Github](https://github.com/gade01/skin.tetradui)  
+[Github](https://github.com/Ch3dd4rGoblin/skin.ellipsisui)  
 <br>
 
 ## LINKS:
