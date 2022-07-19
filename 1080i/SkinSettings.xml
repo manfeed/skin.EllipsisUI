@@ -536,23 +536,6 @@
 				<selected>Skin.HasSetting(Disable_Videos_Home_Icon)</selected>
 				<pulseonselect>false</pulseonselect>
 			</control>
-			<control type="radiobutton" id="302">
-				<visible>ControlGroup(9000).HasFocus(32)</visible>
-				<label>$LOCALIZE[50013]</label>
-				<left>0</left>
-				<top>0</top>
-				<width>1596</width>
-				<height>69</height>
-				<textoffsetx>22</textoffsetx>
-				<font>Default</font>
-				<texturefocus border="4,5,6,8">controls\button_f.png</texturefocus>
-				<texturenofocus/>
-				<textureradioonfocus>controls\radiobutton_f.png</textureradioonfocus>
-				<textureradioonnofocus>controls\radiobutton_nf.png</textureradioonnofocus>
-				<onclick>Skin.ToggleSetting(Disable_Play_DVD_Home_Icon)</onclick>
-				<selected>Skin.HasSetting(Disable_Play_DVD_Home_Icon)</selected>
-				<pulseonselect>false</pulseonselect>
-			</control>
 			<control type="radiobutton" id="303">
 				<visible>ControlGroup(9000).HasFocus(32)</visible>
 				<label>$LOCALIZE[50014]</label>
@@ -585,6 +568,23 @@
 				<textureradioonnofocus>controls\radiobutton_nf.png</textureradioonnofocus>
 				<onclick>Skin.ToggleSetting(Disable_Movie_Library_Home_Icon)</onclick>
 				<selected>Skin.HasSetting(Disable_Movie_Library_Home_Icon)</selected>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="313">
+				<visible>ControlGroup(9000).HasFocus(32)</visible>
+				<label>$LOCALIZE[50177]</label>
+				<left>0</left>
+				<top>0</top>
+				<width>1596</width>
+				<height>69</height>
+				<textoffsetx>22</textoffsetx>
+				<font>Default</font>
+				<texturefocus border="4,5,6,8">controls\button_f.png</texturefocus>
+				<texturenofocus/>
+				<textureradioonfocus>controls\radiobutton_f.png</textureradioonfocus>
+				<textureradioonnofocus>controls\radiobutton_nf.png</textureradioonnofocus>
+				<onclick>Skin.ToggleSetting(Disable_PVR_Home_Icon)</onclick>
+				<selected>Skin.HasSetting(Disable_PVR_Home_Icon)</selected>
 				<pulseonselect>false</pulseonselect>
 			</control>
 			<control type="radiobutton" id="305">
@@ -704,6 +704,23 @@
 				<textureradioonnofocus>controls\radiobutton_nf.png</textureradioonnofocus>
 				<onclick>Skin.ToggleSetting(Disable_Music_Home_Icon)</onclick>
 				<selected>Skin.HasSetting(Disable_Music_Home_Icon)</selected>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<control type="radiobutton" id="302">
+				<visible>ControlGroup(9000).HasFocus(32)</visible>
+				<label>$LOCALIZE[50013]</label>
+				<left>0</left>
+				<top>0</top>
+				<width>1596</width>
+				<height>69</height>
+				<textoffsetx>22</textoffsetx>
+				<font>Default</font>
+				<texturefocus border="4,5,6,8">controls\button_f.png</texturefocus>
+				<texturenofocus/>
+				<textureradioonfocus>controls\radiobutton_f.png</textureradioonfocus>
+				<textureradioonnofocus>controls\radiobutton_nf.png</textureradioonnofocus>
+				<onclick>Skin.ToggleSetting(Disable_Play_DVD_Home_Icon)</onclick>
+				<selected>Skin.HasSetting(Disable_Play_DVD_Home_Icon)</selected>
 				<pulseonselect>false</pulseonselect>
 			</control>
 			<control type="radiobutton" id="312">

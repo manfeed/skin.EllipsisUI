@@ -10,7 +10,9 @@
 	<include file="IncludeFlags.xml"/>
 	<include file="IncludeAnims.xml"/>
 	<include file="IncludeDebug.xml"/>
+	<include file="IncludesPVR.xml"/>
 	<include name="Sort_Letter">
+	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo)</expression>
 		<control type="group">
 			<left>0</left>
 			<top>0</top>
@@ -77,6 +79,26 @@
 	<variable name="watched_style">
 		<value condition="!Skin.HasSetting(Disable_Watched_Overlay) + [Container.Content(Episodes) | Container.Content(MusicVideos)]">overlays/icon/OverlayWatched2.png</value>
 		<value condition="!Skin.HasSetting(Disable_Watched_Overlay)">overlays/icon/OverlayWatched.png</value>
+	</variable>
+	<variable name="PVRStatusImageVar">
+		<value condition="ListItem.IsRecording">new_pvr/record.png</value>
+		<value condition="ListItem.HasTimer | ListItem.HasTimerSchedule">new_pvr/timer.png</value>
+		<value condition="ListItem.HasArchive">new_pvr/archive.png</value>
+		<value condition="ListItem.HasReminder">new_pvr/bell.png</value>
+	</variable>
+	<variable name="PVRTimerIcon">
+		<value condition="ListItem.IsRecording">new_pvr/record.png</value>
+		<value condition="ListItem.HasReminder">new_pvr/bell.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasError">new_pvr/PVR-HasTimerScheduleError.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerHasError">new_pvr/PVR-HasTimerError.png</value>
+		<value condition="ListItem.HasTimerSchedule + ListItem.TimerHasConflict">new_pvr/PVR-HasTimerScheduleConflict.png</value>
+		<value condition="ListItem.HasTimer + ListItem.TimerHasConflict">new_pvr/PVR-HasTimerConflict.png</value>
+		<value condition="ListItem.HasRecording">new_pvr/PVR-HasRecording.png</value>
+		<value condition="ListItem.HasTimerSchedule + !ListItem.TimerIsActive">new_pvr/PVR-HasTimerScheduleDisabled.png</value>
+		<value condition="ListItem.HasTimer + !ListItem.TimerIsActive">new_pvr/PVR-HasTimerDisabled.png</value>
+		<value condition="ListItem.HasTimerSchedule">new_pvr/PVR-HasTimerSchedule.png</value>
+		<value condition="ListItem.HasTimer">new_pvr/timer.png</value>
+		<value condition="ListItem.IsPlayable">new_pvr/archive.png</value>
 	</variable>
 	<include name="FolderName">
 		<control type="group">
@@ -1014,7 +1036,7 @@
 			<top>0</top>
 			<width>1920</width>
 			<height>1080</height>
-			<visible>!Skin.HasSetting(Disable_Background_Video) + Player.HasVideo</visible>
+			<visible>!Skin.HasSetting(Disable_Background_Video) + Player.HasVideo + !Window.IsActive(tvchannels)</visible>
 		</control>
 		<control type="image">
 			<left>0</left>
@@ -1085,7 +1107,7 @@
 		</control>
 		<control type="group">
 			<visible>![!Skin.HasSetting(Disable_Visualisation) + Player.HasAudio]</visible>
-			<visible>![!Skin.HasSetting(Disable_Background_Video) + Player.HasVideo]</visible>
+			<visible>![!Skin.HasSetting(Disable_Background_Video) + Player.HasVideo + VideoPlayer.IsFullscreen]</visible>
 			<visible>![!String.IsEmpty(Fanart.Image) + String.IsEmpty(ListItem.Art(fanart))]</visible>
 			<visible>![!Skin.HasSetting(Disable_Fanart) + !String.IsEmpty(ListItem.Art(fanart))]</visible>
 			<visible>![Skin.HasSetting(Enable_Custom_Background) + !String.IsEmpty(Skin.String(Custom_Background))]</visible>

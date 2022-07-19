@@ -28,16 +28,17 @@
             </control>
             <control type="image">
                 <left>928</left>
-                <top>255</top>
+                <top>215</top>
                 <width>63</width>
                 <height>63</height>
                 <texture>dialogs\numeric-dialog-icon.png</texture>
             </control>
-            <control type="label" id="1">
+            <control type="textbox" id="1">
                 <description>Heading</description>
-                <left>0</left>
-                <top>338</top>
-                <width>1920</width>
+                <left>680</left>
+                <top>292</top>
+                <width>560</width>
+				<height>90</height>
                 <font>Heading_Small</font>
                 <textcolor>Text</textcolor>
                 <align>center</align>

@@ -723,3 +723,7 @@ msgstr "EllipsisUI is un proyecto nacido de la pasión del TeamUI.[CR]Es un proy
 msgctxt "#50176"
 msgid "Select + Right Stick"
 msgstr "Select + Mando Derecha"
+
+msgctxt "#50177"
+msgid "Hide PVR home icon"
+msgstr "Ocultar icono TV EN VIVO"

@@ -156,18 +156,13 @@
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
 				</item>
 				<item>
-					<label>10028</label>
-					<onclick>ActivateWindow(special://videoplaylists/)</onclick>
+					<label>653</label>
+					<onclick>UpdateLibrary(video)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
 				</item>
 				<item>
-					<label>1037</label>
-					<onclick>ActivateWindow(addons://sources/video/)</onclick>
-					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
-				</item>
-				<item>
-					<label>744</label>
-					<onclick>ActivateWindow(sources://video/)</onclick>
+					<label>14247</label>
+					<onclick>CleanLibrary(video)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
 				</item>
 				<item>
@@ -306,18 +301,13 @@
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
 				</item>
 				<item>
-					<label>10500</label>
-					<onclick>ActivateWindow(special://musicplaylists/)</onclick>
+					<label>653</label>
+					<onclick>UpdateLibrary(music)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
 				</item>
 				<item>
-					<label>1038</label>
-					<onclick>ActivateWindow(addons://sources/audio/)</onclick>
-					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
-				</item>
-				<item>
-					<label>744</label>
-					<onclick>ActivateWindow(sources://music/)</onclick>
+					<label>14247</label>
+					<onclick>CleanLibrary(music)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
 				</item>
 			</content>
@@ -373,6 +363,14 @@
 			<icon>icon_home_movie_library.png</icon>
 			<label>[CAPITALIZE]$LOCALIZE[20342][/CAPITALIZE]</label>
 			<onclick>ActivateWindow(Videos,videodb://movies/titles/,return)</onclick>
+		</item>
+	</include>
+	<include name="Menu_PVR">
+		<item>
+			<visible>!Skin.HasSetting(Disable_PVR_Home_Icon)</visible>
+			<icon>icon_home_PVR.png</icon>
+			<label>14204</label>
+			<onclick>ActivateWindow(tvchannels)</onclick>
 		</item>
 	</include>
 	<include name="Menu_Music_Video_Library">
@@ -882,6 +880,7 @@
 					<include>Menu_Tv_Library</include>
 					<include>Menu_Play_DVD</include>
 					<include>Menu_Games</include>
+					<include>Menu_PVR</include>
 					<include>Menu_Pictures</include>
 					<include>Menu_FileManager</include>
 					<include>Menu_Weather</include>

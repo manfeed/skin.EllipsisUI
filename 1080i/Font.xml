@@ -80,6 +80,11 @@
 			<filename>NotoMono-Regular.ttf</filename>
 			<size>26</size>
 		</font>
+		<font>
+			<name>IconSmall</name>
+			<filename>MaterialIcons-Regular.ttf</filename>
+			<size>36</size>
+		</font>
         <!-- Credits -->
         <font>
             <name>Credits_Intro</name>
