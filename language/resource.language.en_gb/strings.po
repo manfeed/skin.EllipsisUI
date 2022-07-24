@@ -723,3 +723,7 @@ msgstr ""
 msgctxt "#50176"
 msgid "Select + Right Stick"
 msgstr ""
+
+msgctxt "#50177"
+msgid "Hide PVR home icon"
+msgstr ""

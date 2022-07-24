@@ -580,6 +580,7 @@
 					<include>Dock_ViewAs</include>
 					<include>Dock_SortAs</include>
 					<include>Dock_SortDirection</include>
+					<include>Dock_Live_TV</include>
 					<include>Dock_HideForeignAddons</include>
 					<include>Dock_AutoupdateAddons</include>
 					<include>Dock_Update_CleanLibrary</include>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<views>10</views>
+	<controls>
+		<include>Background</include>
+		<!-- Elipsis Visor -->
+		<include>Visor_Filter</include>
+		<!-- Edge Filter -->
+		<include>Edge_Filter</include>
+		<include>PVR_GuideViews</include>
+		<!-- Clock -->
+		<include>Clock</include>
+		<!-- Elipsis Button -->
+		<control type="group">
+			<left>960</left>
+			<top>1080</top>
+			<include>Dock_Elipsis_Home</include>
+		</control>
+		<control type="label" id="29">
+			<font/>
+			<include>HiddenObject</include>
+		</control>
+		<control type="label" id="30">
+			<font/>
+			<include>HiddenObject</include>
+		</control>
+		<include>Debug</include>
+	</controls>
+</window>
