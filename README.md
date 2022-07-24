@@ -60,7 +60,7 @@ After this, you will automatically receive the latest development versions of El
 ## LINKS:
 [Kodi forum (skin support)](https://forum.kodi.tv/showthread.php?tid=368248)
 
-[SCREENSHOTS](url placeholder)  
+[SCREENSHOTS](https://imgur.com/a/G8yUtu6#ITyo1Hp)  
 <br>
 
 ## CREDITS: 
