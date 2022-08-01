@@ -12,7 +12,7 @@
 	<include file="IncludeDebug.xml"/>
 	<include file="IncludesPVR.xml"/>
 	<include name="Sort_Letter">
-	<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo)</expression>
+		<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo)</expression>
 		<control type="group">
 			<left>0</left>
 			<top>0</top>
@@ -42,6 +42,41 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.SortLetter]</label>
+				<textcolor>Text</textcolor>
+				<font>Selected_Item</font>
+			</control>
+		</control>
+	</include>
+	<include name="PVRChannelNumberInput">
+		<control type="group">
+			<left>853</left>
+			<top>433</top>
+			<width>214</width>
+			<height>214</height>
+			<visible>!String.IsEmpty(PVR.ChannelNumberInput)</visible>
+			<animation type="Visible" reversible="false">
+				<effect type="zoom" start="10" end="100" center="auto" time="100" tween="elastic" easing="out"/>
+				<effect type="fade" start="0" end="100" time="100" tween="sine" easing="out"/>
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="zoom" start="100" end="10" center="auto" time="300" tween="back" easing="in"/>
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in"/>
+			</animation>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>214</width>
+				<height>214</height>
+				<texture>dialogs\dialog_sort_letter.png</texture>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<top>0</top>
+				<width>214</width>
+				<height>214</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[PVR.ChannelNumberInput]</label>
 				<textcolor>Text</textcolor>
 				<font>Selected_Item</font>
 			</control>
@@ -86,6 +121,11 @@
 		<value condition="ListItem.HasArchive">new_pvr/archive.png</value>
 		<value condition="ListItem.HasReminder">new_pvr/bell.png</value>
 	</variable>
+	<variable name="ListPVRTimersIconVar">
+		<value condition="ListItem.IsRecording">new_pvr/record.png</value>
+		<value condition="ListItem.HasReminder">new_pvr/bell.png</value>
+		<value>new_pvr/archive.png</value>
+	</variable>
 	<variable name="PVRTimerIcon">
 		<value condition="ListItem.IsRecording">new_pvr/record.png</value>
 		<value condition="ListItem.HasReminder">new_pvr/bell.png</value>
@@ -99,6 +139,10 @@
 		<value condition="ListItem.HasTimerSchedule">new_pvr/PVR-HasTimerSchedule.png</value>
 		<value condition="ListItem.HasTimer">new_pvr/timer.png</value>
 		<value condition="ListItem.IsPlayable">new_pvr/archive.png</value>
+	</variable>
+	<variable name="PVRChannelMgrHeader">
+		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
+		<value>$LOCALIZE[19199] - $LOCALIZE[19023]</value>
 	</variable>
 	<include name="FolderName">
 		<control type="group">
@@ -1036,7 +1080,7 @@
 			<top>0</top>
 			<width>1920</width>
 			<height>1080</height>
-			<visible>!Skin.HasSetting(Disable_Background_Video) + Player.HasVideo + !Window.IsActive(tvchannels)</visible>
+			<visible>!Skin.HasSetting(Disable_Background_Video) + Player.HasVideo + !Window.IsActive(tvchannels) + !Window.IsActive(tvsearch) + !Window.IsActive(tvguide)</visible>
 		</control>
 		<control type="image">
 			<left>0</left>

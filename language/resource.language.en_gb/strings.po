@@ -727,3 +727,19 @@ msgstr ""
 msgctxt "#50177"
 msgid "Hide PVR home icon"
 msgstr ""
+
+msgctxt "#50178"
+msgid "SHOW: "
+msgstr ""
+
+msgctxt "#50179"
+msgid "GROUP BY FOLDER"
+msgstr ""
+
+msgctxt "#50180"
+msgid "LIST"
+msgstr ""
+
+msgctxt "#50181"
+msgid "Channel options"
+msgstr ""

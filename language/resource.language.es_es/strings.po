@@ -727,3 +727,19 @@ msgstr "Select + Mando Derecha"
 msgctxt "#50177"
 msgid "Hide PVR home icon"
 msgstr "Ocultar icono TV EN VIVO"
+
+msgctxt "#50178"
+msgid "SHOW: "
+msgstr "MOSTRAR: "
+
+msgctxt "#50179"
+msgid "GROUP BY FOLDER"
+msgstr "AGRUPAR POR DIRECTORIO"
+
+msgctxt "#50180"
+msgid "LIST"
+msgstr "LISTA"
+
+msgctxt "#50181"
+msgid "Channel options"
+msgstr "Opciones de canal"

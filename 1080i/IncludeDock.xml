@@ -18,6 +18,18 @@
 			</control>
 		</itemlayout>
 		<focusedlayout height="135" width="150">
+			<control type="button" id="2991">
+				<left>-300</left>
+				<top>-300</top>
+				<width>1</width>
+				<height>1</height>
+				<texturefocus/>
+				<texturenofocus/>
+				<label/>
+				<font/>
+				<onfocus condition="!String.IsEmpty(Window(Home).Property(ItemDock))">ClearProperty(ItemDock,home)</onfocus>
+				<onfocus>SetProperty(ItemDock,$INFO[Container(9500).ListItem.Icon],home)</onfocus>
+			</control>
 			<control type="label">
 				<left>0</left>
 				<top>0</top>
@@ -71,7 +83,7 @@
 			<texture>filter_dockshadow2.png</texture>
 			<animation effect="fade" time="200">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
-			<visible>!Window.IsActive(FullScreenVideo)</visible>
+			<visible>!Window.IsActive(FullScreenVideo) + !Window.IsVisible(TVRecordings) + !Window.IsActive(Videos)</visible>
 		</control>
 	</include>
 	<include name="Dock_Label">
@@ -88,8 +100,6 @@
 			<visible>!Window.IsActive(123) + !Window.IsActive(125)</visible>
 			<visible>!Container(9500).HasFocus(31000) + !Container(9500).HasFocus(31001)</visible>
 			<visible>!Skin.HasSetting(Disable_Icon_Labels)</visible>
-			<animation effect="fade" time="300">Visible</animation>
-			<animation effect="fade" time="300">Hidden</animation>
 			<animation effect="fade" time="300">WindowOpen</animation>
 			<animation effect="fade" time="300">WindowClose</animation>
 		</control>
@@ -105,8 +115,6 @@
 			<shadowcolor>TextShadow</shadowcolor>
 			<visible>Container(9500).HasFocus(31000)</visible>
 			<visible>!Skin.HasSetting(Disable_Icon_Labels)</visible>
-			<animation effect="fade" time="300">Visible</animation>
-			<animation effect="fade" time="300">Hidden</animation>
 			<animation effect="fade" time="300">WindowOpen</animation>
 			<animation effect="fade" time="300">WindowClose</animation>
 		</control>
@@ -122,8 +130,6 @@
 			<shadowcolor>TextShadow</shadowcolor>
 			<visible>Container(9500).HasFocus(31001)</visible>
 			<visible>!Skin.HasSetting(Disable_Icon_Labels)</visible>
-			<animation effect="fade" time="300">Visible</animation>
-			<animation effect="fade" time="300">Hidden</animation>
 			<animation effect="fade" time="300">WindowOpen</animation>
 			<animation effect="fade" time="300">WindowClose</animation>
 		</control>
@@ -580,13 +586,14 @@
 					<include>Dock_ViewAs</include>
 					<include>Dock_SortAs</include>
 					<include>Dock_SortDirection</include>
+					<include>Dock_Filter</include>
+					<include>Dock_Watched_Live_TV</include>
 					<include>Dock_Live_TV</include>
 					<include>Dock_HideForeignAddons</include>
 					<include>Dock_AutoupdateAddons</include>
-					<include>Dock_Update_CleanLibrary</include>
 					<include>Dock_Watched</include>
 					<include>Dock_Search</include>
-					<include>Dock_Filter</include>
+					<include>Dock_Update_CleanLibrary</include>
 					<include>Dock_PartyMode</include>
 					<include>Dock_UnlockSources</include>
 					<include>Dock_Slideshow</include>
