@@ -16,6 +16,9 @@
 	<include file="IncludeWallView.xml"/>
 	<include file="IncludeChannelsView.xml"/>
 	<include file="IncludePVRGuide.xml"/>
+	<include file="IncludePVRRecordings.xml"/>
+	<include file="IncludePVRTimers.xml"/>
+	<include file="IncludePVRSearch.xml"/>
 	<include name="Video_Library_Views">
 		<include>Show_Case_View</include>
 		<include>Show_Case_Hybrid_View</include>

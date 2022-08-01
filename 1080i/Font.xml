@@ -76,6 +76,12 @@
             <size>39</size>
         </font>
 		<font>
+            <name>Selected_Item_Upper</name>
+            <filename>Ellipsis_normal.ttf</filename>
+			 <style>uppercase</style>
+            <size>39</size>
+        </font>
+		<font>
 			<name>Mono26</name>
 			<filename>NotoMono-Regular.ttf</filename>
 			<size>26</size>

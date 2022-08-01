@@ -200,7 +200,7 @@
 				<control type="label">
 					<visible>!ListItem.IsParentFolder</visible>
 					<left>640</left>
-					<top>873</top>
+					<top>870</top>
 					<width>1200</width>
 					<align>right</align>
 					<font>Medium_Large</font>
@@ -241,15 +241,16 @@
 				<control type="label">
 					<top>15</top>
 					<width>870</width>
-					<height>30</height>
+					<height>60</height>
 					<font>Default</font>
 					<textcolor>white</textcolor>
 					<textoffsetx>15</textoffsetx>
 					<visible>Container(68).ListItem.HasEpg</visible>
-					<label>[B]$INFO[Container(68).ListItem.StartTime]$INFO[Container(68).ListItem.EndTime, - ,: ][/B]$INFO[Container(68).ListItem.Title]</label>
+					<shadowcolor>black</shadowcolor>
+					<label>[B]$INFO[Container(68).ListItem.StartTime]$INFO[Container(68).ListItem.EndTime, - ,    ][/B]$INFO[ListItem.Duration,$LOCALIZE[180]: ,][CR][B][COLOR Highlight]$INFO[Container(68).ListItem.Title][/B][/COLOR]</label>
 				</control>
 				<control type="label">
-					<top>58</top>
+					<top>99</top>
 					<width>870</width>
 					<height>30</height>
 					<font>Medium_Large</font>
@@ -261,9 +262,9 @@
 				<control type="textbox" id="80">
 					<label>$INFO[Container(68).ListItem.Plot]</label>
 					<left>15</left>
-					<top>116</top>
+					<top>150</top>
 					<width>855</width>
-					<height>254</height>
+					<height>220</height>
 					<font>Medium_Large</font>
 					<autoscroll delay="6500" time="2500" repeat="2500">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
 				</control>
@@ -559,20 +560,22 @@
 							<height>50</height>
 							<font>Default</font>
 							<textcolor>white</textcolor>
-							<label>[B]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,: ][/B]</label>
+							<shadowcolor>black</shadowcolor>
+							<label>[B]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,    ][/B]</label>
 						</control>
 						<control type="label">
 							<width>965</width>
 							<align>left</align>
 							<height>50</height>
 							<font>Default</font>
-							<textcolor>white</textcolor>
 							<scroll>true</scroll>
-							<label>$INFO[ListItem.Title]     $INFO[ListItem.Genre,$LOCALIZE[515]: ,]</label>
+							<textcolor>Highlight</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<label>[B]$INFO[ListItem.Title][/B]</label>
 						</control>
 					</control>
 					<control type="textbox" id="81">
-						<label>$INFO[ListItem.Plot]</label>
+						<label>[B]$INFO[ListItem.Duration,$LOCALIZE[180]: , - ]$INFO[ListItem.Genre,$LOCALIZE[515]: , - ][/B]$INFO[ListItem.Plot]</label>
 						<left>15</left>
 						<top>50</top>
 						<width>1350</width>
@@ -591,5 +594,6 @@
 			<animation effect="fade" time="200">Hidden</animation>
 			<visible>Window.IsActive(FileBrowser) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGroupManager) | Window.IsActive(PVRGuideSearch)</visible>
 		</control>
+		<include>PVRChannelNumberInput</include>
 	</include>
 </includes>
