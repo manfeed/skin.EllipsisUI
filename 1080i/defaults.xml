@@ -12,7 +12,7 @@
 		<top>0</top>
 		<font>Default</font>
 		<textcolor>Text</textcolor>
-		<shadowcolor></shadowcolor>
+		<shadowcolor/>
 		<align>left</align>
 	</default>
 	<default type="fadelabel">
@@ -22,7 +22,7 @@
 		<height>0</height>
 		<font>Default</font>
 		<textcolor>Text</textcolor>
-		<shadowcolor></shadowcolor>
+		<shadowcolor/>
 		<textoffsetx>0</textoffsetx>
 		<scrollout>false</scrollout>
 		<resetonlabelchange>false</resetonlabelchange>
@@ -35,7 +35,7 @@
 		<font>Default</font>
 		<textcolor>Text</textcolor>
 		<disabledcolor>DisabledText</disabledcolor>
-		<shadowcolor></shadowcolor>
+		<shadowcolor/>
 		<textoffsetx>22</textoffsetx>
 		<texturenofocus border="4,5,6,8">controls\button_nf.png</texturenofocus>
 		<texturefocus border="4,5,6,8">controls\button_f.png</texturefocus>
@@ -51,7 +51,7 @@
 		<font>Default</font>
 		<textcolor>Text</textcolor>
 		<disabledcolor>DisabledText</disabledcolor>
-		<shadowcolor></shadowcolor>
+		<shadowcolor/>
 		<textoffsetx>22</textoffsetx>
 		<texturenofocus border="4,5,6,8">controls\button_nf.png</texturenofocus>
 		<texturefocus border="4,5,6,8">controls\button_f.png</texturefocus>
@@ -68,7 +68,7 @@
 		<height>0</height>
 		<font>Default</font>
 		<textcolor>Text</textcolor>
-		<shadowcolor></shadowcolor>
+		<shadowcolor/>
 	</default>
 	<default type="progress">
 		<left>0</left>
@@ -76,11 +76,10 @@
 		<width>0</width>
 		<height>0</height>
 		<texturebg>controls\toast-progress-empty.png</texturebg>
-		<lefttexture></lefttexture>
+		<lefttexture/>
 		<midtexture>controls\toast-progress-full.png</midtexture>
-		<righttexture></righttexture>
-		<overlaytexture></overlaytexture>
-		<reveal>true</reveal>
+		<righttexture/>
+		<overlaytexture/>
 	</default>
 	<default type="spincontrolex">
 		<left>0</left>
@@ -90,15 +89,15 @@
 		<font>Default</font>
 		<textcolor>Text</textcolor>
 		<disabledcolor>DisabledText</disabledcolor>
-		<shadowcolor></shadowcolor>
+		<shadowcolor/>
 		<texturefocus border="4,5,6,8">controls\button_f.png</texturefocus>
 		<texturenofocus border="4,5,6,8">controls\button_nf.png</texturenofocus>
 		<textureup>controls\sortup_nf.png</textureup>
 		<texturedown>controls\sortdown_nf.png</texturedown>
 		<textureupfocus>controls\sortup_f.png</textureupfocus>
 		<texturedownfocus>controls\sortdown_f.png</texturedownfocus>
-		<textureupdisabled></textureupdisabled>
-		<texturedowndisabled></texturedowndisabled>
+		<textureupdisabled/>
+		<texturedowndisabled/>
 		<reverse>yes</reverse>
 		<textoffsetx>22</textoffsetx>
 		<align>left</align>
@@ -113,13 +112,13 @@
 		<font>Default</font>
 		<textcolor>Text</textcolor>
 		<disabledcolor>DisabledText</disabledcolor>
-		<shadowcolor></shadowcolor>
+		<shadowcolor/>
 		<texturefocus border="4,5,6,8">controls\button_f.png</texturefocus>
 		<texturenofocus border="4,5,6,8">controls\button_nf.png</texturenofocus>
 		<textureup>controls\sortup_nf.png</textureup>
 		<texturedown>controls\sortdown_nf.png</texturedown>
-		<textureupdisabled></textureupdisabled>
-		<texturedowndisabled></texturedowndisabled>
+		<textureupdisabled/>
+		<texturedowndisabled/>
 		<textureupfocus>controls\sortup_f.png</textureupfocus>
 		<texturedownfocus>controls\sortdown_f.png</texturedownfocus>
 		<subtype>text</subtype>
@@ -137,7 +136,7 @@
 		<font>Default</font>
 		<textcolor>Text</textcolor>
 		<disabledcolor>DisabledText</disabledcolor>
-		<shadowcolor></shadowcolor>
+		<shadowcolor/>
 		<textoffsetx>22</textoffsetx>
 		<radiowidth>24</radiowidth>
 		<radioheight>24</radioheight>
@@ -195,8 +194,8 @@
 		<texturesliderbackground>controls\scrollbar_back.png</texturesliderbackground>
 		<texturesliderbar>controls\scrollbar_bar_nf.png</texturesliderbar>
 		<texturesliderbarfocus>controls\scrollbar_bar_f.png</texturesliderbarfocus>
-		<textureslidernib></textureslidernib>
-		<textureslidernibfocus></textureslidernibfocus>
+		<textureslidernib/>
+		<textureslidernibfocus/>
 		<showonepage>false</showonepage>
 		<orientation>vertical</orientation>
 	</default>

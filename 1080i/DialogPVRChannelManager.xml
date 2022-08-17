@@ -116,12 +116,6 @@
 					<scrolltime>200</scrolltime>
 					<itemlayout height="70" width="630">
 						<control type="image">
-							<left>0</left>
-							<height>70</height>
-							<width>605</width>
-							<texture border="4,5,6,8">controls\button_nf.png</texture>
-						</control>
-						<control type="image">
 							<left>48</left>
 							<top>9</top>
 							<width>50</width>
@@ -143,7 +137,17 @@
 							<right>40</right>
 							<bottom>0</bottom>
 							<aligny>center</aligny>
+							<textcolor>grey</textcolor>
+							<visible>!ListItem.Property(ActiveChannel)</visible>
+							<label>$INFO[ListItem.Property(Name)]</label>
+						</control>
+						<control type="label">
+							<left>110</left>
+							<right>40</right>
+							<bottom>0</bottom>
+							<aligny>center</aligny>
 							<visible>!ListItem.Property(Changed)</visible>
+							<visible>ListItem.Property(ActiveChannel)</visible>
 							<label>$INFO[ListItem.Property(Number),[B],[/B] - ]$INFO[ListItem.Property(Name)]</label>
 						</control>
 						<control type="label">
@@ -153,6 +157,7 @@
 							<aligny>center</aligny>
 							<textcolor>Highlight</textcolor>
 							<visible>ListItem.Property(Changed)</visible>
+							<visible>ListItem.Property(ActiveChannel)</visible>
 							<label>$INFO[ListItem.Property(Number),[B],[/B] - ]$INFO[ListItem.Property(Name)]</label>
 						</control>
 					</itemlayout>
@@ -187,7 +192,18 @@
 							<top>-7</top>
 							<height>40</height>
 							<aligny>top</aligny>
+							<textcolor>grey</textcolor>
+							<visible>!ListItem.Property(ActiveChannel)</visible>
+							<label>$INFO[ListItem.Property(Name)]</label>
+						</control>
+						<control type="label">
+							<left>110</left>
+							<right>40</right>
+							<top>-7</top>
+							<height>40</height>
+							<aligny>top</aligny>
 							<visible>!ListItem.Property(Changed)</visible>
+							<visible>ListItem.Property(ActiveChannel)</visible>
 							<label>$INFO[ListItem.Property(Number),[B],[/B] - ]$INFO[ListItem.Property(Name)]</label>
 						</control>
 						<control type="label">
@@ -198,6 +214,7 @@
 							<aligny>top</aligny>
 							<textcolor>Highlight</textcolor>
 							<visible>ListItem.Property(Changed)</visible>
+							<visible>ListItem.Property(ActiveChannel)</visible>
 							<label>$INFO[ListItem.Property(Number),[B],[/B] - ]$INFO[ListItem.Property(Name)]</label>
 						</control>
 						<control type="label">
@@ -206,8 +223,8 @@
 							<right>40</right>
 							<height>30</height>
 							<font>Library_Normal_14</font>
-							<textcolor>Highlight</textcolor>
-							<visible>ListItem.Property(Changed)</visible>
+							<textcolor>grey</textcolor>
+							<visible>!ListItem.Property(ActiveChannel)</visible>
 							<aligny>center</aligny>
 							<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
 						</control>
@@ -218,6 +235,19 @@
 							<height>30</height>
 							<font>Library_Normal_14</font>
 							<visible>!ListItem.Property(Changed)</visible>
+							<visible>ListItem.Property(ActiveChannel)</visible>
+							<aligny>center</aligny>
+							<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
+						</control>
+						<control type="label">
+							<left>110</left>
+							<top>35</top>
+							<right>40</right>
+							<height>30</height>
+							<font>Library_Normal_14</font>
+							<textcolor>Highlight</textcolor>
+							<visible>ListItem.Property(Changed)</visible>
+							<visible>ListItem.Property(ActiveChannel)</visible>
 							<aligny>center</aligny>
 							<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
 						</control>
@@ -228,7 +258,7 @@
 				<left>700</left>
 				<control type="grouplist" id="9002">
 					<top>80</top>
-					<onleft>60</onleft>
+					<onleft>20</onleft>
 					<onright>9000</onright>
 					<onup>34</onup>
 					<ondown>30</ondown>
@@ -333,7 +363,7 @@
 				<top>120</top>
 				<onleft>9002</onleft>
 				<onright>20</onright>
-				<itemgap>dialogbuttons_itemgap</itemgap>
+				<itemgap>0</itemgap>
 				<width>370</width>
 				<include content="DefaultDialogButton">
 					<param name="width" value="370"/>

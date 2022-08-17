@@ -144,6 +144,10 @@
 		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19024]</value>
 		<value>$LOCALIZE[19199] - $LOCALIZE[19023]</value>
 	</variable>
+	<variable name="PVRGroupMgrHeader">
+		<value condition="!String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19048] - $LOCALIZE[19174]</value>
+		<value>$LOCALIZE[19048] - $LOCALIZE[19173]</value>
+	</variable>
 	<include name="FolderName">
 		<control type="group">
 			<visible>!Skin.HasSetting(Disable_Current_Folder_Section_Widget)</visible>
@@ -214,6 +218,98 @@
 				<visible>$PARAM[visible]</visible>
 			</control>
 		</definition>
+	</include>
+	<include name="ChannelManagerList">
+		<control type="list" id="$PARAM[lista_id]">
+			<left>20</left>
+			<top>75</top>
+			<width>470</width>
+			<height>690</height>
+			<onup>$PARAM[lista_id]</onup>
+			<ondown>$PARAM[lista_id]</ondown>
+			<onleft>$PARAM[onleft]</onleft>
+			<onright>$PARAM[scrollbar_id]</onright>
+			<pagecontrol>$PARAM[scrollbar_id]</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="69" width="470">
+				<control type="image">
+					<width>60</width>
+					<height>60</height>
+					<left>401</left>
+					<top>3</top>
+					<texture>$INFO[ListItem.ActualIcon]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<visible>!String.IsEqual(ListItem.ChannelNumberLabel,0)</visible>
+					<left>20</left>
+					<width>370</width>
+					<height>69</height>
+					<aligny>center</aligny>
+					<font>Medium_Large</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[ListItem.ChannelNumberLabel,[B],[/B] - ]$INFO[ListItem.ChannelName]</label>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(ListItem.ChannelNumberLabel,0)</visible>
+					<left>20</left>
+					<width>370</width>
+					<height>69</height>
+					<aligny>center</aligny>
+					<font>Medium_Large</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[ListItem.ChannelName]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="69" width="470">
+				<control type="image">
+					<left>0</left>
+					<top>-2</top>
+					<width>470</width>
+					<height>73</height>
+					<texture border="4,5,6,8">controls\button_f.png</texture>
+					<visible>Control.HasFocus($PARAM[lista_id])</visible>
+				</control>
+				<control type="image">
+					<width>60</width>
+					<height>60</height>
+					<left>401</left>
+					<top>3</top>
+					<texture>$INFO[ListItem.ActualIcon]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<visible>!String.IsEqual(ListItem.ChannelNumberLabel,0)</visible>
+					<left>20</left>
+					<width>360</width>
+					<height>69</height>
+					<aligny>center</aligny>
+					<font>Medium_Large</font>
+					<label>$INFO[ListItem.ChannelNumberLabel,[B],[/B] - ]$INFO[ListItem.ChannelName]</label>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(ListItem.ChannelNumberLabel,0)</visible>
+					<left>20</left>
+					<width>360</width>
+					<height>69</height>
+					<aligny>center</aligny>
+					<font>Medium_Large</font>
+					<label>$INFO[ListItem.ChannelName]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="$PARAM[scrollbar_id]">
+			<left>497</left>
+			<top>80</top>
+			<width>12</width>
+			<height>675</height>
+			<onleft>$PARAM[lista_id]</onleft>
+			<onright>$PARAM[onright]</onright>
+			<ondown>$PARAM[scrollbar_id]</ondown>
+			<onup>$PARAM[scrollbar_id]</onup>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+		</control>
 	</include>
 	<include name="PosterGames">
 		<param name="width">344</param>
