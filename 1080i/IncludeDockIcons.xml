@@ -277,7 +277,7 @@
 			<visible>String.IsEqual(Container.SortOrder,$LOCALIZE[585])</visible>
 			<visible>Window.IsVisible(tvsearch)</visible>
 		</item>
-				<item id="31034">
+		<item id="31034">
 			<icon>dock\icons\sort-direction-asc.png</icon>
 			<label>$LOCALIZE[580]</label>
 			<onclick>SendClick(10700,4)</onclick>
@@ -291,7 +291,7 @@
 			<visible>String.IsEqual(Container.SortOrder,$LOCALIZE[585])</visible>
 			<visible>Window.IsVisible(tvchannels)</visible>
 		</item>
-						<item id="31036">
+		<item id="31036">
 			<icon>dock\icons\sort-direction-asc.png</icon>
 			<label>$LOCALIZE[580]</label>
 			<onclick>SendClick(10702,4)</onclick>
@@ -305,7 +305,7 @@
 			<visible>String.IsEqual(Container.SortOrder,$LOCALIZE[585])</visible>
 			<visible>Window.IsVisible(tvguide)</visible>
 		</item>
-								<item id="31038">
+		<item id="31038">
 			<icon>dock\icons\sort-direction-asc.png</icon>
 			<label>$LOCALIZE[580]</label>
 			<onclick>SendClick(10701,4)</onclick>
@@ -319,7 +319,7 @@
 			<visible>String.IsEqual(Container.SortOrder,$LOCALIZE[585])</visible>
 			<visible>Window.IsVisible(tvrecordings)</visible>
 		</item>
-										<item id="31040">
+		<item id="31040">
 			<icon>dock\icons\sort-direction-asc.png</icon>
 			<label>$LOCALIZE[580]</label>
 			<onclick>SendClick(10703,4)</onclick>
@@ -333,7 +333,7 @@
 			<visible>String.IsEqual(Container.SortOrder,$LOCALIZE[585])</visible>
 			<visible>Window.IsVisible(tvtimers)</visible>
 		</item>
-												<item id="31042">
+		<item id="31042">
 			<icon>dock\icons\sort-direction-asc.png</icon>
 			<label>$LOCALIZE[580]</label>
 			<onclick>SendClick(10710,4)</onclick>

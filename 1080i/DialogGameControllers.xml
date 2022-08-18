@@ -137,7 +137,7 @@
 				<width>300</width>
 				<onleft>5</onleft>
 				<onright>3</onright>
-				<itemgap>dialogbuttons_itemgap</itemgap>
+				<itemgap>0</itemgap>
 				<include content="DefaultDialogButton">
 					<param name="width" value="290"/>
 					<param name="id" value="18"/>

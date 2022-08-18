@@ -743,3 +743,23 @@ msgstr ""
 msgctxt "#50181"
 msgid "Channel options"
 msgstr ""
+
+msgctxt "#50182"
+msgid "Available groups"
+msgstr ""
+
+msgctxt "#50183"
+msgid "Add group"
+msgstr ""
+
+msgctxt "#50184"
+msgid "Rename group"
+msgstr ""
+
+msgctxt "#50185"
+msgid "Delete group"
+msgstr ""
+
+msgctxt "#50186"
+msgid "Timeshift"
+msgstr ""
