@@ -464,7 +464,7 @@
 	<include name="Dock_Filter">
 		<item>
 			<icon>dock\icons\filter-on.png</icon>
-			<label>$LOCALIZE[587]: $LOCALIZE[16041] - $INFO[Window(music).Property(filter)]</label>
+			<label>$LOCALIZE[587]: $LOCALIZE[16041]$INFO[Window(music).Property(filter), - ","]</label>
 			<onclick>Dialog.Close(1201)</onclick>
 			<onclick>SendClick(10502,19)</onclick>
 			<visible>!String.IsEmpty(Window(music).Property(filter))</visible>
@@ -472,7 +472,7 @@
 		</item>
 		<item>
 			<icon>dock\icons\filter-on.png</icon>
-			<label>$LOCALIZE[587]: $LOCALIZE[16041] - $INFO[Window(videos).Property(filter)]</label>
+			<label>$LOCALIZE[587]: $LOCALIZE[16041]$INFO[Window(videos).Property(filter), - ","]</label>
 			<onclick>Dialog.Close(1201)</onclick>
 			<onclick>SendClick(10025,19)</onclick>
 			<visible>!String.IsEmpty(Window(videos).Property(filter))</visible>
@@ -480,11 +480,19 @@
 		</item>
 		<item>
 			<icon>dock\icons\filter-on.png</icon>
-			<label>$LOCALIZE[587]: $LOCALIZE[16041] - $INFO[Window(TVChannels).Property(filter)]</label>
+			<label>$LOCALIZE[587]: $LOCALIZE[16041]$INFO[Window(TVChannels).Property(filter), - ","]</label>
 			<onclick>Dialog.Close(1201)</onclick>
 			<onclick>SendClick(10700,31)</onclick>
 			<visible>!String.IsEmpty(Window(TVChannels).Property(filter))</visible>
 			<visible>Window.IsActive(TVChannels)</visible>
+		</item>
+		<item>
+			<icon>dock\icons\filter-on.png</icon>
+			<label>$LOCALIZE[587]: $LOCALIZE[16041]$INFO[Window(RadioChannels).Property(filter), - ","]</label>
+			<onclick>Dialog.Close(1201)</onclick>
+			<onclick>SendClick(10705,31)</onclick>
+			<visible>!String.IsEmpty(Window(RadioChannels).Property(filter))</visible>
+			<visible>Window.IsActive(RadioChannels)</visible>
 		</item>
 		<item>
 			<icon>dock\icons\filter-off.png</icon>
@@ -509,6 +517,14 @@
 			<onclick>SendClick(10700,31)</onclick>
 			<visible>String.IsEmpty(Window(TVChannels).Property(filter))</visible>
 			<visible>Window.IsActive(TVChannels)</visible>
+		</item>
+		<item>
+			<icon>dock\icons\filter-off.png</icon>
+			<label>$LOCALIZE[587]: $LOCALIZE[13551]</label>
+			<onclick>Dialog.Close(1201)</onclick>
+			<onclick>SendClick(10705,31)</onclick>
+			<visible>String.IsEmpty(Window(RadioChannels).Property(filter))</visible>
+			<visible>Window.IsActive(RadioChannels)</visible>
 		</item>
 	</include>
 	<include name="Dock_PartyMode">
@@ -712,6 +728,16 @@
 			<visible>!System.Platform.Xbox </visible>
 		</item>
 	</include>
+	<include name="Dock_GlobalSearch">
+		<item>
+			<icon>dock\icons\search.png</icon>
+			<label>$LOCALIZE[137]</label>
+			<onclick>Dialog.Close(1200)</onclick>
+			<onclick condition="System.AddonIsEnabled(script.globalsearch)">RunScript(script.globalsearch)</onclick>
+			<onclick condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
+			<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
+		</item>
+	</include>
 	<include name="Dock_Power_Options_1200">
 		<item>
 			<icon>dock\icons\power.png</icon>
@@ -822,76 +848,116 @@
 			<visible>!Window.IsVisible(LoginScreen)</visible>
 		</item>
 	</include>
-	<include name="Dock_Favourites">
-		<item>
-			<icon>dock\icons\favourites.png</icon>
-			<label>1036</label>
-			<onclick>Dialog.Close(1200)</onclick>
-			<onclick>ActivateWindow(Favourites)</onclick>
-			<visible>!Window.IsVisible(LoginScreen)</visible>
-		</item>
-	</include>
-	<include name="Dock_Live_TV">
+	<include name="Dock_Live_TV_Radio">
 		<item>
 			<icon>dock\icons\channels.png</icon>
 			<label>$LOCALIZE[19019]</label>
 			<onclick>Dialog.Close(1201)</onclick>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
-			<visible>!Window.IsActive(TVChannels) + !Window.IsActive(RadioChannels)</visible>
+			<onclick>ActivateWindow(TVChannels)</onclick>
+			<visible>!Window.IsActive(TVChannels)</visible>
 			<visible>Window.IsVisible(TVGuide) | Window.IsVisible(TVRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(TVTimerRules)  | Window.IsVisible(TVSearch)</visible>
+		</item>
+		<item>
+			<icon>dock\icons\channels.png</icon>
+			<label>$LOCALIZE[19019]</label>
+			<onclick>Dialog.Close(1201)</onclick>
+			<onclick>ActivateWindow(RadioChannels)</onclick>
+			<visible>!Window.IsActive(RadioChannels)</visible>
+			<visible>Window.IsVisible(RadioGuide) | Window.IsVisible(RadioRecordings) | Window.IsVisible(RadioTimers) | Window.IsVisible(RadioTimerRules)  | Window.IsVisible(RadioSearch)</visible>
 		</item>
 		<item>
 			<icon>dock\icons\guide.png</icon>
 			<label>$LOCALIZE[19069]</label>
 			<onclick>Dialog.Close(1201)</onclick>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
-			<visible>!Window.IsActive(TVGuide) + !Window.IsActive(RadioGuide)</visible>
+			<onclick>ActivateWindow(TVGuide)</onclick>
+			<visible>!Window.IsActive(TVGuide)</visible>
 			<visible>Window.IsVisible(TVChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(TVTimerRules)  | Window.IsVisible(TVSearch)</visible>
+		</item>
+		<item>
+			<icon>dock\icons\guide.png</icon>
+			<label>$LOCALIZE[19069]</label>
+			<onclick>Dialog.Close(1201)</onclick>
+			<onclick>ActivateWindow(RadioGuide)</onclick>
+			<visible>!Window.IsActive(RadioGuide)</visible>
+			<visible>Window.IsVisible(RadioChannels) | Window.IsVisible(RadioRecordings) | Window.IsVisible(RadioTimers) | Window.IsVisible(RadioTimerRules)  | Window.IsVisible(RadioSearch)</visible>
 		</item>
 		<item>
 			<icon>dock\icons\recordings.png</icon>
 			<label>$LOCALIZE[19017]</label>
 			<onclick>Dialog.Close(1201)</onclick>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
-			<visible>!Window.IsActive(TVRecordings) + !Window.IsActive(RadioRecordings)</visible>
+			<onclick>ActivateWindow(TVRecordings)</onclick>
+			<visible>!Window.IsActive(TVRecordings)</visible>
 			<visible>Window.IsVisible(TVChannels) | Window.IsVisible(TVGuide) | Window.IsVisible(TVTimers) | Window.IsVisible(TVTimerRules)  | Window.IsVisible(TVSearch)</visible>
+		</item>
+		<item>
+			<icon>dock\icons\recordings.png</icon>
+			<label>$LOCALIZE[19017]</label>
+			<onclick>Dialog.Close(1201)</onclick>
+			<onclick>ActivateWindow(RadioRecordings)</onclick>
+			<visible>!Window.IsActive(RadioRecordings)</visible>
+			<visible>Window.IsVisible(RadioChannels) | Window.IsVisible(RadioGuide) | Window.IsVisible(RadioTimers) | Window.IsVisible(RadioTimerRules)  | Window.IsVisible(RadioSearch)</visible>
 		</item>
 		<item>
 			<icon>dock\icons\timers.png</icon>
 			<label>$LOCALIZE[19040]</label>
 			<onclick>Dialog.Close(1201)</onclick>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
-			<visible>!Window.IsActive(TVTimers) + !Window.IsActive(RadioTimers)</visible>
+			<onclick>ActivateWindow(TVTimers)</onclick>
+			<visible>!Window.IsActive(TVTimers)</visible>
 			<visible>Window.IsVisible(TVChannels) | Window.IsVisible(TVGuide) | Window.IsVisible(TVRecordings) | Window.IsVisible(TVTimerRules)  | Window.IsVisible(TVSearch)</visible>
+		</item>
+		<item>
+			<icon>dock\icons\timers.png</icon>
+			<label>$LOCALIZE[19040]</label>
+			<onclick>Dialog.Close(1201)</onclick>
+			<onclick>ActivateWindow(RadioTimers)</onclick>
+			<visible>!Window.IsActive(RadioTimers)</visible>
+			<visible>Window.IsVisible(RadioChannels) | Window.IsVisible(RadioGuide) | Window.IsVisible(RadioRecordings) | Window.IsVisible(RadioTimerRules)  | Window.IsVisible(RadioSearch)</visible>
 		</item>
 		<item>
 			<icon>dock\icons\timer-rules.png</icon>
 			<label>$LOCALIZE[19138]</label>
 			<onclick>Dialog.Close(1201)</onclick>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimerRules)</onclick>
-			<visible>!Window.IsActive(TVTimerRules) + !Window.IsActive(RadioTimerRules)</visible>
+			<onclick>ActivateWindow(TVTimerRules)</onclick>
+			<visible>!Window.IsActive(TVTimerRules)</visible>
 			<visible>Window.IsVisible(TVChannels) | Window.IsVisible(TVGuide) | Window.IsVisible(TVRecordings) | Window.IsVisible(TVTimers)  | Window.IsVisible(TVSearch)</visible>
+		</item>
+		<item>
+			<icon>dock\icons\timer-rules.png</icon>
+			<label>$LOCALIZE[19138]</label>
+			<onclick>Dialog.Close(1201)</onclick>
+			<onclick>ActivateWindow(RadioTimerRules)</onclick>
+			<visible>!Window.IsActive(RadioTimerRules)</visible>
+			<visible>Window.IsVisible(RadioChannels) | Window.IsVisible(RadioGuide) | Window.IsVisible(RadioRecordings) | Window.IsVisible(RadioTimers)  | Window.IsVisible(RadioSearch)</visible>
 		</item>
 		<item>
 			<icon>dock\icons\search.png</icon>
 			<label>$LOCALIZE[137]</label>
 			<onclick>Dialog.Close(1201)</onclick>
-			<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
-			<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
-			<visible>!Window.IsActive(TVSearch) + !Window.IsActive(RadioSearch)</visible>
+			<onclick>ActivateWindow(TVSearch)</onclick>
+			<visible>!Window.IsActive(TVSearch)</visible>
 			<visible>Window.IsVisible(TVChannels) | Window.IsVisible(TVGuide) | Window.IsVisible(TVRecordings) | Window.IsVisible(TVTimers)  | Window.IsVisible(TVTimerRules)</visible>
+		</item>
+		<item>
+			<icon>dock\icons\search.png</icon>
+			<label>$LOCALIZE[137]</label>
+			<onclick>Dialog.Close(1201)</onclick>
+			<onclick>ActivateWindow(RadioSearch)</onclick>
+			<visible>!Window.IsActive(RadioSearch)</visible>
+			<visible>Window.IsVisible(RadioChannels) | Window.IsVisible(RadioGuide) | Window.IsVisible(RadioRecordings) | Window.IsVisible(RadioTimers)  | Window.IsVisible(RadioTimerRules)</visible>
 		</item>
 		<item>
 			<icon>dock\icons\groups.png</icon>
 			<label>$LOCALIZE[19146]</label>
 			<onclick>Dialog.Close(1201)</onclick>
 			<onclick>SendClick(10700,28)</onclick>
-			<visible>Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml)</visible>
+			<visible>Window.IsVisible(TVChannels) | Window.IsVisible(TVGuide)</visible>
+		</item>
+		<item>
+			<icon>dock\icons\groups.png</icon>
+			<label>$LOCALIZE[19146]</label>
+			<onclick>Dialog.Close(1201)</onclick>
+			<onclick>SendClick(10705,28)</onclick>
+			<visible>Window.IsVisible(RadioChannels) | Window.IsVisible(RadioGuide)</visible>
 		</item>
 	</include>
 </includes>

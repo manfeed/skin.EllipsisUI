@@ -47,6 +47,103 @@
 			</control>
 		</control>
 	</include>
+	<include name="PVRWidget">
+		<control type="group">
+			<animation effect="zoom" end="80" center="auto" condition="true">Conditional</animation>
+			<control type="image">
+				<left>88</left>
+				<top>127</top>
+				<width>110</width>
+				<height>110</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true" fallback="DefaultAddonVideo.png">$PARAM[icon]</texture>
+			</control>
+			<control type="label">
+				<left>225</left>
+				<top>127</top>
+				<height>25</height>
+				<width>420</width>
+				<label>$PARAM[header]</label>
+				<aligny>center</aligny>
+				<font>Medium</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<left>225</left>
+				<top>152</top>
+				<height>105</height>
+				<width>420</width>
+				<label>$PARAM[label1][CR]$PARAM[label2]</label>
+				<font>Small</font>
+			</control>
+		</control>
+	</include>
+	<include name="PVR_Widget">
+		<control type="group">
+			<left>1300</left>
+			<top>580</top>
+			<width>700</width>
+			<height>688</height>
+			<visible>PVR.IsRecordingTV | PVR.HasNonRecordingTVTimer</visible>
+			<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_PVR)</visible>
+			<animation effect="fade" start="0" end="100" time="350">Visible</animation>
+			<control type="group">
+				<top>130</top>
+				<left>-1280</left>
+				<width>674</width>
+				<visible>PVR.IsRecordingTV</visible>
+				<include content="PVRWidget">
+					<param name="icon" value="$INFO[PVR.TVNowRecordingChannelIcon]"/>
+					<param name="header" value="$LOCALIZE[19158]"/>
+					<param name="label1" value="$INFO[PVR.TVNowRecordingDateTime]"/>
+					<param name="label2" value="$INFO[PVR.TVNowRecordingTitle][CR][COLOR=grey]$INFO[PVR.TVNowRecordingChannel][/COLOR]"/>
+				</include>
+			</control>
+			<control type="group">
+				<top>130</top>
+				<width>674</width>
+				<visible>PVR.HasNonRecordingTVTimer</visible>
+				<include content="PVRWidget">
+					<param name="icon" value="$INFO[PVR.TVNextRecordingChannelIcon]"/>
+					<param name="header" value="$LOCALIZE[19157]"/>
+					<param name="label1" value="$INFO[PVR.TVNextRecordingDateTime]"/>
+					<param name="label2" value="$INFO[PVR.TVNextRecordingTitle][CR][COLOR=grey]$INFO[PVR.TVNextRecordingChannel][/COLOR]"/>
+				</include>
+			</control>
+		</control>
+		<control type="group">
+			<left>1300</left>
+			<top>580</top>
+			<width>700</width>
+			<height>688</height>
+			<visible>PVR.IsRecordingRadio | PVR.HasNonRecordingRadioTimer</visible>
+			<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_radio)</visible>
+			<animation effect="fade" start="0" end="100" time="350">Visible</animation>
+			<control type="group">
+				<top>130</top>
+				<left>-1280</left>
+				<width>674</width>
+				<visible>PVR.IsRecordingRadio</visible>
+				<include content="PVRWidget">
+					<param name="icon" value="$INFO[PVR.RadioNowRecordingChannelIcon]"/>
+					<param name="header" value="$LOCALIZE[19158]"/>
+					<param name="label1" value="$INFO[PVR.RadioNowRecordingDateTime]"/>
+					<param name="label2" value="$INFO[PVR.RadioNowRecordingTitle][CR][COLOR=grey]$INFO[PVR.RadioNowRecordingChannel][/COLOR]"/>
+				</include>
+			</control>
+			<control type="group">
+				<top>130</top>
+				<width>674</width>
+				<visible>PVR.HasNonRecordingRadioTimer</visible>
+				<include content="PVRWidget">
+					<param name="icon" value="$INFO[PVR.RadioNextRecordingChannelIcon]"/>
+					<param name="header" value="$LOCALIZE[19157]"/>
+					<param name="label1" value="$INFO[PVR.RadioNextRecordingDateTime]"/>
+					<param name="label2" value="$INFO[PVR.RadioNextRecordingTitle][CR][COLOR=grey]$INFO[PVR.RadioNextRecordingChannel][/COLOR]"/>
+				</include>
+			</control>
+		</control>
+	</include>
 	<include name="PVRChannelNumberInput">
 		<control type="group">
 			<left>853</left>
@@ -151,12 +248,13 @@
 	<include name="FolderName">
 		<control type="group">
 			<visible>!Skin.HasSetting(Disable_Current_Folder_Section_Widget)</visible>
-			<top>-45</top>
+			<top>20</top>
+			<left>-10</left>
 			<control type="image">
-				<left>48</left>
-				<top>975</top>
-				<width>96</width>
-				<height>96</height>
+				<left>58</left>
+				<top>986</top>
+				<width>80</width>
+				<height>80</height>
 				<texture>current_folder.png</texture>
 				<visible>!String.IsEmpty(Container.FolderName)</visible>
 			</control>
@@ -1020,18 +1118,18 @@
 	</include>
 	<include name="Now_Playing_Widget">
 		<control type="group">
-			<top>-907</top>
-			<left>42</left>
+			<top>23</top>
+			<left>32</left>
 			<visible>!Skin.HasSetting(Disable_Now_Playing_Widget)</visible>
 			<control type="group">
 				<left>1766</left>
-				<top>985</top>
+				<top>992</top>
 				<width>82</width>
 				<height>75</height>
 				<visible>Player.HasAudio + !Player.Paused</visible>
 				<control type="image">
 					<left>-8</left>
-					<top>-35</top>
+					<top>-7</top>
 					<width>82</width>
 					<height>75</height>
 					<texture>nowplaying_icon_music.png</texture>
@@ -1039,13 +1137,13 @@
 			</control>
 			<control type="group">
 				<left>1766</left>
-				<top>985</top>
+				<top>992</top>
 				<width>82</width>
 				<height>75</height>
 				<visible>Player.HasVideo + !Player.Paused</visible>
 				<control type="image">
 					<left>-8</left>
-					<top>-35</top>
+					<top>-7</top>
 					<width>82</width>
 					<height>75</height>
 					<texture>nowplaying_icon_video.png</texture>
@@ -1053,13 +1151,13 @@
 			</control>
 			<control type="group">
 				<left>1766</left>
-				<top>985</top>
+				<top>992</top>
 				<width>82</width>
 				<height>75</height>
 				<visible>Player.HasMedia + Player.Paused</visible>
 				<control type="image">
 					<left>-8</left>
-					<top>-35</top>
+					<top>-7</top>
 					<width>82</width>
 					<height>75</height>
 					<texture>nowplaying_icon_paused.png</texture>
@@ -1070,11 +1168,11 @@
 				<visible>Player.HasAudio</visible>
 				<control type="label">
 					<left>1030</left>
-					<top>985</top>
+					<top>989</top>
 					<width>720</width>
 					<align>right</align>
 					<label>$INFO[MusicPlayer.Title] - $INFO[MusicPlayer.Artist]</label>
-					<font>NowPlaying_Label</font>
+					<font>Small</font>
 					<textcolor>Text</textcolor>
 					<scroll>true</scroll>
 				</control>
@@ -1083,11 +1181,11 @@
 				<visible>Player.HasVideo</visible>
 				<control type="label">
 					<left>1030</left>
-					<top>985</top>
+					<top>989</top>
 					<width>720</width>
 					<align>right</align>
 					<label>$INFO[VideoPlayer.TVShowTitle] $INFO[VideoPlayer.Title]</label>
-					<font>NowPlaying_Label</font>
+					<font>Small</font>
 					<textcolor>Text</textcolor>
 					<scroll>true</scroll>
 				</control>
@@ -1096,23 +1194,23 @@
 				<visible>Player.HasMedia</visible>
 				<control type="label">
 					<left>1030</left>
-					<top>956</top>
+					<top>1019</top>
 					<width>720</width>
 					<align>right</align>
 					<label>$INFO[Player.Time] / $INFO[Player.Duration]</label>
-					<font>NowPlaying_Time</font>
-					<textcolor>Text</textcolor>
+					<font>Small</font>
+					<textcolor>grey</textcolor>
 					<scroll>true</scroll>
 					<visible>!Player.Seeking</visible>
 				</control>
 				<control type="label">
 					<left>1030</left>
-					<top>956</top>
+					<top>1019</top>
 					<width>720</width>
 					<align>right</align>
 					<label>$INFO[Player.SeekTime] / $INFO[Player.Duration]</label>
-					<font>NowPlaying_Time</font>
-					<textcolor>Text</textcolor>
+					<font>Small</font>
+					<textcolor>grey</textcolor>
 					<scroll>true</scroll>
 					<visible>Player.Seeking</visible>
 				</control>
@@ -1582,10 +1680,10 @@
 		<control type="image">
 			<description>Edge Filter</description>
 			<visible>!Skin.HasSetting(Disable_Edge_Filter)</visible>
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
+			<left>-2</left>
+			<top>-2</top>
+			<width>1924</width>
+			<height>1095</height>
 			<texture>filter_edges.png</texture>
 		</control>
 	</include>

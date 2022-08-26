@@ -763,3 +763,51 @@ msgstr ""
 msgctxt "#50186"
 msgid "Timeshift"
 msgstr ""
+
+msgctxt "#50187"
+msgid "Hide RADIO home icon"
+msgstr ""
+
+msgctxt "#50188"
+msgid "In progress movies"
+msgstr ""
+
+msgctxt "#50189"
+msgid "Unwatched movies"
+msgstr ""
+
+msgctxt "#50190"
+msgid "Random movies"
+msgstr ""
+
+msgctxt "#50191"
+msgid "Unwatched TV Shows"
+msgstr ""
+
+msgctxt "#50192"
+msgid "Music playlists"
+msgstr ""
+
+msgctxt "#50193"
+msgid "Unplayed albums"
+msgstr ""
+
+msgctxt "#50194"
+msgid "Random albums"
+msgstr ""
+
+msgctxt "#50195"
+msgid "Random artists"
+msgstr ""
+
+msgctxt "#50196"
+msgid "Unwatched music videos"
+msgstr ""
+
+msgctxt "#50197"
+msgid "Random music videos"
+msgstr ""
+
+msgctxt "#50198"
+msgid "Hide FAVOURITES home icon"
+msgstr ""

@@ -187,6 +187,7 @@
 			</control>
 			<control type="group">
 				<visible>Window.IsVisible(PlayerSettings)</visible>
+				<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(5).HasFocus">Conditional</animation>
 				<left>292</left>
 				<include>Center_Tab_Settings</include>
 				<control type="image">
@@ -314,6 +315,7 @@
 				<left>292</left>
 				<include>Center_Tab_Settings</include>
 				<visible>Window.IsVisible(mediasettings)</visible>
+				<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(5).HasFocus">Conditional</animation>
 				<control type="image">
 					<left>-292</left>
 					<top>0</top>
@@ -417,6 +419,7 @@
 			</control>
 			<control type="group">
 				<visible>Window.IsVisible(servicesettings)</visible>
+				<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(5).HasFocus">Conditional</animation>
 				<left>292</left>
 				<include>Center_Tab_Settings</include>
 				<control type="image">
@@ -522,6 +525,7 @@
 			</control>
 			<control type="group">
 				<visible>Window.IsVisible(SystemSettings)</visible>
+				<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(5).HasFocus">Conditional</animation>
 				<left>292</left>
 				<include>Center_Tab_Settings</include>
 				<control type="image">
@@ -667,6 +671,7 @@
 			</control>
 			<control type="group">
 				<visible>Window.IsVisible(interfacesettings)</visible>
+				<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(5).HasFocus">Conditional</animation>
 				<left>194</left>
 				<include>Center_Tab_Settings</include>
 				<control type="image">
@@ -772,6 +777,7 @@
 			</control>
 			<control type="group">
 				<visible>Window.IsVisible(gamesettings)</visible>
+				<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(5).HasFocus">Conditional</animation>
 				<left>194</left>
 				<include>Center_Tab_Settings</include>
 				<control type="image">
@@ -797,6 +803,7 @@
 			</control>
 			<control type="group">
 				<visible>Window.IsVisible(PVRSettings)</visible>
+				<animation effect="fade" start="100" end="50" time="250" condition="ControlGroup(5).HasFocus">Conditional</animation>
 				<left>292</left>
 				<include>Center_Tab_Settings</include>
 				<control type="image">

@@ -173,6 +173,16 @@
 						<textcolor>Highlight</textcolor>
 						<selectedcolor>Highlight</selectedcolor>
 						<label>[B]$INFO[ListItem.ChannelNumberLabel][/B]</label>
+						<visible>Control.HasFocus(10)</visible>
+					</control>
+					<control type="label">
+						<width>75</width>
+						<height>62</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>Highlight</selectedcolor>
+						<label>[B]$INFO[ListItem.ChannelNumberLabel][/B]</label>
+						<visible>!Control.HasFocus(10)</visible>
 					</control>
 					<control type="image">
 						<left>85</left>
@@ -194,6 +204,7 @@
 						<selectedcolor>Highlight</selectedcolor>
 						<label>$INFO[ListItem.ChannelName]</label>
 						<visible>!String.IsEmpty(ListItem.Icon)</visible>
+						<visible>Control.HasFocus(10)</visible>
 					</control>
 					<control type="label" id="1">
 						<left>85</left>
@@ -206,6 +217,31 @@
 						<selectedcolor>Highlight</selectedcolor>
 						<label>$INFO[ListItem.ChannelName]</label>
 						<visible>String.IsEmpty(ListItem.Icon)</visible>
+						<visible>Control.HasFocus(10)</visible>
+					</control>
+					<control type="label" id="1">
+						<left>145</left>
+						<width>374</width>
+						<height>62</height>
+						<font>Heading_Small</font>
+						<aligny>center</aligny>
+						<textoffsetx>12</textoffsetx>
+						<selectedcolor>Highlight</selectedcolor>
+						<label>$INFO[ListItem.ChannelName]</label>
+						<visible>!String.IsEmpty(ListItem.Icon)</visible>
+						<visible>!Control.HasFocus(10)</visible>
+					</control>
+					<control type="label" id="1">
+						<left>85</left>
+						<width>434</width>
+						<height>62</height>
+						<aligny>center</aligny>
+						<font>Heading_Small</font>
+						<textoffsetx>12</textoffsetx>
+						<selectedcolor>Highlight</selectedcolor>
+						<label>$INFO[ListItem.ChannelName]</label>
+						<visible>String.IsEmpty(ListItem.Icon)</visible>
+						<visible>!Control.HasFocus(10)</visible>
 					</control>
 				</focusedchannellayout>
 				<itemlayout height="70" width="60">

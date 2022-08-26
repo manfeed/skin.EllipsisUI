@@ -763,3 +763,53 @@ msgstr "Borrar grupo"
 msgctxt "#50186"
 msgid "Timeshift"
 msgstr "Cambio de tiempo"
+
+msgctxt "#50187"
+msgid "Hide RADIO home icon"
+msgstr "Ocultar icono RADIO"
+
+msgctxt "#50188"
+msgid "In progress movies"
+msgstr "Películas en progreso"
+
+msgctxt "#50189"
+msgid "Unwatched movies"
+msgstr "Películas no vistas"
+
+msgctxt "#50190"
+msgid "Random movies"
+msgstr "Películas aleatorias"
+
+msgctxt "#50191"
+msgid "Unwatched TV Shows"
+msgstr "Series no vistas"
+
+msgctxt "#50192"
+msgid "Music playlists"
+msgstr "Listas de reproducción de música"
+
+msgctxt "#50193"
+msgid "Unplayed albums"
+msgstr "Álbumes sin reproducir"
+
+msgctxt "#50194"
+msgid "Random albums"
+msgstr "Álbumes aleatorios"
+
+msgctxt "#50195"
+msgid "Random artists"
+msgstr "Intérpretes aleatorios"
+
+msgctxt "#50196"
+msgid "Unwatched music videos"
+msgstr "Vídeos musicales no vistos"
+
+msgctxt "#50197"
+msgid "Random music videos"
+msgstr "Vídeos musicales aleatorios"
+
+msgctxt "#50198"
+msgid "Hide FAVOURITES home icon"
+msgstr "Ocultar icono FAVORITOS"
+
+

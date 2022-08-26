@@ -156,6 +156,21 @@
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
 				</item>
 				<item>
+					<label>50188</label>
+					<onclick>ActivateWindow(Videos,special://skin/playlists/inprogress_movies.xsp,return)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
+				</item>
+				<item>
+					<label>50189</label>
+					<onclick>ActivateWindow(Videos,special://skin/playlists/recent_unwatched_movies.xsp,return)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
+				</item>
+				<item>
+					<label>50190</label>
+					<onclick>ActivateWindow(Videos,special://skin/playlists/random_movies.xsp,return)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
+				</item>
+				<item>
 					<label>653</label>
 					<onclick>UpdateLibrary(video)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
@@ -201,6 +216,16 @@
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_tv_library)</visible>
 				</item>
 				<item>
+					<label>50191</label>
+					<onclick>ActivateWindow(Videos,special://skin/playlists/unwatched_tvshows.xsp)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_tv_library)</visible>
+				</item>
+				<item>
+					<label>20387</label>
+					<onclick>ActivateWindow(Videos,special://skin/playlists/recent_unwatched_episodes.xsp)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_tv_library)</visible>
+				</item>
+				<item>
 					<label>50092</label>
 					<onclick>ActivateWindow(Videos,RecentlyAddedMusicVideos)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_videosmusic_library)</visible>
@@ -241,6 +266,21 @@
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_videosmusic_library)</visible>
 				</item>
 				<item>
+					<label>50196</label>
+					<onclick>ActivateWindow(Videos,special://skin/playlists/unwatched_musicvideos.xsp)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_videosmusic_library)</visible>
+				</item>
+				<item>
+					<label>50197</label>
+					<onclick>ActivateWindow(Videos,special://skin/playlists/random_musicvideos.xsp)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_videosmusic_library)</visible>
+				</item>
+				<item>
+					<label>589</label>
+					<onclick>PlayerControl(Partymode(video))</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_videosmusic_library)</visible>
+				</item>
+				<item>
 					<label>50099</label>
 					<onclick>ActivateWindow(Music,RecentlyAddedAlbums)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
@@ -271,11 +311,6 @@
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
 				</item>
 				<item>
-					<label>50098</label>
-					<onclick>ActivateWindow(Music,Top100)</onclick>
-					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
-				</item>
-				<item>
 					<label>10504</label>
 					<onclick>ActivateWindow(Music,Top100Songs)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
@@ -301,6 +336,51 @@
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
 				</item>
 				<item>
+					<label>50192</label>
+					<onclick>ActivateWindow(Music,special://musicplaylists/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
+				</item>
+				<item>
+					<label>29994</label>
+					<onclick>ActivateWindow(Music,musicdb://roles/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
+				</item>
+				<item>
+					<label>39031</label>
+					<onclick>ActivateWindow(Music,musicdb://sources/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
+				</item>
+				<item>
+					<label>1214</label>
+					<onclick>ActivateWindow(Music,sources://music/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
+				</item>
+				<item>
+					<label>1038</label>
+					<onclick>ActivateWindow(Music,addons://sources/audio/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
+				</item>
+				<item>
+					<label>589</label>
+					<onclick>PlayerControl(Partymode(music))</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
+				</item>
+				<item>
+					<label>50193</label>
+					<onclick>ActivateWindow(Music,special://skin/playlists/unplayed_albums.xsp)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
+				</item>
+				<item>
+					<label>50194</label>
+					<onclick>ActivateWindow(Music,special://skin/playlists/random_albums.xsp)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
+				</item>
+				<item>
+					<label>50195</label>
+					<onclick>ActivateWindow(Music,special://skin/playlists/random_artists.xsp)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
+				</item>
+				<item>
 					<label>653</label>
 					<onclick>UpdateLibrary(music)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
@@ -310,15 +390,140 @@
 					<onclick>CleanLibrary(music)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_music)</visible>
 				</item>
+				<item>
+					<label>19019</label>
+					<onclick>ActivateWindow(TVChannels)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_PVR)</visible>
+				</item>
+				<item>
+					<label>19069</label>
+					<onclick>ActivateWindow(TVGuide)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_PVR)</visible>
+				</item>
+				<item>
+					<label>19017</label>
+					<onclick>ActivateWindow(TVRecordings)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_PVR)</visible>
+				</item>
+				<item>
+					<label>19040</label>
+					<onclick>ActivateWindow(TVTimers)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_PVR)</visible>
+				</item>
+				<item>
+					<label>19138</label>
+					<onclick>ActivateWindow(TVTimerRules)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_PVR)</visible>
+				</item>
+				<item>
+					<label>137</label>
+					<onclick>ActivateWindow(TVSearch)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_PVR)</visible>
+				</item>
+				<item>
+					<label>19019</label>
+					<onclick>ActivateWindow(RadioChannels)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_radio)</visible>
+				</item>
+				<item>
+					<label>19069</label>
+					<onclick>ActivateWindow(RadioGuide)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_radio)</visible>
+				</item>
+				<item>
+					<label>19017</label>
+					<onclick>ActivateWindow(RadioRecordings)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_radio)</visible>
+				</item>
+				<item>
+					<label>19040</label>
+					<onclick>ActivateWindow(RadioTimers)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_radio)</visible>
+				</item>
+				<item>
+					<label>19138</label>
+					<onclick>ActivateWindow(RadioTimerRules)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_radio)</visible>
+				</item>
+				<item>
+					<label>137</label>
+					<onclick>ActivateWindow(RadioSearch)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_radio)</visible>
+				</item>
+				<item>
+					<label>24998</label>
+					<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_addons)</visible>
+				</item>
+				<item>
+					<label>24033</label>
+					<onclick>ActivateWindow(addonbrowser,addons://repos/,return)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_addons)</visible>
+				</item>
+				<item>
+					<label>24041</label>
+					<onclick>ActivateWindow(addonbrowser,addons://install/,return)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_addons)</visible>
+				</item>
+				<item>
+					<label>137</label>
+					<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_addons)</visible>
+				</item>
+				<item>
+					<label>1037</label>
+					<onclick>ActivateWindow(addonbrowser,addons://sources/video/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_addons)</visible>
+				</item>
+				<item>
+					<label>1038</label>
+					<onclick>ActivateWindow(addonbrowser,addons://sources/audio/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_addons)</visible>
+				</item>
+				<item>
+					<label>35049</label>
+					<onclick>ActivateWindow(addonbrowser,addons://sources/game/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_addons)</visible>
+				</item>
+				<item>
+					<label>1043</label>
+					<onclick>ActivateWindow(addonbrowser,addons://sources/executable/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_addons)</visible>
+				</item>
+				<item>
+					<label>653</label>
+					<onclick>UpdateLibrary(video)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_videos)</visible>
+				</item>
+				<item>
+					<label>14247</label>
+					<onclick>CleanLibrary(video)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_videos)</visible>
+				</item>
+				<item>
+					<label>20012</label>
+					<onclick>ActivateWindow(Videos,special://videoplaylists/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_videos)</visible>
+				</item>
+				<item>
+					<label>1037</label>
+					<onclick>ActivateWindow(addonbrowser,addons://sources/video/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_videos)</visible>
+				</item>
+				<item>
+					<label>1214</label>
+					<onclick>ActivateWindow(Videos,sources://video/)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_videos)</visible>
+				</item>
 			</content>
 		</control>
 	</include>
 	<!-- Menu Standard Items -->
-	<include name="Menu_Scripts">
+	<include name="Menu_Addons">
 		<item>
-			<visible>!Skin.HasSetting(Disable_Scripts_Home_Icon)</visible>
-			<icon>icon_home_settings.png</icon>
-			<label>0</label>
+			<visible>!Skin.HasSetting(Disable_Addons_Home_Icon)</visible>
+			<icon>icon_home_addons.png</icon>
+			<label>24001</label>
 			<onclick>ActivateWindow(AddonBrowser)</onclick>
 		</item>
 	</include>
@@ -373,6 +578,14 @@
 			<onclick>ActivateWindow(tvchannels)</onclick>
 		</item>
 	</include>
+	<include name="Menu_Radio">
+		<item>
+			<visible>!Skin.HasSetting(Disable_Radio_Home_Icon)</visible>
+			<icon>icon_home_radio.png</icon>
+			<label>19021</label>
+			<onclick>ActivateWindow(radiochannels)</onclick>
+		</item>
+	</include>
 	<include name="Menu_Music_Video_Library">
 		<item>
 			<visible>!Skin.HasSetting(Disable_Music_Video_Library_Home_Icon)</visible>
@@ -412,6 +625,14 @@
 			<icon>icon_home_weather.png</icon>
 			<label>8</label>
 			<onclick>ActivateWindow(Weather)</onclick>
+		</item>
+	</include>
+	<include name="Menu_Favourites">
+		<item>
+			<visible>!Skin.HasSetting(Disable_Favourites_Home_Icon)</visible>
+			<icon>icon_home_favourites.png</icon>
+			<label>1036</label>
+			<onclick>ActivateWindow(Favourites)</onclick>
 		</item>
 	</include>
 	<!-- Settings Items -->
@@ -871,7 +1092,7 @@
 				<top>0</top>
 				<height>384</height>
 				<width>1920</width>
-				<onup condition="String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library) | String.Contains(Container(9000).ListItem.Icon,icon_home_tv_library) | String.Contains(Container(9000).ListItem.Icon,icon_home_videosmusic_library) | String.Contains(Container(9000).ListItem.Icon,icon_home_music)">SetFocus(9550)</onup>
+				<onup condition="String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library) | String.Contains(Container(9000).ListItem.Icon,icon_home_tv_library) | String.Contains(Container(9000).ListItem.Icon,icon_home_videosmusic_library) | String.Contains(Container(9000).ListItem.Icon,icon_home_music) | String.Contains(Container(9000).ListItem.Icon,icon_home_PVR) | String.Contains(Container(9000).ListItem.Icon,icon_home_radio) | String.Contains(Container(9000).ListItem.Icon,icon_home_addons) | String.Contains(Container(9000).ListItem.Icon,icon_home_videos)">SetFocus(9550)</onup>
 				<ondown>ActivateWindow(1200)</ondown>
 				<include>Menu_Layout</include>
 				<content>
@@ -881,10 +1102,12 @@
 					<include>Menu_Play_DVD</include>
 					<include>Menu_Games</include>
 					<include>Menu_PVR</include>
+					<include>Menu_Radio</include>
 					<include>Menu_Pictures</include>
+					<include>Menu_Favourites</include>
 					<include>Menu_FileManager</include>
 					<include>Menu_Weather</include>
-					<include>Menu_Scripts</include>
+					<include>Menu_Addons</include>
 					<include>Menu_Music_Video_Library</include>
 					<include>Menu_Music</include>
 				</content>
@@ -896,6 +1119,7 @@
 	</include>
 	<include name="Menu_Config">
 		<control type="group">
+			<top>-30</top>
 			<visible>!Skin.HasSetting(Disable_Icon_Labels)</visible>
 			<control type="label">
 				<left>0</left>

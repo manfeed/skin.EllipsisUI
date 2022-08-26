@@ -64,8 +64,19 @@
 			<top>-68</top>
 			<include>Dock_Elipsis</include>
 			<control type="image">
+				<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library) | String.Contains(Container(9000).ListItem.Icon,icon_home_tv_library) | String.Contains(Container(9000).ListItem.Icon,icon_home_music) | String.Contains(Container(9000).ListItem.Icon,icon_home_videosmusic_library) | String.Contains(Container(9000).ListItem.Icon,icon_home_PVR) | String.Contains(Container(9000).ListItem.Icon,icon_home_radio) | String.Contains(Container(9000).ListItem.Icon,icon_home_addons) | String.Contains(Container(9000).ListItem.Icon,icon_home_videos)</visible>
+				<left>-74</left>
+				<top>17</top>
+				<width>136</width>
+				<height>68</height>
+				<texture>double_dock_reveal_icon.png</texture>
+				<animation effect="fade" time="600">WindowOpen</animation>
+				<animation effect="fade" time="600">WindowClose</animation>
+			</control>
+			<control type="image">
+				<visible>!String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library) + !String.Contains(Container(9000).ListItem.Icon,icon_home_tv_library) + !String.Contains(Container(9000).ListItem.Icon,icon_home_music) + !String.Contains(Container(9000).ListItem.Icon,icon_home_videosmusic_library) + !String.Contains(Container(9000).ListItem.Icon,icon_home_PVR) + !String.Contains(Container(9000).ListItem.Icon,icon_home_radio) + !String.Contains(Container(9000).ListItem.Icon,icon_home_addons) + !String.Contains(Container(9000).ListItem.Icon,icon_home_videos)</visible>
 				<left>-68</left>
-				<top>0</top>
+				<top>3</top>
 				<width>136</width>
 				<height>68</height>
 				<texture flipy="true">dock_reveal_icon.png</texture>
@@ -561,7 +572,7 @@
 					<include>Dock_Nav_1200</include>
 					<include>Dock_Now_Playing_1200</include>
 					<include>Dock_System_Info</include>
-					<include>Dock_Favourites</include>
+					<include>Dock_GlobalSearch</include>
 				</content>
 			</control>
 			<include>Dock_Shadow</include>
@@ -588,7 +599,7 @@
 					<include>Dock_SortDirection</include>
 					<include>Dock_Filter</include>
 					<include>Dock_Watched_Live_TV</include>
-					<include>Dock_Live_TV</include>
+					<include>Dock_Live_TV_Radio</include>
 					<include>Dock_HideForeignAddons</include>
 					<include>Dock_AutoupdateAddons</include>
 					<include>Dock_Watched</include>
