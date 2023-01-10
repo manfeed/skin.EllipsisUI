@@ -2,6 +2,14 @@
 <includes>
 	<include name="Show_Case_Hybrid_View">
 		<!-- Show Case Hybrid View -->
+		<control type="image">
+			<visible>Control.IsVisible(51)</visible>
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1080</height>
+			<texture colordiffuse="66ffffff">background.png</texture>
+		</control>
 		<control type="group">
 			<left>921</left>
 			<top>210</top>
@@ -550,123 +558,52 @@
 			<focusedlayout height="585" width="246"/>
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(51)</visible>
-			<visible>!Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Movies)</visible>
-			<control type="image">
-				<left>1618</left>
-				<top>190</top>
-				<width>96</width>
-				<height>96</height>
-				<texture>menu\nav\nav_arrow_left_NF.png</texture>
-				<animation effect="fade" time="600">Visible</animation>
-				<visible>!Container(51).OnPrevious</visible>
-			</control>
-			<control type="image">
-				<left>1618</left>
-				<top>190</top>
-				<width>96</width>
-				<height>96</height>
-				<texture>menu\nav\nav_arrow_left_FO.png</texture>
-				<animation type="Hidden">
-					<effect type="slide" start="-15" end="0" center="auto" time="300"/>
-					<effect type="fade" start="100" end="0" time="300"/>
-				</animation>
-				<visible>Container(51).OnPrevious</visible>
-			</control>
-			<control type="image">
-				<left>1618</left>
-				<top>720</top>
-				<width>96</width>
-				<height>96</height>
-				<texture>menu\nav\nav_arrow_right_NF.png</texture>
-				<animation effect="fade" time="600">Visible</animation>
-				<visible>!Container(51).OnNext</visible>
-			</control>
-			<control type="image">
-				<left>1618</left>
-				<top>720</top>
-				<width>96</width>
-				<height>96</height>
-				<texture>menu\nav\nav_arrow_right_FO.png</texture>
-				<animation type="Hidden">
-					<effect type="slide" start="15" end="0" center="auto" time="300"/>
-					<effect type="fade" start="100" end="0" time="300"/>
-				</animation>
-				<visible>Container(51).OnNext</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(51)</visible>
-			<visible>Container.Content(TVShows) + Container.Content(Seasons) + Container.Content(Movies)</visible>
-			<control type="image">
-				<left>93</left>
-				<top>606</top>
-				<width>96</width>
-				<height>96</height>
-				<texture>menu\nav\nav_arrow_left_NF.png</texture>
-				<animation effect="fade" time="600">Visible</animation>
-				<visible>!Container(51).OnPrevious</visible>
-			</control>
-			<control type="image">
-				<left>93</left>
-				<top>606</top>
-				<width>96</width>
-				<height>96</height>
-				<texture>menu\nav\nav_arrow_left_FO.png</texture>
-				<animation type="Hidden">
-					<effect type="slide" start="-15" end="0" center="auto" time="300"/>
-					<effect type="fade" start="100" end="0" time="300"/>
-				</animation>
-				<visible>Container(51).OnPrevious</visible>
-			</control>
-			<control type="image">
-				<left>1732</left>
-				<top>606</top>
-				<width>96</width>
-				<height>96</height>
-				<texture>menu\nav\nav_arrow_right_NF.png</texture>
-				<animation effect="fade" time="600">Visible</animation>
-				<visible>!Container(51).OnNext</visible>
-			</control>
-			<control type="image">
-				<left>1732</left>
-				<top>606</top>
-				<width>96</width>
-				<height>96</height>
-				<texture>menu\nav\nav_arrow_right_FO.png</texture>
-				<animation type="Hidden">
-					<effect type="slide" start="15" end="0" center="auto" time="300"/>
-					<effect type="fade" start="100" end="0" time="300"/>
-				</animation>
-				<visible>Container(51).OnNext</visible>
-			</control>
-		</control>
-		<control type="group">
 			<visible>Control.IsVisible(62)</visible>
 			<visible>Container.Content(Episodes)</visible>
-			<control type="image">
-				<left>1373</left>
-				<top>150</top>
-				<width>80</width>
-				<height>80</height>
-				<texture>menu\nav\nav_arrow_up_FO.png</texture>
-				<animation type="Visible" reversible="false">
-					<effect type="slide" start="0,-50" end="0" center="auto" time="300"/>
-					<effect type="fade" start="0" end="100" delay="200" time="500"/>
-				</animation>
-				<visible>!Container(62).OnNext</visible>
-			</control>
-			<control type="image">
-				<left>1373</left>
-				<top>850</top>
-				<width>80</width>
-				<height>80</height>
-				<texture>menu\nav\nav_arrow_down_FO.png</texture>
-				<animation type="Visible" reversible="false">
-					<effect type="slide" start="0,-50" end="0" center="auto" time="300"/>
-					<effect type="fade" start="0" end="100" delay="200" time="500"/>
-				</animation>
-				<visible>!Container(62).OnPrevious</visible>
+			<control type="group">
+				<left>420</left>
+				<control type="image">
+					<left>1373</left>
+					<top>150</top>
+					<width>70</width>
+					<height>70</height>
+					<texture>menu\nav\nav_arrow_up_NF.png</texture>
+					<animation effect="fade" time="600">Visible</animation>
+					<visible>!Container(62).OnPrevious</visible>
+				</control>
+				<control type="image">
+					<left>1373</left>
+					<top>150</top>
+					<width>70</width>
+					<height>70</height>
+					<texture>menu\nav\nav_arrow_up_FO.png</texture>
+					<animation type="Hidden" reversible="false">
+						<effect type="slide" start="0,-15" end="0" center="auto" time="300"/>
+						<effect type="fade" start="100" end="0" time="300"/>
+					</animation>
+					<visible>Container(62).OnPrevious</visible>
+				</control>
+				<control type="image">
+					<left>1373</left>
+					<top>850</top>
+					<width>70</width>
+					<height>70</height>
+					<texture>menu\nav\nav_arrow_down_NF.png</texture>
+					<animation effect="fade" time="600">Visible</animation>
+					<visible>!Container(62).OnNext</visible>
+				</control>
+				<control type="image">
+					<left>1373</left>
+					<top>850</top>
+					<width>70</width>
+					<height>70</height>
+					<texture>menu\nav\nav_arrow_down_FO.png</texture>
+					<animation type="Hidden" reversible="false">
+						<effect type="slide" start="0,15" end="0" center="auto" time="300"/>
+						<effect type="fade" start="100" end="0" time="300"/>
+					</animation>
+					<visible>Container(62).OnNext</visible>
+				</control>
 			</control>
 			<control type="label">
 				<visible>String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
@@ -696,13 +633,13 @@
 			</control>
 			<control type="label">
 				<visible>!ListItem.IsParentFolder</visible>
-				<left>630</left>
+				<left>560</left>
 				<top>950</top>
 				<width>1200</width>
 				<align>right</align>
 				<font>Medium_Large</font>
 				<scroll>true</scroll>
-				<label>$INFO[Container(62).CurrentItem] $LOCALIZE[20163] $INFO[Container(62).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(62).CurrentPage] $LOCALIZE[20163] $INFO[Container(62).NumPages]</label>
+				<label>$INFO[Container(62).CurrentItem] $LOCALIZE[20163] $INFO[Container(62).NumItems] $LOCALIZE[50129]</label>
 			</control>
 			<control type="image">
 				<left>835</left>
@@ -763,6 +700,51 @@
 			</control>
 		</control>
 		<include>Library_Info</include>
+		<control type="group">
+			<visible>Control.IsVisible(51)</visible>
+			<control type="image">
+				<left>94</left>
+				<top>790</top>
+				<width>70</width>
+				<height>70</height>
+				<texture>menu\nav\nav_arrow_left_NF.png</texture>
+				<animation effect="fade" time="600">Visible</animation>
+				<visible>!Container(51).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<left>94</left>
+				<top>790</top>
+				<width>70</width>
+				<height>70</height>
+				<texture>menu\nav\nav_arrow_left_FO.png</texture>
+				<animation type="Hidden" reversible="false">
+					<effect type="slide" start="-15" end="0" center="auto" time="300"/>
+					<effect type="fade" start="100" end="0" time="300"/>
+				</animation>
+				<visible>Container(51).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<left>1731</left>
+				<top>790</top>
+				<width>70</width>
+				<height>70</height>
+				<texture>menu\nav\nav_arrow_right_NF.png</texture>
+				<animation effect="fade" time="600">Visible</animation>
+				<visible>!Container(51).OnNext</visible>
+			</control>
+			<control type="image">
+				<left>1731</left>
+				<top>790</top>
+				<width>70</width>
+				<height>70</height>
+				<texture>menu\nav\nav_arrow_right_FO.png</texture>
+				<animation type="Hidden" reversible="false">
+					<effect type="slide" start="15" end="0" center="auto" time="300"/>
+					<effect type="fade" start="100" end="0" time="300"/>
+				</animation>
+				<visible>Container(51).OnNext</visible>
+			</control>
+		</control>
 		<control type="group">
 			<left>970</left>
 			<top>395</top>

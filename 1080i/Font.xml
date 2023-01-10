@@ -86,11 +86,6 @@
 			<filename>NotoMono-Regular.ttf</filename>
 			<size>26</size>
 		</font>
-		<font>
-			<name>IconSmall</name>
-			<filename>MaterialIcons-Regular.ttf</filename>
-			<size>36</size>
-		</font>
         <!-- Credits -->
         <font>
             <name>Credits_Intro</name>
@@ -138,31 +133,15 @@
             <filename>Ellipsis_bold.ttf</filename>
             <size>20</size>
         </font>
-        <!-- Folder Name -->
-        <font>
-            <name>Folder_Name</name>
-            <filename>Ellipsis_normal.ttf</filename>
-            <size>34</size>
-        </font>
         <!-- Now Playing Widget -->
         <font>
             <name>NowPlaying_Label</name>
             <filename>Ellipsis_normal.ttf</filename>
             <size>30</size>
         </font>
-        <font>
-            <name>NowPlaying_Time</name>
-            <filename>Ellipsis_Normal.ttf</filename>
-            <size>24</size>
-        </font>
         <!-- RSS -->
         <font>
             <name>RSS_Feed</name>
-            <filename>Ellipsis_normal.ttf</filename>
-            <size>30</size>
-        </font>
-        <font>
-            <name>RSS_Title</name>
             <filename>Ellipsis_normal.ttf</filename>
             <size>30</size>
         </font>
@@ -179,11 +158,6 @@
             <style>bold</style>
         </font>
         <!-- Date & Time -->
-        <font>
-            <name>Time</name>
-            <filename>Ellipsis_time.ttf</filename>
-            <size>40</size>
-        </font>
 		<font>
             <name>Time2</name>
             <filename>Ellipsis_time.ttf</filename>
@@ -194,12 +168,6 @@
             <name>Seek</name>
             <filename>Ellipsis_normal.ttf</filename>
             <size>27</size>
-        </font>
-        <font>
-            <name>Seek_Bold</name>
-            <filename>Ellipsis_normal.ttf</filename>
-            <size>27</size>
-            <style>bold</style>
         </font>
         <!-- Library Info -->
         <font>
@@ -216,11 +184,6 @@
             <name>Library_Normal_20</name>
             <filename>Ellipsis_normal.ttf</filename>
             <size>30</size>
-        </font>
-        <font>
-            <name>Library_Normal_22</name>
-            <filename>Ellipsis_normal.ttf</filename>
-            <size>36</size>
         </font>
         <font>
             <name>Library_Normal_24</name>
@@ -241,11 +204,6 @@
             <name>Library_Normal_43</name>
             <filename>Ellipsis_normal.ttf</filename>
             <size>56</size>
-        </font>
-        <font>
-            <name>Library_Normal_69</name>
-            <filename>Ellipsis_normal.ttf</filename>
-            <size>104</size>
         </font>
         <font>
             <name>Library_Light_18</name>
@@ -281,11 +239,6 @@
             <name>Library_Light_35</name>
             <filename>Ellipsis_light.ttf</filename>
             <size>52</size>
-        </font>
-        <font>
-            <name>Library_Light_38</name>
-            <filename>Ellipsis_light.ttf</filename>
-            <size>57</size>
         </font>
         <font>
             <name>Library_Bold_20</name>

@@ -29,17 +29,14 @@
 		</control>
 		<control type="image">
 			<include>FlagLayout</include>
-			<texture>$INFO[ListItem.AudioCodec,flags\audiocodec\,.png]</texture>
+			<texture>$VAR[audioc_1]</texture>
 			<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 		</control>
-		<control type="textbox">
+		<control type="image">
+			<include>FlagLayout</include>
+			<aspectratio aligny="center" align="center">keep</aspectratio>
+			<texture>$VAR[mpaa]</texture>
 			<visible>!String.IsEmpty(ListItem.MPAA)</visible>
-			<width>60</width>
-			<height>45</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<label>[B]$INFO[ListItem.MPAA][/B]</label>
-			<font>Profile_Medium_2</font>
 		</control>
 		<control type="image">
 			<visible>!String.Contains(Control.GetLabel(358),empty.png)</visible>
@@ -88,17 +85,14 @@
 		</control>
 		<control type="image">
 			<include>FlagLayout</include>
-			<texture>$INFO[ListItem.AudioCodec,flags\audiocodec\,.png]</texture>
+			<texture>$VAR[audioc_1]</texture>
 			<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 		</control>
-		<control type="textbox">
+		<control type="image">
+			<include>FlagLayout</include>
+			<aspectratio aligny="center" align="center">keep</aspectratio>
+			<texture>$VAR[mpaa]</texture>
 			<visible>!String.IsEmpty(ListItem.MPAA)</visible>
-			<width>60</width>
-			<height>45</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<label>[B]$INFO[ListItem.MPAA][/B]</label>
-			<font>Profile_Medium_2</font>
 		</control>
 		<control type="image">
 			<visible>!String.Contains(Control.GetLabel(359),empty.png)</visible>

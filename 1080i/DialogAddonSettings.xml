@@ -98,7 +98,14 @@
 			</control>
 			<control type="label" id="14">
 				<description>Default Label</description>
-				<include>DefaultSettingLabel</include>
+				<left>0</left>
+				<top>0</top>
+				<height>69</height>
+				<label/>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>NowPlaying_Label</font>
+				<textcolor>Text</textcolor>
 			</control>
 			<control type="grouplist" id="9000">
 				<left>1470</left>

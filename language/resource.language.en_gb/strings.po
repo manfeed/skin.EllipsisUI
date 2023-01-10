@@ -811,3 +811,15 @@ msgstr ""
 msgctxt "#50198"
 msgid "Hide FAVOURITES home icon"
 msgstr ""
+
+msgctxt "#50199"
+msgid "In cinemas"
+msgstr ""
+
+msgctxt "#50200"
+msgid "In cinemas soon"
+msgstr ""
+
+msgctxt "#50201"
+msgid "Next aired"
+msgstr ""

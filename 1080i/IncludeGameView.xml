@@ -349,6 +349,51 @@
 				<textcolor>TextSelectedItem</textcolor>
 				<shadowcolor>TextShadow</shadowcolor>
 			</control>
+			<control type="group">
+				<visible>Control.IsVisible(54)</visible>
+				<control type="image">
+					<left>94</left>
+					<top>790</top>
+					<width>70</width>
+					<height>70</height>
+					<texture>menu\nav\nav_arrow_left_NF.png</texture>
+					<animation effect="fade" time="600">Visible</animation>
+					<visible>!Container(54).OnPrevious</visible>
+				</control>
+				<control type="image">
+					<left>94</left>
+					<top>790</top>
+					<width>70</width>
+					<height>70</height>
+					<texture>menu\nav\nav_arrow_left_FO.png</texture>
+					<animation type="Hidden" reversible="false">
+						<effect type="slide" start="-15" end="0" center="auto" time="300"/>
+						<effect type="fade" start="100" end="0" time="300"/>
+					</animation>
+					<visible>Container(54).OnPrevious</visible>
+				</control>
+				<control type="image">
+					<left>1731</left>
+					<top>790</top>
+					<width>70</width>
+					<height>70</height>
+					<texture>menu\nav\nav_arrow_right_NF.png</texture>
+					<animation effect="fade" time="600">Visible</animation>
+					<visible>!Container(54).OnNext</visible>
+				</control>
+				<control type="image">
+					<left>1731</left>
+					<top>790</top>
+					<width>70</width>
+					<height>70</height>
+					<texture>menu\nav\nav_arrow_right_FO.png</texture>
+					<animation type="Hidden" reversible="false">
+						<effect type="slide" start="15" end="0" center="auto" time="300"/>
+						<effect type="fade" start="100" end="0" time="300"/>
+					</animation>
+					<visible>Container(54).OnNext</visible>
+				</control>
+			</control>
 			<control type="label">
 				<visible>!ListItem.IsParentFolder</visible>
 				<left>635</left>

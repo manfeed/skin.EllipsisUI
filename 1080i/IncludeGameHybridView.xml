@@ -231,8 +231,9 @@
 			<top>214</top>
 			<width>798</width>
 			<height>552</height>
+			<onright>67</onright>
+			<pagecontrol>67</pagecontrol>
 			<onleft>ActivateWindow(1201)</onleft>
-			<onright>ActivateWindow(1201)</onright>
 			<viewtype label="50134">list</viewtype>
 			<pagecontrol/>
 			<scrolltime>200</scrolltime>
@@ -382,6 +383,61 @@
 				<font>Extra_Large</font>
 				<textcolor>TextSelectedItem</textcolor>
 				<shadowcolor>TextShadow</shadowcolor>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(56)</visible>
+				<top>-20</top>
+				<left>25</left>
+				<control type="image">
+					<left>1804</left>
+					<top>112</top>
+					<width>60</width>
+					<height>60</height>
+					<texture>menu\nav\nav_arrow_up_NF.png</texture>
+					<animation effect="fade" time="600">Visible</animation>
+					<visible>!Container(56).OnPrevious</visible>
+				</control>
+				<control type="image">
+					<left>1804</left>
+					<top>112</top>
+					<width>60</width>
+					<height>60</height>
+					<texture>menu\nav\nav_arrow_up_FO.png</texture>
+					<animation type="Hidden" reversible="false">
+						<effect type="slide" start="0,-15" end="0" center="auto" time="300"/>
+						<effect type="fade" start="100" end="0" time="300"/>
+					</animation>
+					<visible>Container(56).OnPrevious</visible>
+				</control>
+				<control type="scrollbar" id="67">
+					<left>1825</left>
+					<height>690</height>
+					<top>175</top>
+					<width>18</width>
+					<onleft>56</onleft>
+					<onright>ActivateWindow(1201)</onright>
+				</control>
+				<control type="image">
+					<left>1804</left>
+					<top>868</top>
+					<width>60</width>
+					<height>60</height>
+					<texture>menu\nav\nav_arrow_down_NF.png</texture>
+					<animation effect="fade" time="600">Visible</animation>
+					<visible>!Container(56).OnNext</visible>
+				</control>
+				<control type="image">
+					<left>1804</left>
+					<top>868</top>
+					<width>60</width>
+					<height>60</height>
+					<texture>menu\nav\nav_arrow_down_FO.png</texture>
+					<animation type="Hidden" reversible="false">
+						<effect type="slide" start="0,15" end="0" center="auto" time="300"/>
+						<effect type="fade" start="100" end="0" time="300"/>
+					</animation>
+					<visible>Container(56).OnNext</visible>
+				</control>
 			</control>
 			<control type="label">
 				<visible>!ListItem.IsParentFolder</visible>

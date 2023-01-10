@@ -812,4 +812,15 @@ msgctxt "#50198"
 msgid "Hide FAVOURITES home icon"
 msgstr "Ocultar icono FAVORITOS"
 
+msgctxt "#50199"
+msgid "In cinemas"
+msgstr "En cines"
+
+msgctxt "#50200"
+msgid "In cinemas soon"
+msgstr "En cines próximamente"
+
+msgctxt "#50201"
+msgid "Next aired"
+msgstr "Próxima emisión"
 

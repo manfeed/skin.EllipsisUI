@@ -347,6 +347,20 @@
 			<visible>String.IsEqual(Container.SortOrder,$LOCALIZE[585])</visible>
 			<visible>Window.IsVisible(tvtimerrules)</visible>
 		</item>
+		<item id="31044">
+			<icon>dock\icons\sort-direction-asc.png</icon>
+			<label>$LOCALIZE[580]</label>
+			<onclick>SendClick(10821,4)</onclick>
+			<visible>String.IsEqual(Container.SortOrder,$LOCALIZE[584])</visible>
+			<visible>Window.IsVisible(games)</visible>
+		</item>
+		<item id="31045">
+			<icon>dock\icons\sort-direction-des.png</icon>
+			<label>$LOCALIZE[580]</label>
+			<onclick>SendClick(10821,4)</onclick>
+			<visible>String.IsEqual(Container.SortOrder,$LOCALIZE[585])</visible>
+			<visible>Window.IsVisible(games)</visible>
+		</item>
 	</include>
 	<include name="Dock_Watched_Live_TV">
 		<item id="31022">
@@ -495,6 +509,22 @@
 			<visible>Window.IsActive(RadioChannels)</visible>
 		</item>
 		<item>
+			<icon>dock\icons\filter-on.png</icon>
+			<label>$LOCALIZE[587]: $LOCALIZE[16041]$INFO[Window(games).Property(filter), - ","]</label>
+			<onclick>Dialog.Close(1201)</onclick>
+			<onclick>SendClick(10821,19)</onclick>
+			<visible>!String.IsEmpty(Window(games).Property(filter))</visible>
+			<visible>Window.IsActive(games)</visible>
+		</item>
+		<item>
+			<icon>dock\icons\filter-off.png</icon>
+			<label>$LOCALIZE[587]: $LOCALIZE[13551]</label>
+			<onclick>Dialog.Close(1201)</onclick>
+			<onclick>SendClick(10821,19)</onclick>
+			<visible>String.IsEmpty(Window(games).Property(filter))</visible>
+			<visible>Window.IsVisible(games)</visible>
+		</item>
+		<item>
 			<icon>dock\icons\filter-off.png</icon>
 			<label>$LOCALIZE[587]: $LOCALIZE[13551]</label>
 			<onclick>Dialog.Close(1201)</onclick>
@@ -569,13 +599,6 @@
 			<visible>system.haslocks</visible>
 			<visible>!system.ismaster</visible>
 			<visible>Window.IsVisible(videos) | Window.IsVisible(music)</visible>
-		</item>
-	</include>
-	<include name="Dock_Refresh">
-		<item>
-			<icon>dock\icons\refresh.png</icon>
-			<label>$LOCALIZE[184]</label>
-			<onclick>Container(9500).Refresh</onclick>
 		</item>
 	</include>
 	<!-- Dock Weather Items -->

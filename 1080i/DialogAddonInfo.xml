@@ -256,7 +256,6 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Default</font>
-					<align>left</align>
 					<textcolor>red</textcolor>
 					<label>[B]$INFO[ListItem.AddonLifecycleType]$INFO[ListItem.AddonLifecycleDesc, - ,][/B]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>

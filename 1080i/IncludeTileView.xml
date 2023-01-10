@@ -352,5 +352,84 @@
 				<shadowcolor>TextShadow</shadowcolor>
 			</control>
 		</control>
+		<control type="group">
+			<visible>Control.IsVisible(57)</visible>
+			<control type="image">
+				<left>94</left>
+				<top>790</top>
+				<width>70</width>
+				<height>70</height>
+				<texture>menu\nav\nav_arrow_left_NF.png</texture>
+				<animation effect="fade" time="600">Visible</animation>
+				<visible>!Container(57).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<left>94</left>
+				<top>790</top>
+				<width>70</width>
+				<height>70</height>
+				<texture>menu\nav\nav_arrow_left_FO.png</texture>
+				<animation type="Hidden" reversible="false">
+					<effect type="slide" start="-15" end="0" center="auto" time="300"/>
+					<effect type="fade" start="100" end="0" time="300"/>
+				</animation>
+				<visible>Container(57).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<left>1731</left>
+				<top>790</top>
+				<width>70</width>
+				<height>70</height>
+				<texture>menu\nav\nav_arrow_right_NF.png</texture>
+				<animation effect="fade" time="600">Visible</animation>
+				<visible>!Container(57).OnNext</visible>
+			</control>
+			<control type="image">
+				<left>1731</left>
+				<top>790</top>
+				<width>70</width>
+				<height>70</height>
+				<texture>menu\nav\nav_arrow_right_FO.png</texture>
+				<animation type="Hidden" reversible="false">
+					<effect type="slide" start="15" end="0" center="auto" time="300"/>
+					<effect type="fade" start="100" end="0" time="300"/>
+				</animation>
+				<visible>Container(57).OnNext</visible>
+			</control>
+		</control>
+		<control type="grouplist">
+			<visible>Control.IsVisible(57)</visible>
+			<visible>!ListItem.IsFolder</visible>
+			<left>-150</left>
+			<top>950</top>
+			<width>1100</width>
+			<height>33</height>
+			<itemgap>13</itemgap>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<control type="label">
+				<width>auto</width>
+				<height>33</height>
+				<font>Library_Normal_14</font>
+				<textcolor>grey</textcolor>
+				<label>$LOCALIZE[50163]</label>
+				<align>right</align>
+				<aligny>bottom</aligny>
+			</control>
+			<control type="image">
+				<width>33</width>
+				<height>33</height>
+				<texture>menu\library\info-icon.png</texture>
+			</control>
+			<control type="label">
+				<width>auto</width>
+				<height>33</height>
+				<font>Library_Normal_14</font>
+				<textcolor>grey</textcolor>
+				<label>$LOCALIZE[50065]</label>
+				<align>left</align>
+				<aligny>bottom</aligny>
+			</control>
+		</control>
 	</include>
 </includes>

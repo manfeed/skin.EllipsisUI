@@ -70,6 +70,8 @@
 			</control>
 			<control type="edit" id="12">
 				<include>DefaultSettingButton</include>
+				<font>Default</font>
+				<textcolor>white</textcolor>
 			</control>
 			<control type="sliderex" id="13">
 				<description>Default Slider</description>

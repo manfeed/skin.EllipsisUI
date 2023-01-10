@@ -53,8 +53,8 @@
 				<textcolor>Highlight</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
-				<texturefocus></texturefocus>
-				<texturenofocus></texturenofocus>
+				<texturefocus/>
+				<texturenofocus/>
 			</control>
 			<control type="group">
 				<left>353</left>

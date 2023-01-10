@@ -163,7 +163,7 @@
 				<top>30</top>
 				<control type="image">
 					<left>1804</left>
-					<top>20</top>
+					<top>50</top>
 					<width>60</width>
 					<height>60</height>
 					<texture>menu\nav\nav_arrow_up_NF.png</texture>
@@ -172,7 +172,7 @@
 				</control>
 				<control type="image">
 					<left>1804</left>
-					<top>20</top>
+					<top>50</top>
 					<width>60</width>
 					<height>60</height>
 					<texture>menu\nav\nav_arrow_up_FO.png</texture>
@@ -184,8 +184,8 @@
 				</control>
 				<control type="scrollbar" id="65">
 					<left>1824</left>
-					<height>552</height>
-					<top>80</top>
+					<height>522</height>
+					<top>110</top>
 					<width>18</width>
 					<onleft>59</onleft>
 					<onright>SetFocus(59)</onright>

@@ -171,6 +171,16 @@
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
 				</item>
 				<item>
+					<label>50199</label>
+					<onclick>ActivateWindow(videos,plugin://script.embuary.info/movie/now_playing,return)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
+				</item>
+				<item>
+					<label>50200</label>
+					<onclick>ActivateWindow(videos,plugin://script.embuary.info/movie/upcoming,return)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
+				</item>
+				<item>
 					<label>653</label>
 					<onclick>UpdateLibrary(video)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_movie_library)</visible>
@@ -223,6 +233,11 @@
 				<item>
 					<label>20387</label>
 					<onclick>ActivateWindow(Videos,special://skin/playlists/recent_unwatched_episodes.xsp)</onclick>
+					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_tv_library)</visible>
+				</item>
+				<item>
+					<label>50201</label>
+					<onclick>ActivateWindow(videos,plugin://script.embuary.info/nextaired,return)</onclick>
 					<visible>String.Contains(Container(9000).ListItem.Icon,icon_home_tv_library)</visible>
 				</item>
 				<item>

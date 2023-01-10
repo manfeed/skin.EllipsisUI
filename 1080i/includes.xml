@@ -10,7 +10,6 @@
 	<include file="IncludeFlags.xml"/>
 	<include file="IncludeAnims.xml"/>
 	<include file="IncludeDebug.xml"/>
-	<include file="IncludesPVR.xml"/>
 	<include name="Sort_Letter">
 		<expression name="infodialog_active">Window.IsActive(musicinformation) | Window.IsActive(songinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(pictureinfo)</expression>
 		<control type="group">
@@ -211,6 +210,191 @@
 	<variable name="watched_style">
 		<value condition="!Skin.HasSetting(Disable_Watched_Overlay) + [Container.Content(Episodes) | Container.Content(MusicVideos)]">overlays/icon/OverlayWatched2.png</value>
 		<value condition="!Skin.HasSetting(Disable_Watched_Overlay)">overlays/icon/OverlayWatched.png</value>
+	</variable>
+	<variable name="audioc_1">
+		<value condition="String.Contains(ListItem.AudioCodec,atmos)">flags\audiocodec\atmos.png</value>
+		<value>$INFO[ListItem.AudioCodec,flags\audiocodec\,.png]</value>
+	</variable>
+	<variable name="mpaa">
+		<!-- MPAA Australia -->
+		<value condition="String.Contains(ListItem.MPAA,AU:G) | String.Contains(ListItem.MPAA,Australia:G)">flags/mpaa/au_g.png</value>
+		<value condition="String.Contains(ListItem.MPAA,AU:MA15) | String.Contains(ListItem.MPAA,Australia:MA15)">flags/mpaa/au_ma15.png</value>
+		<value condition="String.Contains(ListItem.MPAA,AU:M) | String.Contains(ListItem.MPAA,Australia:M)">flags/mpaa/au_m.png</value>
+		<value condition="String.Contains(ListItem.MPAA,AU:PG) | String.Contains(ListItem.MPAA,Australia:PG)">flags/mpaa/au_pg.png</value>
+		<value condition="String.Contains(ListItem.MPAA,AU:R18) | String.Contains(ListItem.MPAA,Australia:R18)">flags/mpaa/au_r18.png</value>
+		<value condition="String.Contains(ListItem.MPAA,AU:X18) | String.Contains(ListItem.MPAA,Australia:X18)">flags/mpaa/au_x18.png</value>
+		<!-- MPAA Brazil -->
+		<value condition="String.Contains(ListItem.Mpaa,BR:L) | String.Contains(ListItem.Mpaa,Brazil:L)">flags/mpaa/br_l.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,BR:10) | String.Contains(ListItem.Mpaa,Brazil:10)">flags/mpaa/br_10.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,BR:12) | String.Contains(ListItem.Mpaa,Brazil:12)">flags/mpaa/br_12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,BR:14) | String.Contains(ListItem.Mpaa,Brazil:14)">flags/mpaa/br_14.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,BR:16) | String.Contains(ListItem.Mpaa,Brazil:16)">flags/mpaa/br_16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,BR:18) | String.Contains(ListItem.Mpaa,Brazil:18)">flags/mpaa/br_18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,BR:ER) | String.Contains(ListItem.Mpaa,Brazil:ER)">flags/mpaa/br_er.png</value>
+		<!-- MPAA Canada -->
+		<value condition="String.Contains(ListItem.Mpaa,CA:14A) | String.Contains(ListItem.MPAA,Canada:14A)">flags/mpaa/ca_14a.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,CA:18A) | String.Contains(ListItem.MPAA,Canada:18A)">flags/mpaa/ca_18a.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,CA:PG) | String.Contains(ListItem.MPAA,Canada:PG)">flags/mpaa/ca_g.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,CA:G) | String.Contains(ListItem.MPAA,Canada:G)">flags/mpaa/ca_pg.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,CA:R) | String.Contains(ListItem.MPAA,Canada:R)">flags/mpaa/ca_r.png</value>
+		<!-- MPAA Germany -->
+		<value condition="String.Contains(ListItem.Mpaa,FSK0) | String.Contains(ListItem.Mpaa,FSK 0) | String.Contains(ListItem.Mpaa,FSK-0) | String.Contains(ListItem.Mpaa,DE:0) | String.Contains(ListItem.Mpaa,FSK o.A.) | String.Contains(ListItem.Mpaa,o.A.) | String.Contains(ListItem.Mpaa,ab 0) | String.Contains(ListItem.Mpaa,Germany:0) | String.Contains(ListItem.Mpaa,Germany:o.Al.)">flags/mpaa/de_0.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FSK6) | String.Contains(ListItem.Mpaa,FSK 6) | String.Contains(ListItem.Mpaa,FSK-6) | String.Contains(ListItem.Mpaa,DE:6)  | String.Contains(ListItem.Mpaa,ab 6) | String.Contains(ListItem.Mpaa,Germany:6)">flags/mpaa/de_6.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FSK12) | String.Contains(ListItem.Mpaa,FSK 12) | String.Contains(ListItem.Mpaa,FSK-12) | String.Contains(ListItem.Mpaa,DE:12) | String.Contains(ListItem.Mpaa,ab 12) | String.Contains(ListItem.Mpaa,Germany:12)">flags/mpaa/de_12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FSK16) | String.Contains(ListItem.Mpaa,FSK 16) | String.Contains(ListItem.Mpaa,FSK-16) | String.Contains(ListItem.Mpaa,DE:16) | String.Contains(ListItem.Mpaa,ab 16) | String.Contains(ListItem.Mpaa,Germany:16)">flags/mpaa/de_16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FSK18) | String.Contains(ListItem.Mpaa,FSK 18) | String.Contains(ListItem.Mpaa,FSK-18) | String.Contains(ListItem.Mpaa,DE:18) | String.Contains(ListItem.Mpaa,ab 18) | String.Contains(ListItem.Mpaa,Germany:18)">flags/mpaa/de_18.png</value>
+		<!-- MPAA Spain -->
+		<value condition="String.Contains(ListItem.Mpaa,ES:7I) | String.IsEqual(ListItem.MPAA,Spain:7I)">flags/mpaa/es_7i.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,ES:7) | String.IsEqual(ListItem.MPAA,Spain:7)">flags/mpaa/es_7.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,ES:12) | String.IsEqual(ListItem.MPAA,Spain:12)">flags/mpaa/es_12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,ES:16) | String.IsEqual(ListItem.MPAA,Spain:16)">flags/mpaa/es_16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,ES:18) | String.IsEqual(ListItem.MPAA,Spain:18)">flags/mpaa/es_18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,ES:AI) | String.IsEqual(ListItem.MPAA,Spain:AI) | String.Contains(ListItem.MPAA,APTA)">flags/mpaa/es_ai.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,ES:A) | String.IsEqual(ListItem.MPAA,Spain:A)">flags/mpaa/es_a.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,ES:X) | String.IsEqual(ListItem.MPAA,Spain:X)">flags/mpaa/es_x.png</value>
+		<!-- MPAA Finland -->
+		<value condition="String.Contains(ListItem.Mpaa,FI:) + String.Contains(ListItem.MPAA,7)">flags/mpaa/fi_7.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FI:) + String.Contains(ListItem.MPAA,12)">flags/mpaa/fi_12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FI:) + String.Contains(ListItem.MPAA,16)">flags/mpaa/fi_16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FI:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/fi_18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FI:) + String.Contains(ListItem.MPAA,S)">flags/mpaa/fi_s.png</value>
+		<!-- MPAA France -->
+		<value condition="String.Contains(ListItem.Mpaa,FR:) + String.Contains(ListItem.MPAA,10)">flags/mpaa/fr_10.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FR:) + String.Contains(ListItem.MPAA,12)">flags/mpaa/fr_12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FR:) + String.Contains(ListItem.MPAA,16)">flags/mpaa/fr_16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FR:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/fr_18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FR:) + String.Contains(ListItem.MPAA,U)">flags/mpaa/fr_u.png</value>
+		<!-- MPAA Reino Unido -->
+		<value condition="String.Contains(ListItem.Mpaa,UK:) + String.IsEqual(ListItem.MPAA,12A)">flags/mpaa/gb_12a.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,UK:) + String.IsEqual(ListItem.MPAA,12)">flags/mpaa/gb_12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,UK:) + String.IsEqual(ListItem.MPAA,15)">flags/mpaa/gb_15.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,UK:) + String.IsEqual(ListItem.MPAA,R18)">flags/mpaa/gb_r18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,UK:) + String.IsEqual(ListItem.MPAA,18)">flags/mpaa/gb_18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,UK:) + String.IsEqual(ListItem.MPAA,PG)">flags/mpaa/gb_pg.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,UK:) + String.IsEqual(ListItem.MPAA,U)">flags/mpaa/gb_u.png</value>
+		<!-- MPAA Hong Kong -->
+		<value condition="String.Contains(ListItem.Mpaa,HK:) + String.Contains(ListItem.MPAA,III)">flags/mpaa/hk_III.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,HK:) + String.Contains(ListItem.MPAA,IIB)">flags/mpaa/hk_IIb.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,HK:) + String.Contains(ListItem.MPAA,IIA)">flags/mpaa/hk_IIa.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,HK:) + String.Contains(ListItem.MPAA,II)">flags/mpaa/hk_II.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,HK:) + String.Contains(ListItem.MPAA,I)">flags/mpaa/hk_I.png</value>
+		<!-- MPAA Hungary -->
+		<value condition="String.Contains(ListItem.Mpaa,HU:) + String.Contains(ListItem.MPAA,X)">flags/mpaa/hu_x.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,HU:) + String.Contains(ListItem.MPAA,KN)">flags/mpaa/hu_kn.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,HU:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/hu_18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,HU:) + String.Contains(ListItem.MPAA,16)">flags/mpaa/hu_16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,HU:) + String.Contains(ListItem.MPAA,12)">flags/mpaa/hu_12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,HU:) + String.Contains(ListItem.MPAA,6)">flags/mpaa/hu_6.png</value>
+		<!-- MPAA Italy -->
+		<value condition="String.Contains(ListItem.Mpaa,IT:) + String.Contains(ListItem.MPAA,6)">flags/mpaa/it_6.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,IT:) + String.Contains(ListItem.MPAA,14)">flags/mpaa/it_14.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,IT:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/it_18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,IT:) + String.Contains(ListItem.MPAA,T)">flags/mpaa/it_t.png</value>
+		<!-- MPAA Japan -->
+		<value condition="String.Contains(ListItem.Mpaa,JP:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/jp_r18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,JP:) + String.Contains(ListItem.MPAA,15)">flags/mpaa/jp_r15.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,JP:) + String.Contains(ListItem.MPAA,12)">flags/mpaa/jp_pg12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,JP:) + String.Contains(ListItem.MPAA,G)">flags/mpaa/jp_g.png</value>
+		<!-- MPAA Korea -->
+		<value condition="String.Contains(ListItem.MPAA,KR:ALL) | String.Contains(ListItem.MPAA,전체)">flags/mpaa/kr_all.png</value>
+		<value condition="String.Contains(ListItem.MPAA,KR:12) | String.Contains(ListItem.MPAA,12세)">flags/mpaa/kr_12.png</value>
+		<value condition="String.Contains(ListItem.MPAA,KR:15) | String.Contains(ListItem.MPAA,15세)">flags/mpaa/kr_15.png</value>
+		<value condition="String.Contains(ListItem.MPAA,KR:18) | String.Contains(ListItem.MPAA,불가)">flags/mpaa/kr_18.png</value>
+		<!-- MPAA Netherlands -->
+		<value condition="String.Contains(ListItem.Mpaa,NL:) + String.Contains(ListItem.MPAA,AL)">flags/mpaa/NL-AL.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NL:) + String.Contains(ListItem.MPAA,MG6)">flags/mpaa/NL-MG6.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NL:) + String.Contains(ListItem.MPAA,16)">flags/mpaa/NL-16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NL:) + String.Contains(ListItem.MPAA,6)">flags/mpaa/NL-6.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NL:) + String.Contains(ListItem.MPAA,9)">flags/mpaa/NL-9.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NL:) + String.Contains(ListItem.MPAA,12)">flags/mpaa/NL-12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NL:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/NL-18.png</value>
+		<!-- MPAA Norway -->
+		<value condition="String.Contains(ListItem.Mpaa,NO:) + String.Contains(ListItem.MPAA,6)">flags/mpaa/no_6.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NO:) + String.Contains(ListItem.MPAA,9)">flags/mpaa/no_9.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NO:) + String.Contains(ListItem.MPAA,12)">flags/mpaa/no_12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NO:) + String.Contains(ListItem.MPAA,15)">flags/mpaa/no_15.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NO:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/no_18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NO:) + String.Contains(ListItem.MPAA,A)">flags/mpaa/no_a.png</value>
+		<!-- MPAA New Zealand -->
+		<value condition="String.Contains(ListItem.Mpaa,NZ:) + String.Contains(ListItem.MPAA,PG)">flags/mpaa/nz_pg.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NZ:) + String.Contains(ListItem.MPAA,G)">flags/mpaa/nz_g.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NZ:) + String.Contains(ListItem.MPAA,M)">flags/mpaa/nz_m.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NZ:) + String.Contains(ListItem.MPAA,13)">flags/mpaa/nz_r13.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NZ:) + String.Contains(ListItem.MPAA,15)">flags/mpaa/nz_r15.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NZ:) + String.Contains(ListItem.MPAA,16)">flags/mpaa/nz_r16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NZ:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/nz_r18.png</value>
+		<!-- MPAA Russia -->
+		<value condition="String.Contains(ListItem.Mpaa,Russian:0) | [String.Contains(ListItem.Mpaa,RU) + String.Contains(ListItem.Mpaa,0)]">flags/mpaa/ru_0.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,Russian:16) | [String.Contains(ListItem.Mpaa,RU) + String.Contains(ListItem.Mpaa,16)]">flags/mpaa/ru_16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,Russian:12) | [String.Contains(ListItem.Mpaa,RU) + String.Contains(ListItem.Mpaa,12)]">flags/mpaa/ru_12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,Russian:6) | [String.Contains(ListItem.Mpaa,RU) + String.Contains(ListItem.Mpaa,6)]">flags/mpaa/ru_6.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,Russian:18) | [String.Contains(ListItem.Mpaa,RU) + String.Contains(ListItem.Mpaa,18)]">flags/mpaa/ru_18.png</value>
+		<!-- MPAA Saudi Arabia -->
+		<value condition="String.Contains(ListItem.Mpaa,SA:) + String.Contains(ListItem.MPAA,PG) + String.Contains(ListItem.MPAA,12)">flags/mpaa/sa_pg12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,SA:) + String.Contains(ListItem.MPAA,PG) + String.Contains(ListItem.MPAA,15)">flags/mpaa/sa_pg15.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,SA:) + String.Contains(ListItem.MPAA,PG)">flags/mpaa/sa_pg.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,SA:) + String.Contains(ListItem.MPAA,G)">flags/mpaa/sa_g.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,SA:) + String.Contains(ListItem.MPAA,R) + String.Contains(ListItem.MPAA,12)">flags/mpaa/sa_r12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,SA:) + String.Contains(ListItem.MPAA,R) + String.Contains(ListItem.MPAA,15)">flags/mpaa/sa_r15.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,SA:) + String.Contains(ListItem.MPAA,R) + String.Contains(ListItem.MPAA,18)">flags/mpaa/sa_r18.png</value>
+		<!-- MPAA Slovakia -->
+		<value condition="String.Contains(ListItem.Mpaa,SK:) + String.Contains(ListItem.MPAA,7)">flags/mpaa/sk_7.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,SK:) + String.Contains(ListItem.MPAA,12)">flags/mpaa/sk_12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,SK:) + String.Contains(ListItem.MPAA,15)">flags/mpaa/sk_15.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,SK:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/sk_18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,SK:) + String.Contains(ListItem.MPAA,T)">flags/mpaa/sk_t.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,SK:) + String.Contains(ListItem.MPAA,U)">flags/mpaa/sk_u.png</value>
+		<!-- MPAA Turkey -->
+		<value condition="String.Contains(ListItem.Mpaa,TR:) + !String.Contains(ListItem.MPAA,A) + String.Contains(ListItem.MPAA,6)">flags/mpaa/tr_6+.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TR:) + String.Contains(ListItem.MPAA,A) + String.Contains(ListItem.MPAA,6)">flags/mpaa/tr_6a.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TR:) + !String.Contains(ListItem.MPAA,A) + String.Contains(ListItem.MPAA,10)">flags/mpaa/tr_10+.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TR:) + String.Contains(ListItem.MPAA,A) + String.Contains(ListItem.MPAA,10)">flags/mpaa/tr_10a.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TR:) + !String.Contains(ListItem.MPAA,A) + String.Contains(ListItem.MPAA,13)">flags/mpaa/tr_13+.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TR:) + String.Contains(ListItem.MPAA,A) + String.Contains(ListItem.MPAA,13)">flags/mpaa/tr_13a.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TR:) + String.Contains(ListItem.MPAA,16)">flags/mpaa/tr_16+.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TR:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/tr_18+.png</value>
+		<!-- MPAA Taiwan -->
+		<value condition="String.Contains(ListItem.Mpaa,TW:) + String.Contains(ListItem.MPAA,0)">flags/mpaa/tw_0.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TW:) + String.Contains(ListItem.MPAA,6)">flags/mpaa/tw_6.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TW:) + String.Contains(ListItem.MPAA,12)">flags/mpaa/tw_12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TW:) + String.Contains(ListItem.MPAA,15)">flags/mpaa/tw_15.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TW:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/tw_18.png</value>
+		<!-- MPAA Vietnam -->
+		<value condition="String.Contains(ListItem.Mpaa,VN:) + String.Contains(ListItem.MPAA,13)">flags/mpaa/vn_c13.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,VN:) + String.Contains(ListItem.MPAA,16)">flags/mpaa/vn_c16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,VN:) + String.Contains(ListItem.MPAA,18)">flags/mpaa/vn_c18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,VN:) + String.Contains(ListItem.MPAA,P)">flags/mpaa/vn_p.png</value>
+		<!-- MPAA TV America -->
+		<value condition="String.Contains(ListItem.Mpaa,TV) + String.Contains(ListItem.Mpaa,PG)">flags/mpaa/us_TV-PG.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TV) + String.Contains(ListItem.Mpaa,G)">flags/mpaa/us_TV-G.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TV) + String.Contains(ListItem.Mpaa,Y7FV)">flags/mpaa/us_TV-y7fv.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TV) + String.Contains(ListItem.Mpaa,Y7)">flags/mpaa/us_TV-y7.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TV) + String.Contains(ListItem.Mpaa,Y)">flags/mpaa/us_TV-y.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TV) + String.Contains(ListItem.Mpaa,14)">flags/mpaa/us_TV-14.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,TV) + String.Contains(ListItem.Mpaa,MA)">flags/mpaa/us_TV-MA.png</value>
+		<!-- MPAA USA -->
+		<value condition="[String.Contains(ListItem.Mpaa,NR) | String.Contains(ListItem.Mpaa,Not rated)] + !String.Contains(ListItem.Mpaa,unrated)">flags/mpaa/us_nr.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,PG) + String.Contains(ListItem.Mpaa,13)">flags/mpaa/us_pg-13.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,PG)">flags/mpaa/us_pg.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,G)">flags/mpaa/us_g.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,NC) + String.Contains(ListItem.Mpaa,17)">flags/mpaa/us_nc-17.png</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,R) | [String.Contains(ListItem.Mpaa,Rated) + String.Contains(ListItem.Mpaa,R) + !String.Contains(ListItem.Mpaa,unrated)]">flags/mpaa/us_r.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,unrated)">flags/mpaa/us_unrated.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,X)">flags/mpaa/us_x.png</value>
+		<!-- Default -->
+		<value condition="String.Contains(ListItem.Mpaa,18)">flags/mpaa/18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,17)">flags/mpaa/17.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,16)">flags/mpaa/16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,15)">flags/mpaa/15.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,14)">flags/mpaa/14.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,13)">flags/mpaa/13.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,12)">flags/mpaa/12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,11)">flags/mpaa/11.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,10)">flags/mpaa/10.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,9)">flags/mpaa/9.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,8)">flags/mpaa/8.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,7)">flags/mpaa/7.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,6)">flags/mpaa/6.png</value>
 	</variable>
 	<variable name="PVRStatusImageVar">
 		<value condition="ListItem.IsRecording">new_pvr/record.png</value>

@@ -51,10 +51,6 @@
 				<top>-3000</top>
 				<width>1</width>
 				<height>1</height>
-				<texturefocus/>
-				<texturenofocus/>
-				<label/>
-				<font/>
 				<ondown>3000</ondown>
 				<onup>3000</onup>
 			</control>

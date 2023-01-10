@@ -445,7 +445,7 @@
 						<visible>Container(500).HasFocus(1)</visible>
 					</item>
 					<item>
-						<label>$LOCALIZE[470]</label>
+						<label>$LOCALIZE[470]  (Frodo - 2012)</label>
 						<onclick>Dialog.Close(114)</onclick>
 						<onclick>ActivateWindow(1204)</onclick>
 						<visible>Container(500).HasFocus(1)</visible>

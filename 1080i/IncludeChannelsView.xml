@@ -143,6 +143,7 @@
 				</focusedlayout>
 			</control>
 			<control type="group">
+				<left>15</left>
 				<control type="image">
 					<left>919</left>
 					<top>15</top>
@@ -165,10 +166,10 @@
 					<visible>Container(68).OnPrevious</visible>
 				</control>
 				<control type="scrollbar" id="70">
-					<left>938</left>
+					<left>936</left>
 					<top>65</top>
 					<height>775</height>
-					<width>12</width>
+					<width>16</width>
 					<onleft>68</onleft>
 					<orientation>vertical</orientation>
 					<ondown>70</ondown>
@@ -199,7 +200,7 @@
 				</control>
 				<control type="label">
 					<visible>!ListItem.IsParentFolder</visible>
-					<left>640</left>
+					<left>625</left>
 					<top>870</top>
 					<width>1200</width>
 					<align>right</align>
@@ -453,7 +454,7 @@
 				<left>896</left>
 				<control type="image">
 					<left>919</left>
-					<top>15</top>
+					<top>25</top>
 					<width>50</width>
 					<height>50</height>
 					<texture>menu\nav\nav_arrow_up_NF.png</texture>
@@ -462,7 +463,7 @@
 				</control>
 				<control type="image">
 					<left>919</left>
-					<top>15</top>
+					<top>25</top>
 					<width>50</width>
 					<height>50</height>
 					<texture>menu\nav\nav_arrow_up_FO.png</texture>
@@ -474,8 +475,8 @@
 				</control>
 				<control type="scrollbar" id="60">
 					<left>938</left>
-					<top>65</top>
-					<height>650</height>
+					<top>75</top>
+					<height>640</height>
 					<width>12</width>
 					<onleft>69</onleft>
 					<orientation>vertical</orientation>

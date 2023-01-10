@@ -542,7 +542,7 @@
 						<left>726</left>
 						<top>362</top>
 						<width>807</width>
-						<height>290</height>
+						<height>285</height>
 						<font>Library_Normal_20</font>
 						<textcolor>Text</textcolor>
 						<label>$INFO[ListItem.Plot]</label>

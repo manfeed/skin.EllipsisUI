@@ -47,7 +47,6 @@
 						<top>-4</top>
 						<left>130</left>
 						<width>532</width>
-						<width>400</width>
 						<height>50</height>
 						<align>left</align>
 						<font>Heading_Small</font>
@@ -129,7 +128,6 @@
 						<top>-4</top>
 						<left>130</left>
 						<width>532</width>
-						<width>400</width>
 						<height>50</height>
 						<align>left</align>
 						<font>Heading_Small</font>
@@ -205,10 +203,10 @@
 					<visible>Container(68).OnPrevious</visible>
 				</control>
 				<control type="scrollbar" id="70">
-					<left>938</left>
+					<left>936</left>
 					<top>65</top>
 					<height>775</height>
-					<width>12</width>
+					<width>16</width>
 					<onleft>68</onleft>
 					<orientation>vertical</orientation>
 					<ondown>70</ondown>

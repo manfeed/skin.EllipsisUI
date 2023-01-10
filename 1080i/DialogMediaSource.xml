@@ -202,8 +202,6 @@
 					<textcolor>Highlight</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
-					<texturefocus></texturefocus>
-					<texturenofocus></texturenofocus>
 				</control>
 				<control type="group" id="9001">
 					<control type="button" id="20">

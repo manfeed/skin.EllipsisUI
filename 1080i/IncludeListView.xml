@@ -3,11 +3,12 @@
 	<include name="List_View">
 		<control type="list" id="50">
 			<left>162</left>
-			<top>264</top>
+			<top>146</top>
 			<width>1596</width>
-			<height>552</height>
+			<height>759</height>
 			<onleft>ActivateWindow(1201)</onleft>
-			<onright>ActivateWindow(1201)</onright>
+			<onright>65</onright>
+			<pagecontrol>65</pagecontrol>
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<viewtype label="535">list</viewtype>
@@ -148,6 +149,105 @@
 					<info>ListItem.Label2</info>
 				</control>
 			</focusedlayout>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<top>50</top>
+			<control type="image">
+				<left>1803</left>
+				<top>60</top>
+				<width>60</width>
+				<height>60</height>
+				<texture>menu\nav\nav_arrow_up_NF.png</texture>
+				<animation effect="fade" time="600">Visible</animation>
+				<visible>!Container(50).OnPrevious</visible>
+			</control>
+			<control type="image">
+				<left>1803</left>
+				<top>60</top>
+				<width>60</width>
+				<height>60</height>
+				<texture>menu\nav\nav_arrow_up_FO.png</texture>
+				<animation type="Hidden" reversible="false">
+					<effect type="slide" start="0,-15" end="0" center="auto" time="300"/>
+					<effect type="fade" start="100" end="0" time="300"/>
+				</animation>
+				<visible>Container(50).OnPrevious</visible>
+			</control>
+			<control type="scrollbar" id="65">
+				<left>1824</left>
+				<height>709</height>
+				<top>120</top>
+				<width>18</width>
+				<onleft>50</onleft>
+				<onright>ActivateWindow(1201)</onright>
+			</control>
+			<control type="image">
+				<left>1803</left>
+				<top>830</top>
+				<width>60</width>
+				<height>60</height>
+				<texture>menu\nav\nav_arrow_down_NF.png</texture>
+				<animation effect="fade" time="600">Visible</animation>
+				<visible>!Container(50).OnNext</visible>
+			</control>
+			<control type="image">
+				<left>1803</left>
+				<top>830</top>
+				<width>60</width>
+				<height>60</height>
+				<texture>menu\nav\nav_arrow_down_FO.png</texture>
+				<animation type="Hidden" reversible="false">
+					<effect type="slide" start="0,15" end="0" center="auto" time="300"/>
+					<effect type="fade" start="100" end="0" time="300"/>
+				</animation>
+				<visible>Container(50).OnNext</visible>
+			</control>
+			<control type="label">
+				<visible>!ListItem.IsParentFolder</visible>
+				<left>585</left>
+				<top>903</top>
+				<width>1200</width>
+				<align>right</align>
+				<font>Medium</font>
+				<scroll>true</scroll>
+				<label>$INFO[Container(50).CurrentItem] $LOCALIZE[20163] $INFO[Container(50).NumItems] $LOCALIZE[50129] - $LOCALIZE[50130] $INFO[Container(50).CurrentPage] $LOCALIZE[20163] $INFO[Container(50).NumPages]</label>
+			</control>
+		</control>
+		<control type="grouplist">
+			<visible>Control.IsVisible(50)</visible>
+			<visible>!ListItem.IsFolder</visible>
+			<visible>Container.Content(images) | Container.Content(addons)</visible>
+			<left>-150</left>
+			<top>950</top>
+			<width>1100</width>
+			<height>33</height>
+			<itemgap>13</itemgap>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<control type="label">
+				<width>auto</width>
+				<height>33</height>
+				<font>Library_Normal_14</font>
+				<textcolor>grey</textcolor>
+				<label>$LOCALIZE[50163]</label>
+				<align>right</align>
+				<aligny>bottom</aligny>
+			</control>
+			<control type="image">
+				<width>33</width>
+				<height>33</height>
+				<texture>menu\library\info-icon.png</texture>
+			</control>
+			<control type="label">
+				<width>auto</width>
+				<height>33</height>
+				<font>Library_Normal_14</font>
+				<textcolor>grey</textcolor>
+				<label>$LOCALIZE[50065]</label>
+				<align>left</align>
+				<aligny>bottom</aligny>
+			</control>
 		</control>
 		<control type="group">
 			<left>854</left>
