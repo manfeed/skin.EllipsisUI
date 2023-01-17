@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <window>
     <include>Fade_In_WindowOpen</include>
     <include>Fade_Out_WindowClose</include>
@@ -110,7 +109,7 @@
                             <height>30</height>
                             <font>Medium</font>
                             <align>center</align>
-							<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
+                            <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
                         </control>
                     </itemlayout>
                     <focusedlayout width="429" height="230">
@@ -135,7 +134,7 @@
                             <height>30</height>
                             <font>Medium</font>
                             <align>center</align>
-							<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
+                            <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
                         </control>
                     </focusedlayout>
                 </control>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <window>
     <defaultcontrol>8</defaultcontrol>
     <controls>
@@ -55,7 +54,7 @@
                 <top>15</top>
                 <width>1125</width>
                 <align>center</align>
-                <label/>
+                <label />
                 <font>Medium</font>
                 <shadowcolor>TextShadow</shadowcolor>
             </control>
@@ -65,7 +64,7 @@
                 <top>60</top>
                 <width>1125</width>
                 <align>center</align>
-                <label/>
+                <label />
                 <font>Medium</font>
                 <shadowcolor>TextShadow</shadowcolor>
             </control>

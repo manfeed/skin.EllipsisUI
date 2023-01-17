@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <window>
     <include>Fade_In_WindowOpen</include>
     <include>Fade_Out_WindowClose</include>
@@ -261,7 +260,7 @@
                             <top>0</top>
                             <width>410</width>
                             <height>69</height>
-                            <label/>
+                            <label />
                             <align>center</align>
                             <aligny>center</aligny>
                             <font>Default</font>

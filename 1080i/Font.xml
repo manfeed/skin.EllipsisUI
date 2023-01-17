@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <fonts>
     <fontset id="Default">
         <!-- General -->
@@ -65,7 +64,7 @@
             <filename>Ellipsis_normal.ttf</filename>
             <size>24</size>
         </font>
-		<font>
+        <font>
             <name>Tiny</name>
             <filename>Ellipsis_normal.ttf</filename>
             <size>12</size>
@@ -75,17 +74,17 @@
             <filename>Ellipsis_normal.ttf</filename>
             <size>39</size>
         </font>
-		<font>
+        <font>
             <name>Selected_Item_Upper</name>
             <filename>Ellipsis_normal.ttf</filename>
-			 <style>uppercase</style>
+            <style>uppercase</style>
             <size>39</size>
         </font>
-		<font>
-			<name>Mono26</name>
-			<filename>NotoMono-Regular.ttf</filename>
-			<size>26</size>
-		</font>
+        <font>
+            <name>Mono26</name>
+            <filename>NotoMono-Regular.ttf</filename>
+            <size>26</size>
+        </font>
         <!-- Credits -->
         <font>
             <name>Credits_Intro</name>
@@ -158,9 +157,9 @@
             <style>bold</style>
         </font>
         <!-- Date & Time -->
-		<font>
+        <font>
             <name>Time2</name>
-            <filename>Ellipsis_time.ttf</filename>
+            <filename>Galette-Medium.ttf</filename>
             <size>32</size>
         </font>
         <!-- Seek -->

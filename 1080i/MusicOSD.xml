@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol always="true">9500</defaultcontrol>
-	<coordinates>
-		<system>1</system>
-		<left>0</left>
-		<top>0</top>
-	</coordinates>
-	<controls>
-		<animation effect="fade" time="600">WindowOpen</animation>
-		<animation effect="fade" time="600">WindowClose</animation>
-		<include>Dock_MusicOSD</include>
-		<include>Debug</include>
-	</controls>
+    <defaultcontrol always="true">9500</defaultcontrol>
+    <coordinates>
+        <system>1</system>
+        <left>0</left>
+        <top>0</top>
+    </coordinates>
+    <controls>
+        <animation effect="fade" time="600">WindowOpen</animation>
+        <animation effect="fade" time="600">WindowClose</animation>
+        <include>Dock_MusicOSD</include>
+        <include>Debug</include>
+    </controls>
 </window>

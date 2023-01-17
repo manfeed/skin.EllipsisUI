@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <includes>
     <include name="Profiles_View">
         <control type="list" id="2">

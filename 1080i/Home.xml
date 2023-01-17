@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
     <controls>
@@ -14,7 +13,7 @@
         <include>Clock</include>
         <!-- Now Playing Widget -->
         <include>Now_Playing_Widget</include>
-		<include>PVR_Widget</include>
+        <include>PVR_Widget</include>
         <!-- Elipsis Button -->
         <control type="group">
             <left>960</left>
