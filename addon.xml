@@ -10,7 +10,7 @@
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<license>Creative Commons Attribution-ShareAlike 3.0 Unported License</license>
-		<source>https://github.com/Ch3dd4rGoblin/skin.EllipsisUI</source>
+		<source>https://github.com/manfeed/skin.EllipsisUI</source>
 		<summary>EllipsisUI</summary>
 		<news>Updated for Kodi v19 Matrix</news>
 		<description>EllipsisUI is a skin Addon for Kodi media center and is in active development. Inspired by the work done on Ellipsis by Team Blackbolt, EllipsisUI is a forked project based off of Ellipsis. This Addon was created by TeamUI in dedication to Team Blackbolt.</description>
